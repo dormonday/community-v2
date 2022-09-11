@@ -13,11 +13,6 @@ search_banner_link:
   default: https://www.google.com
   description: Search banner link
 
-search_banner_link_text:
-  type: string
-  default: 
-  description: Search banner link text
-
 cta_title:
   type: string
   default: Can't find what you're looking for?
