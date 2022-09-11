@@ -1,11 +1,11 @@
 search_banner_title:
   type: string
-  default: Community forum
+  default: Welcome to the community
   description: Search banner title
 
 search_banner_description:
   type: string
-  default: Welcome! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  default: Learn from fellow monday.com users and product experts
   description: Search banner description
 
 search_banner_link:
@@ -15,12 +15,12 @@ search_banner_link:
 
 search_banner_link_text:
   type: string
-  default: Community guidelines >
+  default: 
   description: Search banner link text
 
 cta_title:
   type: string
-  default: Hire an Expert!
+  default: Can't find what you're looking for?
   description: HP cta title
 
 cta_sub_title:
@@ -30,7 +30,7 @@ cta_sub_title:
 
 cta_button_text:
   type: string
-  default: Cta
+  default: Contact support
   description: HP cta button text
 
 cta_button_link:
