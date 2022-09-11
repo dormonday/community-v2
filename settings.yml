@@ -1,0 +1,134 @@
+search_banner_title:
+  type: string
+  default: Community forum
+  description: Search banner title
+
+search_banner_description:
+  type: string
+  default: Welcome! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  description: Search banner description
+
+search_banner_link:
+  type: string
+  default: https://www.google.com
+  description: Search banner link
+
+search_banner_link_text:
+  type: string
+  default: Community guidelines >
+  description: Search banner link text
+
+cta_title:
+  type: string
+  default: Hire an Expert!
+  description: HP cta title
+
+cta_sub_title:
+  type: string
+  default: Need a hand? Lets us help you.
+  description: HP cta sub title
+
+cta_button_text:
+  type: string
+  default: Cta
+  description: HP cta button text
+
+cta_button_link:
+  type: string
+  default: https://www.google.com
+  description: HP cta button link
+
+latest_topics_amount:
+  default: 5
+  min: 1
+  max: 20
+
+category_topics:
+  type: string
+  default: General
+  description: HP category to show topics
+
+category_topics_amount:
+  default: 10
+  min: 1
+  max: 20
+
+left_external_category_title:
+  type: string
+  default: Knowledge base
+  description: The left external category title
+
+left_external_category_description:
+  type: string
+  default: Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur elit.Lorem ipsum dolor sit ametadipiscing elit.
+  description: The left external category description
+
+left_external_category_url:
+  type: string
+  default: https://support.monday.com/hc/en-us/articles/360003522920
+  description: The left external category url
+
+right_external_category_title:
+  type: string
+  default: Webinars
+  description: The right external category title
+
+right_external_category_description:
+  type: string
+  default: Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur elit.Lorem ipsum dolor sit ametadipiscing elit.
+  description: The right external category description
+
+right_external_category_url:
+  type: string
+  default: https://www.monday.com/webinars
+  description: The right external category url
+
+conversation_title:
+  type: string
+  default: Join the conversation
+  description: The title for the conversation section
+
+conversation_subtitle:
+  type: string
+  default: Find general information about monday.com, share your work and contact our team if you're having any trouble. We're here to help!
+  description: The subtitle for the conversation section
+
+product_help_title:
+  type: string
+  default: Product help
+  description: The title for the Product help section
+
+product_help_subtitle:
+  type: string
+  default: Explore this content for solutions and help with monday.com products. All include our core platform monday work management.
+  description: The subtitle for the Product help section
+
+announcements_title:
+  type: string
+  default: Announcements
+  description: The subtitle for the Announcements section
+
+announcements_subtitle:
+  type: string
+  default: Follow for updates about the monday.com community
+  description: The subtitle for the Announcements section
+
+recent_discussion_title:
+  type: string
+  default: Recent discussion
+  description: The subtitle for the Recent discussion section
+
+recent_discussion_subtitle:
+  type: string
+  default: Stay up-to-date on recent posts and show off your skills by answering a question
+  description: The subtitle for the Recent discussion section
+
+become_member_title:
+  type: string
+  default: Become a member
+  description: The title for the Become a member section
+
+become_member_subtitle:
+  type: string
+  default: Spark conversation with fellow monday.com users, share best practices, get inspired by workflows, and learn from product experts — all within the monday.com community.
+  description: The subtitle for the Become a member section
