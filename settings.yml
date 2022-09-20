@@ -1,11 +1,11 @@
 search_banner_title:
   type: string
-  default: Welcome to the community
+  default: Community forum
   description: Search banner title
 
 search_banner_description:
   type: string
-  default: Learn from fellow monday.com users and product experts
+  default: Welcome! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   description: Search banner description
 
 search_banner_link:
@@ -13,9 +13,14 @@ search_banner_link:
   default: https://www.google.com
   description: Search banner link
 
+search_banner_link_text:
+  type: string
+  default: Community guidelines >
+  description: Search banner link text
+
 cta_title:
   type: string
-  default: Can't find what you're looking for?
+  default: Hire an Expert!
   description: HP cta title
 
 cta_sub_title:
@@ -25,7 +30,7 @@ cta_sub_title:
 
 cta_button_text:
   type: string
-  default: Contact support
+  default: Cta
   description: HP cta button text
 
 cta_button_link:
@@ -34,7 +39,7 @@ cta_button_link:
   description: HP cta button link
 
 latest_topics_amount:
-  default: 5
+  default: 6
   min: 1
   max: 20
 
@@ -118,9 +123,19 @@ recent_discussion_subtitle:
   default: Stay up-to-date on recent posts and show off your skills by answering a question
   description: The subtitle for the Recent discussion section
 
+community_channels_title:
+  type: string
+  default: Community channels
+  description: The title for the Community channels section
+
+community_channels_subtitle:
+  type: string
+  default: Join your fellow monday.com users on your favorite platforms
+  description: The subtitle for the Community channels section
+
 become_member_title:
   type: string
-  default: Become a member
+  default: Become part of the monday.com community
   description: The title for the Become a member section
 
 become_member_subtitle:

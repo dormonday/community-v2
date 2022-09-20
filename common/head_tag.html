@@ -3,7 +3,7 @@
 <!-- general page settings -->
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
-    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/?preview_theme_id=6615" || url === "/categories?preview_theme_id=6615"){
+    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/?preview_theme_id=6615" || url === "/categories?preview_theme_id=6615"){
       let thisUser = Discourse.User.current(); 
       let isAdmin = false;
       if (thisUser && thisUser.admin){
@@ -13,7 +13,7 @@
         $('#navigation-bar .select-list a[href="/latest"]').click();
       }
     }
-    if (url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=44" || url === "/categories?preview_theme_id=6615" || url === "/latest?preview_theme_id=6615" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=44" || url === "/top?preview_theme_id=6615") {
+    if (url === "/categories?preview_theme_id=45" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest?preview_theme_id=6615" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')) {
       $('.custom-search-bar .search-widget .search-menu .search-input input[type="text"]').attr("placeholder", "Search topics, posts, users, or categories");
     }
   });
@@ -33,7 +33,7 @@
       return helper.h('li.get-started-button-wrapper', [
           helper.h('a.get-started-button', {
               title: 'Get Started',
-              text: 'Get Started >',
+              text: '',
               href: 'https://auth.monday.com/users/sign_up_new',
               target: '_blank'
           }),
@@ -150,7 +150,7 @@
   api.registerConnectorClass("below-site-header", "search-banner", {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/?preview_theme_id=6615" || url === "/categories"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=44" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=44" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=44" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=44" || url === "/top?preview_theme_id=6615"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
           component.set("displaySearchBanner", true); 
         } else {  
           component.set("displaySearchBanner", false); 
@@ -168,6 +168,7 @@
         <div class="wrap custom-search-banner-wrap">
           <h1>{{theme-setting 'search_banner_title'}}</h1>
           <p>{{theme-setting 'search_banner_description'}}</p>
+          <a target="_blank" href="{{theme-setting 'search_banner_link'}}">{{theme-setting 'search_banner_link_text'}}</a>
         </div>
         <div class="custom-search-bar wrap">
           {{mount-widget widget="search-widget"}}
@@ -182,11 +183,11 @@
   const navigationComponent = require('discourse/components/d-navigation').default;
   navigationComponent.reopen({
     isHomepage: function() {
-      return (window.location.pathname === "/" || window.location.pathname === "/?preview_theme_id=4988" || window.location.pathname === "/?preview_theme_id=44" || window.location.pathname === "/?preview_theme_id=6615" ||  window.location.pathname === "/categories" || window.location.pathname === "/categories?preview_theme_id=4988" || window.location.pathname === "/categories?preview_theme_id=44" || window.location.pathname === "/categories?preview_theme_id=6615" || window.location.pathname === "/latest" || window.location.pathname === "/latest?preview_theme_id=4988" || window.location.pathname === "/latest?preview_theme_id=44" || window.location.pathname === "/latest?preview_theme_id=6615" || window.location.pathname === "/new" || window.location.pathname === "/new?preview_theme_id=4988" || window.location.pathname === "/new?preview_theme_id=44" || window.location.pathname === "/new?preview_theme_id=6615")
+      return (window.location.pathname === "/" || window.location.pathname === "/?preview_theme_id=4988" || window.location.pathname === "/?preview_theme_id=45" || window.location.pathname === "/?preview_theme_id=6615" ||  window.location.pathname === "/categories" || window.location.pathname === "/categories?preview_theme_id=4988" || window.location.pathname === "/categories?preview_theme_id=45" || window.location.pathname === "/categories?preview_theme_id=6615" || window.location.pathname === "/latest" || window.location.pathname === "/latest?preview_theme_id=4988" || window.location.pathname === "/latest?preview_theme_id=45" || window.location.pathname === "/latest?preview_theme_id=6615" || window.location.pathname === "/new" || window.location.pathname === "/new?preview_theme_id=4988" || window.location.pathname === "/new?preview_theme_id=45" || window.location.pathname === "/new?preview_theme_id=6615")
     }.property()
   });
   api.onPageChange((url, title) => {
-    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=44" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=44" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=44" || url === "/top?preview_theme_id=6615"){
+    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){
       let $topics = $('.topics-container tbody tr');
       for (let i = settings.latest_topics_amount; i < $topics.length; i++){
         $($topics[i]).css('display','none');
@@ -199,7 +200,7 @@
     api.onPageChange((url, title) => {
       setTimeout(function () {
       if (window.innerWidth < 768) {
-          $('.custom-categories-boxes-container').slick({
+          $('.custom-categories-boxes-container, .community-channels-buttons').not('.slick-initialized').slick({
               slidesToShow: 1,
               slidesToScroll: 1,
               infinite: true,
@@ -207,10 +208,10 @@
               arrows: false,
               dots: false,
               variableWidth: true
-          });
-      }
-  }, 1500)
-});
+          }); 
+        }
+      }, 1200)
+    });
 </script>
 
 <!-- page nav -->
@@ -234,20 +235,12 @@
         btnClass=createTopicClass
         canCreateTopicOnTag=canCreateTopicOnTag
       }}
-      {{#if showCategoryAdmin}}
-        {{categories-admin-dropdown
-          onChange=(action "selectCategoryAdminDropdownAction")
-          options=(hash
-            triggerOnChangeOnTab=false
-          )
-        }}
-      {{/if}}
     </div>
   </div> -->
 </script>
 
 <script type="text/x-handlebars" data-template-name="components/d-navigation-orig">
-{{bread-crumbs categories=categories category=category noSubcategories=noSubcategories tag=tag additionalTags=additionalTags}}
+{{bread-crumbs categories=categories subCategories=subCategories category=category noSubcategories=noSubcategories tag=tag additionalTags=additionalTags}}
 {{#unless additionalTags}}
   {{!-- nav bar doesn't work with tag intersections --}}
   {{navigation-bar navItems=navItems filterMode=filterMode category=category}}
@@ -325,7 +318,7 @@
   api.registerConnectorClass('below-site-header', 'hp-above-footer-categories-boxes', {
     setupComponent(args, component) {
       api.onPageChange((url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=44" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=44" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=44" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=44" || url === "/top?preview_theme_id=6615"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615"){ 
           component.set('displayCategoriesBoxes', true);
           component.set("loadingCategories", true);
           let thisUser = Discourse.User.current(); 
@@ -336,7 +329,8 @@
           component.set("isAdmin", isAdmin);
           ajax("/categories.json").then (function(result){
             let categories = [];
-            result.category_list.categories.filter(category => category.notification_level != 0).forEach(function(category){
+            let filteredCategories = result.category_list.categories.filter(category => category.notification_level != 0)
+            filteredCategories.forEach(function(category){
               categories.push(category);
             });
             component.set("loadingTopics", false);
@@ -420,7 +414,7 @@
       <!-- {{log 'test' }} -->
       {{#each categories as |c|}} 
       {{#if (or (eq c.id 1) (eq c.id 2) (eq c.id 5) (eq c.id 4))}}
-      <a class="category-box-container" href='\c\\{{c.slug}}'>
+      <a class="category-box-container" href='/c/{{c.slug}}'>
         <!-- <div class="category-image-container">
           <a class="category-box-link" href='\c\\{{c.slug}}'>
             {{cdn-img src=c.uploaded_background.url class="category-box-image"}}
@@ -437,7 +431,7 @@
           <p class="category-description">{{html-safe c.description_excerpt}}</p>
         </div> -->
         <div class="category-topic-count">{{c.topic_count}} posts</div>
-        <a class="category-box-link" href='\c\\{{c.slug}}'>
+        <a class="category-box-link" href='/c/{{c.slug}}'>
           <span>Join the conversation</span>
           <div class="category-arrow-icon"></div>
         </a>
@@ -445,88 +439,31 @@
       {{/if}}
     {{/each}}
   </div>
-  <!-- <div class="categories-show-button-wrapper">
-    <button class="show-more-categories-button">Show more categories<i class="show-categories-button-icon"></i></button>
-    <button class="show-less-categories-button hide">Show less categories<i class="show-categories-button-icon"></i></button>
-  </div> -->
   <div class="categories-border-bottom"></div>
   </div>
   {{/if}}
-
-  {{#if displayCategoriesBoxes}}
-  <div class="wrap">
-    <div class="custom-categories-boxes-container-header">
-      <div class="categories-boxes-title">{{theme-setting 'product_help_title'}}</div>
-      <div class="categories-boxes-subtitle">{{theme-setting 'product_help_subtitle'}}</div>
-    </div>
-    {{#if isAdmin}}
-      <a href="/categories">Categories</a>
-    {{/if}}
-    <div class="custom-categories-boxes-section">
-    <div class="custom-categories-boxes-container product-help">
-      {{#each categories as |c|}}
-      {{#if (or (eq c.id 6) (eq c.id 8) (eq c.id 10) (eq c.id 18) (eq c.id 16))}}
-      <a class="category-box-container" href='\c\\{{c.slug}}'>
-        <div class="category-image product-help"></div>
-        <div class="category-topic-count">{{c.topic_count}} posts</div>
-        <a class="category-box-link" href='\c\\{{c.slug}}'>
-          <span>Join the conversation</span>
-          <div class="category-arrow-icon"></div>
-        </a>
-      </a>
-      {{/if}}
-      {{/each}}
-    </div>
-    <div class="more-categories-container">
-      {{#each categories as |c|}}
-      {{#if (or (eq c.id 6) (eq c.id 8))}}
-      <div class="single-category-section">
-        <div class="single-category-image"></div>
-        <div class="single-category-content">
-          <!-- <div class="single-category-name">{{c.name}}</div> -->
-          <a class="single-category-link" href='\c\\{{c.slug}}'>
-            <span>Join the conversation</span>
-            <div class="single-category-arrow-icon"></div>
-          </a>
-        </div>
-      </div>
-      {{/if}}
-      {{/each}}
-    </div>
-  </div>
-    <!-- <div class="categories-show-button-wrapper">
-      <button class="show-more-categories-button">Show more categories<i class="show-categories-button-icon"></i></button>
-      <button class="show-less-categories-button hide">Show less categories<i class="show-categories-button-icon"></i></button>
-    </div> -->
-    <div class="categories-border-bottom"></div>
-  </div>
-  {{/if}}
-</script>
-
-<script type="text/discourse-plugin" version="0.8">
-  const ajax = require('discourse/lib/ajax').ajax;
-  ajax("/c/general/5.json").then (function(result){
-    const announcements = [];
-    result.topic_list.topics.forEach(announcement => announcements.push(announcement))
-    component.set('displayCategoriesBoxes', true);
-
-    console.log('announcements: ', announcements)
-  });
 </script>
 
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
-    console.log('test')
-    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/?preview_theme_id=6615"){
-      $('.topics-container-header').css('display', 'flex')
+    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url.startsWith('/latest')){
+      $('.topics-container-header-section').css('display', 'block')
+      $('.announcements-container').css('display', 'block')
+      $('.see-more-button').css('display', 'flex')
       $('#main-outlet').css({'margin-left': 'unset', 'margin-right': 'unset'})
     } else {
-      $('.topics-container-header').css('display', 'none')
+      $('.topics-container-header-section').css('display', 'none')
+      $('.see-more-button').css('display', 'none')
+      $('.announcements-container').css('display', 'none')
+
       if (window.innerWidth < 768) {
         $('#main-outlet').css({'margin-left': 'unset', 'margin-right': 'unset'})
       } else {
         $('#main-outlet').css({'margin-left': '118px', 'margin-right': '165px'})
       }
+    }
+    if (url.startsWith("/latest")) {
+
     }
   });
 </script>
@@ -534,29 +471,6 @@
 <!-- topics -->
 <script type="text/x-handlebars" data-template-name="discovery/topics">
   <div class="topics-section">
-    <!-- <div class="announcements-topicts-container">
-      <div class="topicts-container-header">
-        <div class="topicts-title">{{theme-setting 'announcements_title'}}</div>
-        <div class="topicts-subtitle">{{theme-setting 'announcements_subtitle'}}</div>
-      </div>
-      <div class="topics-container">
-            <div class="top-lists">
-              {{#each announcements as |a|}} 
-              {{log 'test'}}
-              <div>{{a.title}}</div>
-              {{/each}}
-            </div>
-      </div>
-      <a class="see-more-button">
-        <div class="see-more-button-text">See more announcements</div>
-        <div class="see-more-button-arrow-icon"></div>
-      </a>
-  </div> -->
-  <!-- <div class="recent-discussion-topics-container"> -->
-    <!-- <div class="topicts-container-header">
-      <div class="topicts-title">{{theme-setting 'recent_discussion_title'}}</div>
-      <div class="topicts-subtitle">{{theme-setting 'recent_discussion_subtitle'}}</div>
-    </div> -->
     <div class="topics-container">
       {{#discovery-topics-list
         model=model
@@ -580,79 +494,119 @@
           {{/if}}
         {{/if}}
         {{plugin-outlet name="before-topic-list" args=(hash category=category)}}
-      
-        {{#if hasTopics}}
-          {{topic-list
-            highlightLastVisited=true
-            top=top
-            showTopicPostBadges=showTopicPostBadges
-            showPosters=true
-            canBulkSelect=canBulkSelect
-            changeSort=(route-action "changeSort")
-            toggleBulkSelect=(action "toggleBulkSelect")
-            updateAutoAddTopicsToBulkSelect=(action "updateAutoAddTopicsToBulkSelect")
-            hideCategory=model.hideCategory
-            order=order
-            ascending=ascending
-            bulkSelectEnabled=bulkSelectEnabled
-            selected=selected
-            expandGloballyPinned=expandGloballyPinned
-            expandAllPinned=expandAllPinned
-            category=category
-            topics=model.topics
-            discoveryList=true
-            scrollOnLoad=true
-            onScroll=discoveryTopicList.saveScrollPosition}}
-        {{/if}}
-        {{plugin-outlet name="after-topic-list" args=(hash category=category)}}
-      {{/discovery-topics-list}}
-    </div>
-    <!-- <footer class="topic-list-bottom">
-      {{conditional-loading-spinner condition=model.loadingMore}}
-      {{#if allLoaded}}
-        {{#if showDismissRead}}
-          {{d-button
-            class="btn-default dismiss-read"
-            id="dismiss-topics"
-            action=(action "dismissReadPosts")
-            title="topics.bulk.dismiss_tooltip"
-            label="topics.bulk.dismiss_button"}}
-        {{/if}}
-        {{#if showResetNew}}
-          {{d-button
-            class="btn-default dismiss-read"
-            action=(action "resetNew")
-            id="dismiss-new"
-            icon="check"
-            label="topics.bulk.dismiss_new"}}
-        {{/if}}
-    
-        {{#footer-message education=footerEducation message=footerMessage}}
-          {{#if latest}}
-            {{#if canCreateTopicOnCategory}}
-              {{i18n "topics.none.ready_to_create"}}
-              <a href {{action "createTopic"}}>{{i18n "topic.suggest_create_topic"}}</a>
-            {{/if}}
-          {{else if top}}
-            {{#link-to "discovery.categories"}}{{i18n "topic.browse_all_categories"}}{{/link-to}}, {{#link-to "discovery.latest"}}{{i18n "topic.view_latest_topics"}}{{/link-to}} {{i18n "or"}} {{i18n "filters.top.other_periods"}}
-            {{top-period-buttons period=period action=(action "changePeriod")}}
-          {{else}}
-            {{#link-to "discovery.categories"}} {{i18n "topic.browse_all_categories"}}{{/link-to}} {{i18n "or"}} {{#link-to "discovery.latest"}}{{i18n "topic.view_latest_topics"}}{{/link-to}}
+        <div class="latest-topics-container">
+          <div class="topics-container-header-section">
+            <div class="topics-title">{{theme-setting 'recent_discussion_title'}}</div>
+            <div class="topics-subtitle">{{theme-setting 'recent_discussion_subtitle'}}</div>
+          </div>
+          {{#if hasTopics}}
+            {{topic-list
+              highlightLastVisited=true
+              top=top
+              showTopicPostBadges=showTopicPostBadges
+              showPosters=true
+              canBulkSelect=canBulkSelect
+              changeSort=(route-action "changeSort")
+              toggleBulkSelect=(action "toggleBulkSelect")
+              updateAutoAddTopicsToBulkSelect=(action "updateAutoAddTopicsToBulkSelect")
+              hideCategory=model.hideCategory
+              order=order
+              ascending=ascending
+              bulkSelectEnabled=bulkSelectEnabled
+              selected=selected
+              expandGloballyPinned=expandGloballyPinned
+              expandAllPinned=expandAllPinned
+              category=category
+              topics=model.topics
+              discoveryList=true
+              scrollOnLoad=true
+              onScroll=discoveryTopicList.saveScrollPosition}}
           {{/if}}
-        {{/footer-message}}
-      {{/if}}
-    </footer> -->
-
-    <!-- <a class="see-more-button">
-      <div class="see-more-button-text">See more discussions</div>
-      <div class="see-more-button-arrow-icon"></div>
-    </a> -->
+          {{plugin-outlet name="after-topic-list" args=(hash category=category)}}
+          <a target="_blank" class="see-more-button">
+            <div class="see-more-button-text">See more discussions</div>
+            <div class="see-more-button-arrow-icon"></div>
+          </a>
+        </div>
+        {{/discovery-topics-list}}
+    </div>
   <!-- </div> -->
 </div>
 </script>
 
+<!-- hp-before-topic-list-announcements -->
+<script type="text/discourse-plugin" version="0.8">
+  const ajax = require('discourse/lib/ajax').ajax;
+  api.registerConnectorClass('before-topic-list', 'hp-before-topic-list-announcements', {
+    setupComponent(args, component) {
+      api.onPageChange(async(url, title) => {
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
+          component.set('displayAnnouncements', true);
+          component.set("loadingAnnouncements", true);
+          let thisUser = Discourse.User.current(); 
+          let isAdmin = false;
+          if (thisUser && thisUser.admin){
+            isAdmin = true;
+          }
+          component.set("isAdmin", isAdmin);
+          const announcementTopics = await ajax("/c/general/5.json");
+          let announcements = [];
+          announcementTopics.topic_list.topics.forEach(topic => {
+            if(announcements.length < 6) announcements.push(topic)
+          })
+          component.set('announcements', announcements);
+          component.set('loadingTopics', false);
+        } else {
+          component.set('displayAnnouncements', false);
+        }
+      });
+    }
+  });
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/before-topic-list/hp-before-topic-list-announcements">
+  <div class="announcements-container">
+    <div class="topics-container-header-section">
+      <div class="topics-title">{{theme-setting 'announcements_title'}}</div>
+      <div class="topics-subtitle">{{theme-setting 'announcements_subtitle'}}</div>
+    </div>
+    <table class="announcements-list">
+      <thead class="announcements-list-header">
+        <th>Topic</th>
+      </thead>
+      <tbody>
+        {{#each announcements as |announcement|}}
+        <tr class="announcement-section">
+          <td class="announcement-content">
+            <a href="/t/{{announcement.slug}}/{{announcement.id}}" class="announcement-title">{{announcement.title}}</a>
+            <div class="announcement-bottom">
+              <a href='/c/announcements/10' class="announcement-category">
+                <div class="announcement-category-square"></div>
+                <div class="announcement-category-text">Announcement</div>
+              </a>
+              <div class="announcement-tags">
+                {{#each announcement.tags as |tag|}}
+                <a href='/tag/{{tag}}' class="announcement-tag">{{tag}}</a>
+                {{/each}}
+              </div>
+            </div>
+          </td>
+          <!-- <td class="announcement-numbers">
+            <div class="announcement-reply-count0">{{announcement.reply_count}}</div>
+          </td> -->
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <a target="_blank" class="see-more-button">
+      <div class="see-more-button-text">See more announcements</div>
+      <div class="see-more-button-arrow-icon"></div>
+    </a>
+  </div>
+</script>
+
 <!-- homepage topics header -->
-<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/topicts-header">
+<!-- <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/topicts-header">
   <div class="topics-container-header">
     <div class="topics-container-header-section">
       <div class="topics-title">{{theme-setting 'recent_discussion_title'}}</div>
@@ -663,14 +617,25 @@
       <div class="topics-subtitle">{{theme-setting 'announcements_subtitle'}}</div>
     </div>
 </div>
-</script>
+</script> -->
 
 <!-- hp above footer cta banner page settings -->
 <script type="text/discourse-plugin" version="0.8">
+  api.registerConnectorClass("above-footer", "hp-above-footer-community-channels" , {
+    setupComponent(args, component) {
+      api.onPageChange((url) => {
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
+          component.set("displayCommunityChannelBanner", true); 
+        } else {  
+          component.set("displayCommunityChannelBanner", false); 
+        }
+      });
+    }
+  });
   api.registerConnectorClass("above-footer", "hp-above-footer-cta-banner" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=44" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=44" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=44" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=44" || url === "/top?preview_theme_id=6615"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
           component.set("displayCtaBanner", true); 
         } else {  
           component.set("displayCtaBanner", false); 
@@ -681,7 +646,7 @@
   api.registerConnectorClass("above-footer", "hp-above-footer-more-discussions-btn" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=44" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=44" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=44" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=44" || url === "/top?preview_theme_id=6615"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
           component.set("displayCtaBanner", true); 
         } else {  
           component.set("displayCtaBanner", false); 
@@ -701,13 +666,129 @@
   {{/if}} -->
 </script>
 
+<!-- hp-above-footer-products -->
+<script type="text/discourse-plugin" version="0.8">
+  const ajax = require('discourse/lib/ajax').ajax;
+  api.registerConnectorClass('above-footer', 'hp-above-footer-products', {
+    setupComponent(args, component) {
+      api.onPageChange(async(url, title) => {
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615"){ 
+          component.set('displaySubCategoriesBoxes', true);
+          component.set("loadingSubCategories", true);
+          let thisUser = Discourse.User.current(); 
+          let isAdmin = false;
+          if (thisUser && thisUser.admin){
+            isAdmin = true;
+          }
+          component.set("isAdmin", isAdmin);
+
+          const categories = await ajax("/categories.json");
+          let filteredCategories = categories.category_list.categories.filter(category => category.notification_level != 0)
+          let subCategories = [];
+          await Promise.all(filteredCategories.map(async function(category) {
+            if (category.id === 10) {
+              return await Promise.all(category.subcategory_ids.map(async function(subCategoty) {
+                const result = await ajax(`/c/${subCategoty}/show.json`)
+                subCategories.push(result.category)
+                return result;
+              }))
+            }
+          }))
+          component.set('subCategories', subCategories);
+          component.set('loadingTopics', false);
+
+        } else {
+          component.set('displaySubCategoriesBoxes', false);
+        }
+      });
+    }
+  });
+</script>
+
+<!-- hp above footer products section -->
+<script type="text/x-handlebars" data-template-name="/connectors/above-footer/hp-above-footer-products">
+  {{#if displaySubCategoriesBoxes}}
+  <div class="wrap">
+    <div class="categories-border-top"></div>
+    <div class="custom-categories-boxes-container-header">
+      <div class="categories-boxes-title">{{theme-setting 'product_help_title'}}</div>
+      <div class="categories-boxes-subtitle">{{theme-setting 'product_help_subtitle'}}</div>
+    </div>
+    <div class="custom-categories-boxes-container">
+      {{#each subCategories as |s|}} 
+      {{log s}}
+      <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/announcements/{{s.slug}}'>
+        <!-- <div class="category-image-container">
+          <a class="category-box-link" href='\c\\{{c.slug}}'>
+            {{cdn-img src=c.uploaded_background.url class="category-box-image"}}
+            <div class="image-bg-container">
+            </div>
+          </a>
+        </div> -->
+        <!-- <img src=c.uploaded_background.url /> -->
+        <div class="category-image"></div>
+        <div class="category-title-container">
+          <h3 class="category-title">{{s.name}}</h3>
+        </div>
+        <!-- <div class="category-description-container">
+          <p class="category-description">{{html-safe c.description_excerpt}}</p>
+        </div> -->
+        <div class="category-topic-count">{{s.topic_count}} posts</div>
+        <a class="category-box-link" href='/c/school/{{s.slug}}'>
+          <span>Join the conversation</span>
+          <div class="category-arrow-icon"></div>
+        </a>
+      </a>
+      {{/each}}
+    </div>
+    <div class="categories-border-bottom"></div>
+  </div>
+  {{/if}}
+</script>
+
+<!-- hp above footer community channels banner -->
+<script type="text/x-handlebars" data-template-name="/connectors/above-footer/hp-above-footer-community-channels">
+  {{#if displayCommunityChannelBanner}}
+    <div class="community-channels-section">
+      <div class="community-channels-header">
+        <div class="community-channels-title">{{theme-setting 'community_channels_title'}}</div>
+        <div class="community-channels-subtitle">{{theme-setting 'community_channels_subtitle'}}</div>
+      </div>
+      <div class="community-channels-buttons">
+        <a class="community-channels-button">
+          <div class="community-channels-button-facebook-icon"></div>
+          <div class="community-channels-button-text">Facebook group</div>
+          <div class="community-channels-button-arrow-icon"></div>
+        </a>
+        <a class="community-channels-button">
+          <div class="community-channels-button-twitter-icon"></div>
+          <div class="community-channels-button-text">Twitter community</div>
+          <div class="community-channels-button-arrow-icon"></div>
+        </a>
+        <a class="community-channels-button">
+          <div class="community-channels-button-developer-icon"></div>
+          <div class="community-channels-button-text">Developer forum</div>
+          <div class="community-channels-button-arrow-icon"></div>
+        </a>
+        <a class="community-channels-button">
+          <div class="community-channels-button-reddit-icon"></div>
+          <div class="community-channels-button-text">Reddit community</div>
+          <div class="community-channels-button-arrow-icon"></div>
+        </a>
+      </div>
+      <div class="community-channels-bottom"></div>
+    </div>
+  {{/if}}
+</script>
+
 <!-- hp above footer cta banner -->
 <script type="text/x-handlebars" data-template-name="/connectors/above-footer/hp-above-footer-cta-banner">
   {{#if displayCtaBanner}}
+  <div class="become-member-conatiner">
     <div class="become-member-section">
       <div class="become-member-title">{{theme-setting 'become_member_title'}}</div>
       <div class="become-member-content">
-        <div class="become-memeber-icon"></div>
+        <!-- <div class="become-memeber-icon"></div> -->
         <div>
           <div class="become-member-subtitle">{{theme-setting 'become_member_subtitle'}}</div>
           <a class="become-member-button">
@@ -717,6 +798,7 @@
         </div>
       </div>
     </div>
+  </div>
   {{/if}}
 </script>
 
@@ -724,17 +806,17 @@
   {{add-category-tag-classes category=category tagName=""}}
   <section class="category-heading">
     <div class="category-header-container">
-      <div class="category-image-container">
-        {{cdn-img src=category.uploaded_logo.url class="category-image"}}
-        <div class="category-image-bg"></div>
-      </div>
       <div class="category-info-container">
         <div class="category-title">
-          <span>{{category.name}}</span>
+          <span>
+            {{category.name}}
+          </span>
         </div>
         {{#if category.description}}
         <div class="category-description">
-          <p>{{html-safe category.description}}</p>
+          <p>
+            {{html-safe category.description}}
+          </p>
         </div>
         {{/if}}
       </div>
@@ -845,7 +927,6 @@
   </a>
 </script>
 
-<!-- footer -->
 <!-- hp above footer cta banner page settings -->
 <script type="text/discourse-plugin" version="0.8">
   api.registerConnectorClass("below-footer", "footer", {
@@ -861,6 +942,7 @@
   });
 </script>
 
+<!-- footer -->
 <script type="text/x-handlebars" data-template-name="/connectors/below-footer/footer">
   <div class="custom-cta-banner" >
     <div class="custom-cta-banner-title">{{theme-setting 'cta_title'}}</div>

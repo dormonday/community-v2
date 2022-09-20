@@ -34,7 +34,15 @@
     "button_arrow_icon": "assets/button_arrow_icon.svg",
     "button_arrow_icon_purple": "assets/button_arrow_icon_purple.svg",
     "more_topics_white_arrow": "assets/more_topics_white_arrow.svg",
-    "more_topics_purple_arrow": "assets/more_topics_purple_arrow.svg"
+    "more_topics_purple_arrow": "assets/more_topics_purple_arrow.svg",
+    "mobile_cat_banner": "assets/mobile_cat_banner.svg",
+    "desktop_cat_banner": "assets/desktop_cat_banner.svg",
+    "desktop_welcome_community": "assets/desktop_welcome_community.jpg",
+    "mobile_welcome_community": "assets/mobile_welcome_community.jpg",
+    "facebook_icon": "assets/facebook_icon.svg",
+    "twitter_icon": "assets/twitter_icon.svg",
+    "dev_icon": "assets/dev_icon.svg",
+    "reddit_icon": "assets/reddit_icon.svg"
   },
   "color_schemes": {
     "New Color Scheme": {
