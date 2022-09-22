@@ -499,7 +499,7 @@
             <div class="topics-title">{{theme-setting 'recent_discussion_title'}}</div>
             <div class="topics-subtitle">{{theme-setting 'recent_discussion_subtitle'}}</div>
           </div>
-          {{#if hasTopics}}
+          <!-- {{#if hasTopics}}
             {{topic-list
               highlightLastVisited=true
               top=top
@@ -521,7 +521,8 @@
               discoveryList=true
               scrollOnLoad=true
               onScroll=discoveryTopicList.saveScrollPosition}}
-          {{/if}}
+          {{/if}} -->
+          <CategoriesTopicList @topics={{this.topics}} @filter="latest" @class="latest-topic-list" />
           {{plugin-outlet name="after-topic-list" args=(hash category=category)}}
           <a target="_blank" class="see-more-button">
             <div class="see-more-button-text">See more discussions</div>
