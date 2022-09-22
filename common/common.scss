@@ -156,7 +156,7 @@ body.navigation-categories{
 }
 
 body.category,
-body.navigation-topics,
+body.navigation-categories,
 body.tags-page {
   table.topic-list {
     thead.topic-list-header {
@@ -1261,7 +1261,7 @@ body.tags-page {
 }
 
 /* change homepage navigation */
-.navigation-topics,
+.navigation-categories,
 .navigation-categories {
   .navigation-container {
     .navigation {
@@ -3366,7 +3366,7 @@ body {
   }
 
   /* change homepage navigation */
-  .navigation-topics,
+  .navigation-categories,
   .navigation-categories {
     .navigation-container {
       .navigation {
