@@ -158,11 +158,14 @@ body.navigation-categories{
 body.category,
 body.navigation-categories,
 body.tags-page {
-  table.topic-list {
-    thead.topic-list-header {
+  div.latest-topic-list {
+    div.table-heading {
       border: 1px solid #ebebeb;
       border-radius: 4px;
-
+      color: #323338;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 20px;
       th {
         color: #323338;
         font-size: 15px;
