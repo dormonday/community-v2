@@ -142,7 +142,7 @@ body.tags-page {
   }
 }
 
-body.navigation-topics {
+body.navigation-categories{
   #list-area {
     margin-bottom: 70px;
   }
@@ -1066,7 +1066,7 @@ body.tags-page {
 // }
 
 /* topics */
-.navigation-topics {
+.navigation-categories{
   .topics-section {
     .announcements-container {
       border-top: 1px solid #D5D8DF;
@@ -3355,7 +3355,7 @@ body {
     }
   }
 
-  body.navigation-topics {
+  body.navigation-categories{
     .topics-container {
       .contents {
         display: flex;
@@ -3735,7 +3735,7 @@ body {
   }
 
   /* topics */
-  .navigation-topics {
+  .navigation-categories{
     .topics-section {
       display: flex;
       padding: 0 70px;
