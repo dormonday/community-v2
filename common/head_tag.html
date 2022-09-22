@@ -189,6 +189,7 @@
   api.onPageChange((url, title) => {
     if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){
       let $topics = $('.topics-container tbody tr');
+      console.log($topics)
       for (let i = settings.latest_topics_amount; i < $topics.length; i++){
         $($topics[i]).css('display','none');
       }
