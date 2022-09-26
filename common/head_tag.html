@@ -416,21 +416,11 @@
       {{log c}}
       {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 72) (eq c.id 8))}}
       <a class="category-box-container" href='/c/{{c.slug}}'>
-        <!-- <div class="category-image-container">
-          <a class="category-box-link" href='\c\\{{c.slug}}'>
-            <div class="image-bg-container">
-            </div>
-          </a>
-        </div> -->
-        <!-- <img src=c.uploaded_background.url /> -->
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
         <div class="category-image" style="background-image: url({{c.uploaded_background.url}})"></div>
         <div class="category-title-container">
           <h3 class="category-title">{{c.name}}</h3>
         </div>
-        <!-- <div class="category-description-container">
-          <p class="category-description">{{html-safe c.description_excerpt}}</p>
-        </div> -->
         <div class="category-topic-count">{{c.topic_count}} posts</div>
         <a class="category-box-link" href='/c/{{c.slug}}'>
           <span>Join the conversation</span>
@@ -720,21 +710,11 @@
       {{#each subCategories as |s|}} 
       {{log s}}
       <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/workflows/{{s.slug}}'>
-        <!-- <div class="category-image-container">
-          <a class="category-box-link" href='\c\\{{c.slug}}'>
-            {{cdn-img src=c.uploaded_background.url class="category-box-image"}}
-            <div class="image-bg-container">
-            </div>
-          </a>
-        </div> -->
-        <!-- <img src=c.uploaded_background.url /> -->
-        <div class="category-image"></div>
+        <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
+        <div class="category-image" style="background-image: url({{s.uploaded_background.url}})"></div>
         <div class="category-title-container">
           <h3 class="category-title">{{s.name}}</h3>
         </div>
-        <!-- <div class="category-description-container">
-          <p class="category-description">{{html-safe c.description_excerpt}}</p>
-        </div> -->
         <div class="category-topic-count">{{s.topic_count}} posts</div>
         <a class="category-box-link" href='/c/workflows/{{s.slug}}'>
           <span>Join the conversation</span>
