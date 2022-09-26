@@ -706,7 +706,7 @@
       <div class="categories-boxes-title">{{theme-setting 'product_help_title'}}</div>
       <div class="categories-boxes-subtitle">{{theme-setting 'product_help_subtitle'}}</div>
     </div>
-    <div class="custom-categories-boxes-container">
+    <div class="custom-categories-boxes-container subcategory">
       {{#each subCategories as |s|}} 
       {{log s}}
       <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/workflows/{{s.slug}}'>

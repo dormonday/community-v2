@@ -3578,6 +3578,9 @@ body {
       margin: 0px 0px 0px 120px;
     }
 
+    .custom-categories-boxes-container.subcategory {
+      flex-wrap: wrap;
+    }
     .custom-categories-boxes-container {
       display: flex;
       margin: 0px 120px;
@@ -3585,7 +3588,6 @@ body {
       transition: all 0.5s ease;
       .subcategory.category-box-container {
         width: 20%;
-        flex-wrap: wrap;
 
         &:hover {
           background: var(--hovercolor);
