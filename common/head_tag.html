@@ -413,6 +413,7 @@
     <div class="custom-categories-boxes-container">
       <!-- {{log 'test' }} -->
       {{#each categories as |c|}} 
+      {{log c}}
       {{#if (or (eq c.id 1) (eq c.id 2) (eq c.id 5) (eq c.id 4))}}
       <a class="category-box-container" href='/c/{{c.slug}}'>
         <!-- <div class="category-image-container">
@@ -576,6 +577,7 @@
       </thead>
       <tbody>
         {{#each announcements as |announcement|}}
+        {{log announcement}}
         <tr class="announcement-section">
           <td class="announcement-content">
             <a href="/t/{{announcement.slug}}/{{announcement.id}}" class="announcement-title">{{announcement.title}}</a>
