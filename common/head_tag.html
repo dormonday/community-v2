@@ -414,16 +414,16 @@
       <!-- {{log 'test' }} -->
       {{#each categories as |c|}} 
       {{log c}}
-      {{#if (or (eq c.id 1) (eq c.id 2) (eq c.id 5) (eq c.id 4))}}
+      {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 72) (eq c.id 8))}}
       <a class="category-box-container" href='/c/{{c.slug}}'>
         <!-- <div class="category-image-container">
           <a class="category-box-link" href='\c\\{{c.slug}}'>
-            {{cdn-img src=c.uploaded_background.url class="category-box-image"}}
             <div class="image-bg-container">
             </div>
           </a>
         </div> -->
         <!-- <img src=c.uploaded_background.url /> -->
+        {{cdn-img src=c.uploaded_background.url class="category-box-image"}}
         <div class="category-image"></div>
         <div class="category-title-container">
           <h3 class="category-title">{{c.name}}</h3>
@@ -688,7 +688,7 @@
           let filteredCategories = categories.category_list.categories.filter(category => category.notification_level != 0)
           let subCategories = [];
           await Promise.all(filteredCategories.map(async function(category) {
-            if (category.id === 10) {
+            if (category.id === 5) {
               return await Promise.all(category.subcategory_ids.map(async function(subCategoty) {
                 const result = await ajax(`/c/${subCategoty}/show.json`)
                 subCategories.push(result.category)
@@ -719,7 +719,7 @@
     <div class="custom-categories-boxes-container">
       {{#each subCategories as |s|}} 
       {{log s}}
-      <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/announcements/{{s.slug}}'>
+      <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/workflows/{{s.slug}}'>
         <!-- <div class="category-image-container">
           <a class="category-box-link" href='\c\\{{c.slug}}'>
             {{cdn-img src=c.uploaded_background.url class="category-box-image"}}
@@ -736,7 +736,7 @@
           <p class="category-description">{{html-safe c.description_excerpt}}</p>
         </div> -->
         <div class="category-topic-count">{{s.topic_count}} posts</div>
-        <a class="category-box-link" href='/c/school/{{s.slug}}'>
+        <a class="category-box-link" href='/c/workflows/{{s.slug}}'>
           <span>Join the conversation</span>
           <div class="category-arrow-icon"></div>
         </a>
