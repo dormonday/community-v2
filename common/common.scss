@@ -3583,9 +3583,9 @@ body {
       margin: 0px 120px;
       padding-bottom: 73px;
       transition: all 0.5s ease;
-      flex-wrap: wrap;
       .subcategory.category-box-container {
         width: 20%;
+        flex-wrap: wrap;
 
         &:hover {
           background: var(--hovercolor);
