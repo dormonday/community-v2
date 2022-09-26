@@ -3,7 +3,7 @@
 <!-- general page settings -->
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
-    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/categories?preview_theme_id=44"){
+    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/?preview_theme_id=6615" || url === "/categories?preview_theme_id=6615"){
       let thisUser = Discourse.User.current(); 
       let isAdmin = false;
       if (thisUser && thisUser.admin){
@@ -13,7 +13,7 @@
         $('#navigation-bar .select-list a[href="/latest"]').click();
       }
     }
-    if (url === "/categories?preview_theme_id=45" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest?preview_theme_id=44" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')) {
+    if (url === "/categories?preview_theme_id=45" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest?preview_theme_id=6615" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')) {
       $('.custom-search-bar .search-widget .search-menu .search-input input[type="text"]').attr("placeholder", "Search topics, posts, users, or categories");
     }
   });
@@ -150,7 +150,7 @@
   api.registerConnectorClass("below-site-header", "search-banner", {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
           component.set("displaySearchBanner", true); 
         } else {  
           component.set("displaySearchBanner", false); 
@@ -183,13 +183,12 @@
   const navigationComponent = require('discourse/components/d-navigation').default;
   navigationComponent.reopen({
     isHomepage: function() {
-      return (window.location.pathname === "/" || window.location.pathname === "/?preview_theme_id=4988" || window.location.pathname === "/?preview_theme_id=45" || window.location.pathname === "/?preview_theme_id=44" ||  window.location.pathname === "/categories" || window.location.pathname === "/categories?preview_theme_id=4988" || window.location.pathname === "/categories?preview_theme_id=45" || window.location.pathname === "/categories?preview_theme_id=44" || window.location.pathname === "/latest" || window.location.pathname === "/latest?preview_theme_id=4988" || window.location.pathname === "/latest?preview_theme_id=45" || window.location.pathname === "/latest?preview_theme_id=44" || window.location.pathname === "/new" || window.location.pathname === "/new?preview_theme_id=4988" || window.location.pathname === "/new?preview_theme_id=45" || window.location.pathname === "/new?preview_theme_id=44")
+      return (window.location.pathname === "/" || window.location.pathname === "/?preview_theme_id=4988" || window.location.pathname === "/?preview_theme_id=45" || window.location.pathname === "/?preview_theme_id=6615" ||  window.location.pathname === "/categories" || window.location.pathname === "/categories?preview_theme_id=4988" || window.location.pathname === "/categories?preview_theme_id=45" || window.location.pathname === "/categories?preview_theme_id=6615" || window.location.pathname === "/latest" || window.location.pathname === "/latest?preview_theme_id=4988" || window.location.pathname === "/latest?preview_theme_id=45" || window.location.pathname === "/latest?preview_theme_id=6615" || window.location.pathname === "/new" || window.location.pathname === "/new?preview_theme_id=4988" || window.location.pathname === "/new?preview_theme_id=45" || window.location.pathname === "/new?preview_theme_id=6615")
     }.property()
   });
   api.onPageChange((url, title) => {
-    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){
-      let $topics = $('.topics-container .latest-topic-list .latest-topic-list-item');
-      console.log($topics)
+    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){
+      let $topics = $('.topics-container tbody tr');
       for (let i = settings.latest_topics_amount; i < $topics.length; i++){
         $($topics[i]).css('display','none');
       }
@@ -319,7 +318,7 @@
   api.registerConnectorClass('below-site-header', 'hp-above-footer-categories-boxes', {
     setupComponent(args, component) {
       api.onPageChange((url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615"){ 
           component.set('displayCategoriesBoxes', true);
           component.set("loadingCategories", true);
           let thisUser = Discourse.User.current(); 
@@ -447,7 +446,7 @@
 
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
-    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url.startsWith('/latest')){
+    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url.startsWith('/latest')){
       $('.topics-container-header-section').css('display', 'block')
       $('.announcements-container').css('display', 'block')
       $('.see-more-button').css('display', 'flex')
@@ -470,7 +469,7 @@
 </script>
 
 <!-- topics -->
-<script type="text/x-handlebars" data-template-name="components/categories-and-latest-topics">
+<script type="text/x-handlebars" data-template-name="discovery/topics">
   <div class="topics-section">
     <div class="topics-container">
       {{#discovery-topics-list
@@ -500,75 +499,39 @@
             <div class="topics-title">{{theme-setting 'recent_discussion_title'}}</div>
             <div class="topics-subtitle">{{theme-setting 'recent_discussion_subtitle'}}</div>
           </div>
-
-          
-
-          {{#if this.redirectedReason}}
-          <div class="alert alert-info">{{this.redirectedReason}}</div>
-        {{/if}}
-        
-        {{#if this.showEditWelcomeTopicBanner}}
-          <WelcomeTopicBanner />
-        {{/if}}
-        
-        <TopicDismissButtons @position="top" @selectedTopics={{this.selected}} @model={{this.model}} @showResetNew={{this.showResetNew}} @showDismissRead={{this.showDismissRead}} @resetNew={{action "resetNew"}} />
-        
-        {{#if this.model.sharedDrafts}}
-          <TopicList @class="shared-drafts" @listTitle="shared_drafts.title" @top={{this.top}} @hideCategory="true" @category={{this.category}} @topics={{this.model.sharedDrafts}} @discoveryList={{true}} />
-        {{/if}}
-        
-        <DiscoveryTopicsList @model={{this.model}} @refresh={{action "refresh"}} @loadingComplete={{action "loadingComplete"}} @incomingCount={{this.topicTrackingState.incomingCount}} @autoAddTopicsToBulkSelect={{this.autoAddTopicsToBulkSelect}} @bulkSelectEnabled={{this.bulkSelectEnabled}} @addTopicsToBulkSelect={{action "addTopicsToBulkSelect"}} as |discoveryTopicList|>
-          {{#if this.top}}
-            <div class="top-lists">
-              <PeriodChooser @period={{this.period}} @action={{action "changePeriod"}} @fullDay={{false}} />
-            </div>
-          {{else}}
-            {{#if this.topicTrackingState.hasIncoming}}
-              <div class="show-more {{if this.hasTopics "has-topics"}}">
-                <a tabindex="0" href {{action "showInserted"}} class="alert alert-info clickable">
-                  <CountI18n @key="topic_count_" @suffix={{this.topicTrackingState.filter}} @count={{this.topicTrackingState.incomingCount}} />
-                </a>
-              </div>
-            {{/if}}
+          {{#if hasTopics}}
+            {{topic-list
+              highlightLastVisited=true
+              top=top
+              showTopicPostBadges=showTopicPostBadges
+              showPosters=true
+              canBulkSelect=canBulkSelect
+              changeSort=(route-action "changeSort")
+              toggleBulkSelect=(action "toggleBulkSelect")
+              updateAutoAddTopicsToBulkSelect=(action "updateAutoAddTopicsToBulkSelect")
+              hideCategory=model.hideCategory
+              order=order
+              ascending=ascending
+              bulkSelectEnabled=bulkSelectEnabled
+              selected=selected
+              expandGloballyPinned=expandGloballyPinned
+              expandAllPinned=expandAllPinned
+              category=category
+              topics=model.topics
+              discoveryList=true
+              scrollOnLoad=true
+              onScroll=discoveryTopicList.saveScrollPosition}}
           {{/if}}
-          <PluginOutlet @name="before-topic-list" @tagName="span" @connectorTagName="div" @args={{hash category=this.category}} />
-        
-          {{#if this.hasTopics}}
-            <TopicList @highlightLastVisited={{true}} @top={{this.top}} @showTopicPostBadges={{this.showTopicPostBadges}} @showPosters={{true}} @canBulkSelect={{this.canBulkSelect}} @changeSort={{route-action "changeSort"}} @toggleBulkSelect={{action "toggleBulkSelect"}} @updateAutoAddTopicsToBulkSelect={{action "updateAutoAddTopicsToBulkSelect"}} @hideCategory={{this.model.hideCategory}} @order={{this.order}} @ascending={{this.ascending}} @bulkSelectEnabled={{this.bulkSelectEnabled}} @bulkSelectAction={{action "refresh"}} @selected={{this.selected}} @expandGloballyPinned={{this.expandGloballyPinned}} @expandAllPinned={{this.expandAllPinned}} @category={{this.category}} @topics={{this.model.topics}} @discoveryList={{true}} @scrollOnLoad={{true}} @onScroll={{discoveryTopicList.saveScrollPosition}} @focusLastVisitedTopic={{true}} />
-          {{/if}}
-        
-          <PluginOutlet @name="after-topic-list" @tagName="span" @connectorTagName="div" @args={{hash category=this.category}} />
-        </DiscoveryTopicsList>
-        
-        <footer class="topic-list-bottom">
-          <ConditionalLoadingSpinner @condition={{this.model.loadingMore}} />
-          {{#if this.allLoaded}}
-            <TopicDismissButtons @position="bottom" @selectedTopics={{this.selected}} @model={{this.model}} @showResetNew={{this.showResetNew}} @showDismissRead={{this.showDismissRead}} @resetNew={{action "resetNew"}} />
-        
-            <FooterMessage @education={{this.footerEducation}} @message={{this.footerMessage}}>
-              {{#if this.latest}}
-                {{#if this.canCreateTopicOnCategory}}
-                  <DiscourseLinkedText @action={{route-action "createTopic"}} @text="topic.suggest_create_topic" />
-                {{/if}}
-              {{else if this.top}}
-                <LinkTo @route="discovery.categories">{{i18n "topic.browse_all_categories"}}</LinkTo>, <LinkTo @route="discovery.latest">{{i18n "topic.view_latest_topics"}}</LinkTo> {{i18n "or"}} {{i18n "filters.top.other_periods"}}
-                <TopPeriodButtons @period={{this.period}} @action={{action "changePeriod"}} />
-              {{else}}
-                <LinkTo @route="discovery.categories"> {{i18n "topic.browse_all_categories"}}</LinkTo> {{i18n "or"}} <LinkTo @route="discovery.latest">{{i18n "topic.view_latest_topics"}}</LinkTo>
-              {{/if}}
-            </FooterMessage>
-          {{/if}}
-        </footer>
-
-
-          <a target="_blank" class="see-more-button">
+          {{plugin-outlet name="after-topic-list" args=(hash category=category)}}
+          <a target="_blank" herf="https://community.monday.com/latest" class="see-more-button">
             <div class="see-more-button-text">See more discussions</div>
             <div class="see-more-button-arrow-icon"></div>
           </a>
         </div>
         {{/discovery-topics-list}}
     </div>
-  </div>
+  <!-- </div> -->
+</div>
 </script>
 
 <!-- hp-before-topic-list-announcements -->
@@ -577,7 +540,7 @@
   api.registerConnectorClass('before-topic-list', 'hp-before-topic-list-announcements', {
     setupComponent(args, component) {
       api.onPageChange(async(url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
           component.set('displayAnnouncements', true);
           component.set("loadingAnnouncements", true);
           let thisUser = Discourse.User.current(); 
@@ -635,7 +598,7 @@
         {{/each}}
       </tbody>
     </table>
-    <a target="_blank" class="see-more-button">
+    <a target="_blank" herf="https://community.monday.com/c/announcements/10" class="see-more-button">
       <div class="see-more-button-text">See more announcements</div>
       <div class="see-more-button-arrow-icon"></div>
     </a>
@@ -661,7 +624,7 @@
   api.registerConnectorClass("above-footer", "hp-above-footer-community-channels" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
           component.set("displayCommunityChannelBanner", true); 
         } else {  
           component.set("displayCommunityChannelBanner", false); 
@@ -672,7 +635,7 @@
   api.registerConnectorClass("above-footer", "hp-above-footer-cta-banner" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
           component.set("displayCtaBanner", true); 
         } else {  
           component.set("displayCtaBanner", false); 
@@ -683,7 +646,7 @@
   api.registerConnectorClass("above-footer", "hp-above-footer-more-discussions-btn" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615" || url.startsWith('/latest')){ 
           component.set("displayCtaBanner", true); 
         } else {  
           component.set("displayCtaBanner", false); 
@@ -709,7 +672,7 @@
   api.registerConnectorClass('above-footer', 'hp-above-footer-products', {
     setupComponent(args, component) {
       api.onPageChange(async(url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=6615" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=6615" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=6615" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=6615"){ 
           component.set('displaySubCategoriesBoxes', true);
           component.set("loadingSubCategories", true);
           let thisUser = Discourse.User.current(); 
@@ -792,22 +755,22 @@
         <div class="community-channels-subtitle">{{theme-setting 'community_channels_subtitle'}}</div>
       </div>
       <div class="community-channels-buttons">
-        <a class="community-channels-button">
+        <a target="_blank" href="https://www.facebook.com/groups/monday.community" class="community-channels-button">
           <div class="community-channels-button-facebook-icon"></div>
           <div class="community-channels-button-text">Facebook group</div>
           <div class="community-channels-button-arrow-icon"></div>
         </a>
-        <a class="community-channels-button">
+        <a target="_blank" href="https://twitter.com/mondaydotcom" class="community-channels-button">
           <div class="community-channels-button-twitter-icon"></div>
           <div class="community-channels-button-text">Twitter community</div>
           <div class="community-channels-button-arrow-icon"></div>
         </a>
-        <a class="community-channels-button">
+        <a target="_blank" class="community-channels-button">
           <div class="community-channels-button-developer-icon"></div>
           <div class="community-channels-button-text">Developer forum</div>
           <div class="community-channels-button-arrow-icon"></div>
         </a>
-        <a class="community-channels-button">
+        <a target="_blank" herf="https://www.reddit.com/r/mondaydotcom/" class="community-channels-button">
           <div class="community-channels-button-reddit-icon"></div>
           <div class="community-channels-button-text">Reddit community</div>
           <div class="community-channels-button-arrow-icon"></div>
