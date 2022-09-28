@@ -170,6 +170,12 @@ body.tags-page {
         line-height: 20px;
       }
     }
+    .topic-post-visited-line {
+      border-bottom: 1px solid #6C6CFF;
+      span {
+        color: #6C6CFF;
+      }
+    }
     .topic-list-item-separator {
       .topic-list-data {
         border-top: 1px solid #6C6CFF;
@@ -1233,6 +1239,9 @@ body.tags-page {
         .right {
           margin-left: unset;
           width: 100%;
+          .topic-item-stats {
+            flex-wrap: wrap;
+          }
         }
       }
     }
@@ -2819,14 +2828,14 @@ body.archetype-regular {
     .post-stream {
       .topic-post {
         .topic-avatar {
-          border-top: 1px solid #808080;
+          border-top: none;
           img.avatar {
             width: 37px;
             height: 37px;
           }
         }
         .topic-body {
-          border-top: 1px solid #808080;
+          border-top: none;
           .topic-meta-data {
             margin-top: 1rem;
             .names {
