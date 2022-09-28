@@ -196,6 +196,24 @@
   });
 </script>
 
+<script type="text/discourse-plugin" version="0.8">
+    api.onPageChange((url, title) => {
+      setTimeout(function () {
+      if (window.innerWidth < 768) {
+          $('.custom-categories-boxes-container, .community-channels-buttons').not('.slick-initialized').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              autoplay: false,
+              arrows: false,
+              dots: false,
+              variableWidth: true
+          }); 
+        }
+      }, 1200)
+    });
+</script>
+
 <!-- page nav -->
 <script type="text/x-handlebars" data-template-name="components/d-navigation">
   {{#if isHomepage}}
@@ -747,24 +765,6 @@
       <div class="community-channels-bottom"></div>
     </div>
   {{/if}}
-</script>
-
-<script type="text/discourse-plugin" version="0.8">
-  api.onPageChange((url, title) => {
-    setTimeout(function () {
-    if (window.innerWidth < 768) {
-        $('.custom-categories-boxes-container, .community-channels-buttons').not('.slick-initialized').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            autoplay: false,
-            arrows: false,
-            dots: false,
-            variableWidth: true
-        }); 
-      }
-    }, 1200)
-  });
 </script>
 
 <!-- hp above footer cta banner -->
