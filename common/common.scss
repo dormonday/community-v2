@@ -229,7 +229,7 @@ body.tags-page {
 }
 
 .discourse-tags {
-  flex-wrap: nowrap !important;
+  flex-wrap: wrap !important;
 
   a.discourse-tag {
     background: #FFFFFF;
@@ -3373,6 +3373,10 @@ body.archetype-regular {
       }
     }
   }
+  
+  .discourse-tags {
+    flex-wrap: nowrap !important;
+  }
 
   /* search bar */
   $max-width: 640px;
@@ -3419,7 +3423,7 @@ body.archetype-regular {
 
     .custom-search-banner-bg {
       background-image: url($header_bg);
-      
+
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
