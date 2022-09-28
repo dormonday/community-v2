@@ -544,7 +544,7 @@
             isAdmin = true;
           }
           component.set("isAdmin", isAdmin);
-          const announcementTopics = await ajax("/c/general/5.json");
+          const announcementTopics = await ajax("/c/announcements/10.json");
           let announcements = [];
           announcementTopics.topic_list.topics.forEach(topic => {
             if(announcements.length < 6) announcements.push(topic)
@@ -639,7 +639,7 @@
       });
     }
   });
-  api.registerConnectorClass("above-footer", "hp-above-footer-more-discussions-btn" , {
+  api.registerConnectorClass("above-footer", "hp-above-footer-become-member-banner" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
         if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" ){ 
@@ -768,8 +768,8 @@
 </script>
 
 <!-- hp above footer cta banner -->
-<script type="text/x-handlebars" data-template-name="/connectors/above-footer/hp-above-footer-cta-banner">
-  {{#if displayCtaBanner}}
+<script type="text/x-handlebars" data-template-name="/connectors/above-footer/hp-above-footer-become-member-banner">
+  {{#if displayBecomeMemberBanner}}
   <div class="become-member-conatiner">
     <div class="become-member-section">
       <div class="become-member-title">{{theme-setting 'become_member_title'}}</div>
