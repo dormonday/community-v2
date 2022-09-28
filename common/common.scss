@@ -3486,14 +3486,13 @@ body.archetype-regular {
         border-radius: 20px;
         color: white !important;
         border: 1px solid #6C6CFF;
-
         svg {
           color: white !important;
         }
 
         &:hover {
           background: white;
-
+          color: #6C6CFF !important;
           svg {
             color: #6C6CFF !important;
           }
