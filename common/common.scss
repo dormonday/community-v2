@@ -3393,6 +3393,17 @@ body.archetype-regular {
     }
   }
 
+  //single topic chat
+  .topic-timeline {
+    .timeline-controls, .timeline-footer-controls {
+      button {
+        background: #6C6CFF;
+        border-radius: 20px;
+        color: white;
+        border: 1px solid #6C6CFF;
+      }
+    }
+  }
   .title-voting {
     float: none;
   }
