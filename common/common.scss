@@ -219,7 +219,7 @@ body.tags-page {
     border-radius: 5px;
     color: #111111 !important;
     font-size: 12px;
-    height: 24px;
+    line-height: 12px;
     text-align: center;
     padding: 5px 10px !important;
     border: 1px solid #6C6CFF;
@@ -1167,7 +1167,7 @@ body.tags-page {
                     font-size: 12px;
                     line-height: 12px;
                     transition: all 0.2s ease-in-out;
-
+                    height: 16px;
                     &:hover {
                       cursor: pointer;
                       border: 1px solid #F0F3FF;
