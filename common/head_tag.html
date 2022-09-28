@@ -318,7 +318,7 @@
   api.registerConnectorClass('below-site-header', 'hp-above-footer-categories-boxes', {
     setupComponent(args, component) {
       api.onPageChange((url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
           component.set('displayCategoriesBoxes', true);
           component.set("loadingCategories", true);
           let thisUser = Discourse.User.current(); 
@@ -437,24 +437,28 @@
 
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
-    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url.startsWith('/latest')){
+    if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=6615" ){
       $('.topics-container-header-section').css('display', 'block')
       $('.announcements-container').css('display', 'block')
       $('.see-more-button').css('display', 'flex')
       $('#main-outlet').css({'margin-left': 'unset', 'margin-right': 'unset'})
+
+      if (window.innerWidth < 768) {
+        $('.latest-topics-container').css('width', '100%')
+      } else {
+        $('.latest-topics-container').css('width', '55%')
+      }
     } else {
       $('.topics-container-header-section').css('display', 'none')
       $('.see-more-button').css('display', 'none')
       $('.announcements-container').css('display', 'none')
+      $('.latest-topics-container').css('width', '100%')
 
       if (window.innerWidth < 768) {
         $('#main-outlet').css({'margin-left': 'unset', 'margin-right': 'unset'})
       } else {
         $('#main-outlet').css({'margin-left': '118px', 'margin-right': '165px'})
       }
-    }
-    if (url.startsWith("/latest")) {
-
     }
   });
 </script>
@@ -531,7 +535,7 @@
   api.registerConnectorClass('before-topic-list', 'hp-before-topic-list-announcements', {
     setupComponent(args, component) {
       api.onPageChange(async(url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" ){ 
           component.set('displayAnnouncements', true);
           component.set("loadingAnnouncements", true);
           let thisUser = Discourse.User.current(); 
@@ -616,7 +620,7 @@
   api.registerConnectorClass("above-footer", "hp-above-footer-community-channels" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" ){ 
           component.set("displayCommunityChannelBanner", true); 
         } else {  
           component.set("displayCommunityChannelBanner", false); 
@@ -627,7 +631,7 @@
   api.registerConnectorClass("above-footer", "hp-above-footer-cta-banner" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
           component.set("displayCtaBanner", true); 
         } else {  
           component.set("displayCtaBanner", false); 
@@ -638,10 +642,10 @@
   api.registerConnectorClass("above-footer", "hp-above-footer-more-discussions-btn" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
-          component.set("displayCtaBanner", true); 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" ){ 
+          component.set("displayBecomeMemberBanner", true); 
         } else {  
-          component.set("displayCtaBanner", false); 
+          component.set("displayBecomeMemberBanner", false); 
         }
       });
     }
@@ -664,7 +668,7 @@
   api.registerConnectorClass('above-footer', 'hp-above-footer-products', {
     setupComponent(args, component) {
       api.onPageChange(async(url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
           component.set('displaySubCategoriesBoxes', true);
           component.set("loadingSubCategories", true);
           let thisUser = Discourse.User.current(); 
