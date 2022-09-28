@@ -3521,31 +3521,45 @@ body.archetype-regular {
     }
   }
 
-  #topic-title {
-    a.fancy-title {
-      font-size: 35px;
+
+  body.archetype-regular {
+    #main-outlet {
+      #topic-title {
+        a.fancy-title {
+          font-size: 35px;
+
+        }
+      }
+      .post-stream {
+        .topic-post {
+          .topic-body {
+            .contents {
+              .actions {
+                justify-content: flex-start;
+              }
+            } 
+          }
+        } 
+      }
+      .title-voting {
+        float: none;
+      }
+    
+      .voting-wrapper {
+        display: flex;
+    
+        .vote-count-wrapper {
+          height: 41px !important;
+        }
+    
+        button.vote-button {
+          margin-top: 0;
+        }
+      }
     }
-  }
+  } 
 
-  .topic-post .topic-body .contents .actions {
-    justify-content: flex-start;
-  }
 
-  .title-voting {
-    float: none;
-  }
-
-  .voting-wrapper {
-    display: flex;
-
-    .vote-count-wrapper {
-      height: 41px !important;
-    }
-
-    button.vote-button {
-      margin-top: 0;
-    }
-  }
 
   .custom-search-bar {
     .search-widget {
