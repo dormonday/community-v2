@@ -3393,6 +3393,20 @@ body.archetype-regular {
     }
   }
 
+  .title-voting {
+    float: none;
+  }
+
+  .voting-wrapper {
+    display: flex;
+    .vote-count-wrapper {
+      height: 41px;
+    }
+    button.vote-button {
+      margin-top: 0;
+    }
+  }
+
   .custom-search-bar {
     .search-widget {
       width: 691px;
