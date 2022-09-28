@@ -214,6 +214,7 @@ body.tags-page {
 }
 
 .discourse-tags {
+  flex-wrap: nowrap;
   a.discourse-tag {
     background: #FFFFFF;
     border-radius: 5px;
@@ -1156,7 +1157,6 @@ body.tags-page {
 
                 .announcement-tags {
                   display: flex;
-
                   .announcement-tag {
                     margin: 0 10px;
                     border: 1px solid #595AD4;
@@ -1167,7 +1167,6 @@ body.tags-page {
                     font-size: 12px;
                     line-height: 12px;
                     transition: all 0.2s ease-in-out;
-                    height: 16px;
                     &:hover {
                       cursor: pointer;
                       border: 1px solid #F0F3FF;
