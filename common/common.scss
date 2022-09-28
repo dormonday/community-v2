@@ -3400,7 +3400,7 @@ body.archetype-regular {
   .voting-wrapper {
     display: flex;
     .vote-count-wrapper {
-      height: 41px;
+      height: 41px !important;
     }
     button.vote-button {
       margin-top: 0;
