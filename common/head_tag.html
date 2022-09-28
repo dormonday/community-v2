@@ -168,7 +168,7 @@
         <div class="wrap custom-search-banner-wrap">
           <h1>{{theme-setting 'search_banner_title'}}</h1>
           <p>{{theme-setting 'search_banner_description'}}</p>
-          <a target="_blank" href="{{theme-setting 'search_banner_link'}}">{{theme-setting 'search_banner_link_text'}}</a>
+          <!-- <a target="_blank" href="{{theme-setting 'search_banner_link'}}">{{theme-setting 'search_banner_link_text'}}</a> -->
         </div>
         <div class="custom-search-bar wrap">
           {{mount-widget widget="search-widget"}}
@@ -407,9 +407,9 @@
       <div class="categories-boxes-title">{{theme-setting 'conversation_title'}}</div>
       <div class="categories-boxes-subtitle">{{theme-setting 'conversation_subtitle'}}</div>
     </div>
-    {{#if isAdmin}}
+    <!-- {{#if isAdmin}}
       <a href="/categories">Categories</a>
-    {{/if}}
+    {{/if}} -->
     <div class="custom-categories-boxes-container">
       <!-- {{log 'test' }} -->
       {{#each categories as |c|}} 
