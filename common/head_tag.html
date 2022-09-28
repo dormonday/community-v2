@@ -717,7 +717,7 @@
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
     if (window.innerWidth < 768) {
-        $('.custom-categories-boxes-container, .community-channels-buttons').not('.slick-initialized').slick({
+        $('.custom-categories-boxes-container, .community-channels-buttons').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
