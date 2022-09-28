@@ -2933,6 +2933,7 @@ body.archetype-regular {
                 button.btn {
                   background: white;
                   border: none;
+                  border-radius: 4px;
                 }
               }
 
@@ -3469,7 +3470,7 @@ body.archetype-regular {
   //single topic chat
   .topic-timeline {
     .timeline-scroller {
-      margin-left: -0.3em;
+      margin-left: -0.3em !important;
       .timeline-handle {
         border-radius: 50%;
         width: 8.5px;
@@ -3518,6 +3519,16 @@ body.archetype-regular {
         }
       }
     }
+  }
+
+  #topic-title {
+    a.fancy-title {
+      font-size: 35px;
+    }
+  }
+
+  .topic-post .topic-body .contents .actions {
+    justify-content: flex-start;
   }
 
   .title-voting {
