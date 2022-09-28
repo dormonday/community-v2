@@ -215,7 +215,7 @@ body.tags-page {
     font-size: 12px;
     text-align: center;
     padding: 5px 10px;
-    border: 1px solid #595AD4;
+    border: 1px solid #6C6CFF;
     margin-right: 10px !important;
     margin-bottom: 10px !important;
     &:hover {
@@ -227,7 +227,7 @@ body.tags-page {
 
     &.list-vote-count {
       background: #6C6CFF;
-      color: white;
+      color: white !important;
       position: relative;
       padding-left: 20px;
 
@@ -2776,6 +2776,7 @@ body.archetype-regular {
           width: 70px;
           font-size: 16px;
           font-weight: 600;
+          margin-left: unset;
         }
         .vote-count-wrapper {
           height: 43px;
