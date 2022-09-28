@@ -73,31 +73,38 @@ h3,
       display: none;
     }
   }
+
   .d-header-icons {
     .d-icon {
       font-size: 1.3em;
       color: #323338;
     }
+
     .active {
       .d-icon {
-        color: #6C6CFF !important; 
+        color: #6C6CFF !important;
       }
     }
   }
+
   .search-menu {
     .menu-panel {
       right: 0;
       box-shadow: 0px 8px 15px rgba(29, 140, 242, 0.16);
+
       .search-input {
         border: none;
+
         input#search-term {
           border-radius: 4px;
           border: 1px solid #DCDFEC;
         }
+
         &:focus-within {
           border-radius: 4px;
         }
       }
+
       .results {
         .item {
           a.search-link {
@@ -107,8 +114,10 @@ h3,
                   color: #6C6CFF;
                 }
               }
+
               .second-line {
                 margin-top: 0.5rem;
+
                 .discourse-tags {
                   .discourse-tag {
                     border: 1px solid #6C6CFF;
@@ -119,6 +128,7 @@ h3,
                 }
               }
             }
+
             &:hover {
               background-color: #F6F7FB;
             }
@@ -170,20 +180,25 @@ body.tags-page {
         line-height: 20px;
       }
     }
+
     .topic-post-visited-line {
       border-bottom: 1px solid #6C6CFF;
+
       span {
         color: #6C6CFF;
       }
     }
+
     .topic-list-item-separator {
       .topic-list-data {
         border-top: 1px solid #6C6CFF;
+
         span {
           color: #6C6CFF;
         }
       }
     }
+
     tbody.topic-list-body {
       border: none;
     }
@@ -215,6 +230,7 @@ body.tags-page {
 
 .discourse-tags {
   flex-wrap: nowrap !important;
+
   a.discourse-tag {
     background: #FFFFFF;
     border-radius: 5px;
@@ -225,6 +241,7 @@ body.tags-page {
     padding: 5px 10px !important;
     border: 1px solid #6C6CFF;
     margin-right: 10px !important;
+
     // margin-bottom: 10px !important;
     &:hover {
       cursor: pointer;
@@ -1157,6 +1174,7 @@ body.tags-page {
 
                 .announcement-tags {
                   display: flex;
+
                   .announcement-tag {
                     margin: 0 10px;
                     border: 1px solid #595AD4;
@@ -1167,6 +1185,7 @@ body.tags-page {
                     font-size: 12px;
                     line-height: 12px;
                     transition: all 0.2s ease-in-out;
+
                     &:hover {
                       cursor: pointer;
                       border: 1px solid #F0F3FF;
@@ -1239,6 +1258,7 @@ body.tags-page {
         .right {
           margin-left: unset;
           width: 100%;
+
           .topic-item-stats {
             // flex-wrap: wrap;
           }
@@ -1694,6 +1714,7 @@ body.tags-page {
     display: block;
     margin: 28px;
     width: auto;
+
     span {
       font-weight: 'Sofia Pro';
       font-weight: 300;
@@ -1795,6 +1816,7 @@ body.tags-page {
 
     #navigation-bar {
       flex-direction: column-reverse;
+
       .custom-sort-by-select {
         .select-kit.combo-box.sort-by-drop {
           .select-kit-header.combo-box-header.sort-by-drop-header {
@@ -1888,6 +1910,7 @@ body.tags-page {
       .custom-search-bar {
         width: 250px;
         margin-bottom: 15px;
+
         .search-widget {
           width: 250px;
           padding: 0;
@@ -2605,7 +2628,9 @@ body {
   .grippie {
     background: #6C6CFF;
   }
+
   .reply-area {
+
     .composer-fields .title-and-category .title-input input#reply-title,
     .composer-fields .title-and-category .category-input .select-kit .select-kit-header,
     .composer-fields .title-and-category .select-kit.mini-tag-chooser .select-kit-header,
@@ -2613,6 +2638,7 @@ body {
       border-radius: 4px;
       border: 1px solid #C5C7D0;
     }
+
     .submit-panel .save-or-cancel button.create {
       background: #6C6CFF;
       box-shadow: 0px 3.5px 7px rgba(0, 0, 0, 0.1);
@@ -2620,17 +2646,21 @@ body {
       padding: 12px 16px;
       font-weight: 300;
     }
+
     .reply-to {
       .select-kit-header {
         border: none !important;
         border-radius: 4px;
+
         .select-kit-header-wrapper {
           background: #F0F3FF;
+
           svg.d-icon {
-            color: #6C6CFF !important  ;
+            color: #6C6CFF !important;
           }
         }
       }
+
       .action-title {
         color: #111;
       }
@@ -2773,9 +2803,11 @@ body.archetype-regular {
   #main-outlet {
     padding: 3rem 2rem 2rem;
     font-family: 'Sofia Pro';
+
     .voting {
       .voting-wrapper {
         margin-bottom: 2rem;
+
         button.vote-button {
           height: 43px;
           background: white;
@@ -2787,6 +2819,7 @@ body.archetype-regular {
           font-weight: 600;
           margin-left: unset;
         }
+
         .vote-count-wrapper {
           height: 43px;
           width: 35px;
@@ -2800,6 +2833,7 @@ body.archetype-regular {
         }
       }
     }
+
     #topic-title {
       a.fancy-title {
         font-weight: 600;
@@ -2807,87 +2841,114 @@ body.archetype-regular {
         line-height: 16px;
         font-family: 'Sofia Pro';
       }
+
       .category-name {
         color: #323338;
         margin-left: 0.5rem;
       }
     }
+
     #topic-progress-wrapper {
       #topic-progress {
         border: 1px solid #6C6CFF;
         border-radius: 8px;
+
         .nums {
           color: #6C6CFF;
         }
+
         .bg {
           border-radius: 8px 0 0 8px;
           background-color: #cfcffd;
         }
       }
     }
+
     .post-stream {
       .topic-post {
         .topic-avatar {
           border-top: none;
+
           img.avatar {
             width: 37px;
             height: 37px;
           }
         }
+
         .topic-body {
           border-top: none;
+
           .topic-meta-data {
             margin-top: 1rem;
+
             .names {
               span a {
                 color: #0F1048;
               }
             }
+
             .post-infos {
-              svg, button, span {
+
+              svg,
+              button,
+              span {
                 color: #676879;
               }
             }
           }
+
           .contents {
-           .cooked {
-            background-color: white;
-            p, li {
-              color: #0F1048;
-              font-size: 14px;
-              font-weight: 400;
-              font-family: 'Sofia Pro';
+            .cooked {
+              background-color: white;
+
+              p,
+              li {
+                color: #0F1048;
+                font-size: 14px;
+                font-weight: 400;
+                font-family: 'Sofia Pro';
+              }
             }
-           } 
-           .actions {
-            width: 100%;
-            justify-content: space-between;
-            svg, button {
-              color: #0F1048;
+
+            .actions {
+              width: 100%;
+              justify-content: space-between;
+
+              svg,
+              button {
+                color: #0F1048;
+              }
             }
-           }
           }
+
           .topic-map {
             background: white;
             border: 1px solid #DCDFEC;
             border-radius: 4px;
+
             section.map {
               border-top: none;
+
               nav.buttons {
                 button.btn {
                   background: white;
                   border: none;
                 }
               }
+
               ul.clearfix {
-                li.avatars, li.users {
+
+                li.avatars,
+                li.users {
                   display: none;
                 }
+
                 li {
                   span.number {
                     color: #323338;
                     font-size: 18px;
                   }
+
                   h4 {
                     color: #323338;
                     font-size: 12px;
@@ -2900,45 +2961,57 @@ body.archetype-regular {
         }
       }
     }
+
     #topic-footer-buttons {
-      button, summary {
+
+      button,
+      summary {
         border: 1px solid #6C6CFF;
         background: white;
         border-radius: 24px;
         color: #6C6CFF;
         padding: 8px 12px;
+
         svg {
           color: #6C6CFF;
         }
       }
+
       button.create {
         background: #6C6CFF;
         color: white;
+
         svg {
           color: white;
         }
       }
+
       p.reason {
         flex-direction: column;
         align-items: flex-start;
+
         span.text {
           margin-top: 1rem;
           color: rgba(103, 104, 121, 0.7);
+
           a {
             color: #6C6CFF;
           }
         }
       }
     }
+
     #suggested-topics {
       h3.suggested-topics-title {
         color: #0F1048;
         font-size: 35px;
         font-weight: 600;
       }
+
       thead.topic-list-header {
         // display: none;
       }
+
       .suggested-topics-message {
         a {
           color: #6C6CFF;
@@ -3395,32 +3468,51 @@ body.archetype-regular {
 
   //single topic chat
   .topic-timeline {
-    .timeline-controls, .timeline-footer-controls {
+    .timeline-scroller {
+      margin-left: -0.3em;
+      .timeline-handle {
+        border-radius: 50%;
+        width: 8.5px;
+        background-color: #323338;
+        height: 8.5px;
+      }
+    }
+
+
+    .timeline-controls,
+    .timeline-footer-controls {
       button {
         background: #6C6CFF;
         border-radius: 20px;
-        color: white;
+        color: white !important;
         border: 1px solid #6C6CFF;
+
         svg {
           color: white;
         }
+
         &:hover {
           background: white;
+
           svg {
             color: #6C6CFF !important;
           }
         }
       }
+
       summary {
         background: white;
         border-radius: 20px;
-        color: #6C6CFF;
+        color: #6C6CFF !important;
         border: 1px solid #6C6CFF;
+
         svg {
           color: #6C6CFF;
         }
+
         &:hover {
           background: #6C6CFF;
+
           svg {
             color: white !important;
           }
@@ -3428,15 +3520,18 @@ body.archetype-regular {
       }
     }
   }
+
   .title-voting {
     float: none;
   }
 
   .voting-wrapper {
     display: flex;
+
     .vote-count-wrapper {
       height: 41px !important;
     }
+
     button.vote-button {
       margin-top: 0;
     }
@@ -4799,6 +4894,7 @@ body.archetype-regular {
       #navigation-bar {
         width: 60%;
         flex-direction: unset;
+
         .custom-sort-by-select {
           width: 33.33%;
 
