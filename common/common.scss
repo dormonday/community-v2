@@ -223,7 +223,7 @@ body.tags-page {
     padding: 5px 10px;
     border: 1px solid #6C6CFF;
     margin-right: 10px !important;
-    margin-bottom: 10px !important;
+    // margin-bottom: 10px !important;
     &:hover {
       cursor: pointer;
       border: 1px solid rgb(240, 243, 255);
@@ -1240,7 +1240,7 @@ body.tags-page {
           margin-left: unset;
           width: 100%;
           .topic-item-stats {
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
           }
         }
       }
