@@ -3407,7 +3407,22 @@ body.archetype-regular {
         &:hover {
           background: white;
           svg {
-            color: #6C6CFF;
+            color: #6C6CFF !important;
+          }
+        }
+      }
+      summary {
+        background: white;
+        border-radius: 20px;
+        color: #6C6CFF;
+        border: 1px solid #6C6CFF;
+        svg {
+          color: #6C6CFF;
+        }
+        &:hover {
+          background: #6C6CFF;
+          svg {
+            color: white !important;
           }
         }
       }
