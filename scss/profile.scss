@@ -1,0 +1,249 @@
+$content-left-padding: 90px;
+
+
+.user-summary-page {
+  .user-secondary-navigation {
+    padding-left: $content-left-padding;
+
+    .nav-stacked {
+      a {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .user-main {
+
+    .user-content,
+    .user-primary-navigation {
+      padding-left: $content-left-padding;
+    }
+
+    .about {
+      .details {
+        .primary {
+          .primary-textual {
+
+            .user-profile-names {
+              padding-left: $content-left-padding;
+            }
+
+            h1 {
+              color: #111111;
+              font-weight: 600;
+              font-size: 35px;
+              line-height: 33px;
+            }
+
+            h2 {
+              color: #111111;
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: 600;
+            }
+          }
+
+          .controls {
+            .btn {
+              background-color: transparent;
+              color: #333333;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 16px;
+              border-bottom: 1px solid #333333;
+              padding-bottom: 3px;
+              min-width: unset;
+              padding-left: 0;
+              padding-right: 0;
+
+              &:after {
+                content: '';
+                background-image: url($arrow_icon);
+                fill: #333333;
+                width: 15px;
+                stroke: black;
+                height: 15px;
+                background-repeat: no-repeat;
+                background-position: center right;
+                filter: brightness(0);
+              }
+
+              svg {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nav-pills {
+      >li {
+        &:first-child {
+          >a {
+            padding-left: 0;
+          }
+        }
+
+        >a {
+
+          &.active {
+            background-color: transparent;
+            color: #111111;
+          }
+
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+
+
+    .stats-section {
+      .stats-title {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+      }
+
+      .user-stat {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .value {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 600;
+
+        }
+
+        .label {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 23px;
+          color: #323338;
+
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+
+
+
+    .replies-section,
+    .links-section,
+    .most-liked-section,
+    .badges-section {
+      .stats-title {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 17px;
+        font-weight: 400;
+      }
+    }
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .user-summary-page {
+    #main-outlet-wrapper {
+      padding: 24px;
+    }
+
+    .user-secondary-navigation {
+      padding-left: 0;
+
+      .nav-stacked {
+        a {}
+      }
+    }
+
+    .user-main {
+
+      .user-content,
+      .user-primary-navigation {
+        padding-left: 0;
+      }
+
+      .about {
+        .details {
+          .primary {
+            .primary-textual {
+
+              .user-profile-names {
+                padding-left: 0;
+              }
+
+              h1 {}
+
+              h2 {}
+            }
+
+            .controls {
+              .btn {
+
+
+                &:after {}
+
+                svg {}
+              }
+            }
+          }
+        }
+      }
+
+      .nav-pills {
+        >li {
+          &:first-child {
+            >a {}
+          }
+
+          >a {
+
+            &.active {}
+
+            svg {}
+          }
+        }
+      }
+
+
+      .stats-section {
+        .stats-title {}
+
+        .user-stat {
+
+
+          .value {}
+
+          .label {
+
+
+            svg {}
+          }
+        }
+      }
+
+
+
+      .replies-section,
+      .links-section,
+      .most-liked-section,
+      .badges-section {
+        .stats-title {}
+
+        p {}
+      }
+    }
+  }
+}
