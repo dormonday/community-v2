@@ -16,6 +16,11 @@
     if (url === "/categories?preview_theme_id=45" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest?preview_theme_id=44" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')) {
       $('.custom-search-bar .search-widget .search-menu .search-input input[type="text"]').attr("placeholder", "Search topics, posts, users, or categories");
     }
+    helper.attach("a.become-member-button", {
+      label: "sign_up",
+      className: "btn-primary btn-small sign-up-button",
+      action: "showCreateAccount"
+    })
   });
   api.modifyClass("route:application", {
     actions: {
