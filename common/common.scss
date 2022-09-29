@@ -264,6 +264,10 @@ body.tags-page {
       color: white !important;
       position: relative;
       padding-left: 7px;
+      &:hover {
+        background: white;
+        color: #6C6CFF !important;
+      }
 
       // &::before {
       //   content: "";
@@ -1406,6 +1410,7 @@ body.tags-page {
         .community-channels-button-arrow-icon {
           position: absolute;
           right: 25px;
+          transition: all 0.2s ease-in-out;
           background-image: url($more_topics_purple_arrow);
           background-position: center;
           background-size: cover;
