@@ -198,6 +198,7 @@
 
 <script type="text/discourse-plugin" version="0.8">
     api.onPageChange((url, title) => {
+      console.log('change')
       setTimeout(function () {
       if (window.innerWidth < 768) {
           $('.custom-categories-boxes-container, .community-channels-buttons').not('.slick-initialized').slick({
