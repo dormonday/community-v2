@@ -1393,18 +1393,19 @@ body.tags-page {
         border: 1px solid #6C6CFF;
         border-radius: 24px;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 170px;
 
         .community-channels-button-text {
           font-size: 14px;
           font-weight: 400;
           color: #6C6CFF;
+          margin-right: 0.75rem;
         }
 
         .community-channels-button-arrow-icon {
           position: absolute;
-          transform: translate(-230%, 0%);
+          right: 25px;
           background-image: url($more_topics_purple_arrow);
           background-position: center;
           background-size: cover;
@@ -1454,6 +1455,7 @@ body.tags-page {
 
         &:hover {
           cursor: pointer;
+
         }
       }
     }
