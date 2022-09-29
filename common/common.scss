@@ -2864,12 +2864,11 @@ body.archetype-regular {
         h1 {
           margin-bottom: 1rem;
           font-family: 'Sofia Pro';
-          line-height: 40px;
         }
         a.fancy-title {
           font-weight: 600;
           font-size: 16px;
-          line-height: 16px;
+          line-height: 22px;
           font-family: 'Sofia Pro';
         }
   
@@ -3565,11 +3564,9 @@ body.archetype-regular {
     #main-outlet {
       #topic-title {
         .title-wrapper {
-          h1 {
-            line-height: 22px;
-          }
           a.fancy-title {
             font-size: 35px;
+            line-height: 40px;
           }
         }
       }
