@@ -212,6 +212,12 @@ body.tags-page {
       border: none;
     }
   }
+  .topic-post-visited-line {
+    border-bottom: 1px solid #6C6CFF;
+    span {
+      color: #6C6CFF;
+    }
+  }
 }
 
 #main-outlet-wrapper {
@@ -2843,6 +2849,10 @@ body.archetype-regular {
           font-size: 16px;
           font-weight: 600;
           margin-left: unset;
+          &:hover {
+            background: #6C6CFF;
+            color: white;
+          }
         }
 
         .vote-count-wrapper {
