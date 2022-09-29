@@ -163,6 +163,9 @@ body.navigation-topics {
     .contents {
       display: flex;
       flex-direction: column-reverse;
+      .show-more {
+        display: none;
+      }
     }
   }
 }
