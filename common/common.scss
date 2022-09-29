@@ -1545,7 +1545,7 @@ body.tags-page {
         transition: all 0.2s ease-in-out;
         display: flex;
         align-items: center;
-
+        border: none;
         &:hover {
           background: rgb(60, 73, 217);
           opacity: 0.9;
