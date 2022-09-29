@@ -1,5 +1,6 @@
 header {
-
+  .contents {
+  }
   .menu-container-general-links,
   .menu-container-footer-links {
     .menu-links {
@@ -89,6 +90,14 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  header.d-header {
+    .contents {
+      margin: 0 120px;
     }
   }
 }
