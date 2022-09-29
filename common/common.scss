@@ -213,9 +213,9 @@ body.tags-page {
     }
   }
   .topic-post-visited-line {
-    border-bottom: 1px solid #6C6CFF;
+    border-bottom: 1px solid #6C6CFF !important;
     span {
-      color: #6C6CFF;
+      color: #6C6CFF !important;
     }
   }
 }
@@ -2954,13 +2954,13 @@ body.archetype-regular {
             .actions {
               width: 100%;
               justify-content: space-between;
-              &:first-child {
-                margin-left: unset;
-              }
               svg,
               button {
                 color: #0F1048;
               }
+            }
+            .actions:first-child {
+              margin-left: unset;
             }
           }
 
