@@ -5207,6 +5207,14 @@ body.archetype-regular {
     }
   }
 
+  .navigation-controls {
+    button#create-topic {
+      span.d-button-label {
+        display: block;
+      }
+    }
+  }
+
   body {
     .topics-container {
       .topic-list {
