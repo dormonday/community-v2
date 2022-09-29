@@ -1259,11 +1259,8 @@ body.tags-page {
             height: 34px;
           }
         }
-
         .right {
-          margin-left: unset;
           width: 100%;
-
           .topic-item-stats {
             // flex-wrap: wrap;
           }
@@ -1689,7 +1686,7 @@ body.tags-page {
 
     .category-info-container {
       .category-title {
-        padding: 2rem;
+        padding: 2rem 2rem 1rem;
 
         span {
           color: #0F1048;
@@ -1703,7 +1700,7 @@ body.tags-page {
 
       .category-description {
         p {
-          padding: 1rem 2rem;
+          padding: 0rem 2rem 0rem;
           font-family: 'Sofia Pro';
           font-size: 18px;
           font-weight: 300;
