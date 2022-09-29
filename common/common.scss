@@ -2923,7 +2923,9 @@ body.archetype-regular {
             .actions {
               width: 100%;
               justify-content: space-between;
-
+              &:first-child {
+                margin-left: unset;
+              }
               svg,
               button {
                 color: #0F1048;
