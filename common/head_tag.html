@@ -210,7 +210,7 @@
               variableWidth: true
           }); 
         }
-      }, 1200)
+      }, 1400)
     });
 </script>
 
@@ -715,7 +715,7 @@
       {{log s}}
       <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/workflows/{{s.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
-        <div class="category-image" style="background-image: url({{s.uploaded_background.url}})"></div>
+        <div class="category-image subcategory" style="background-image: url({{s.uploaded_background.url}})"></div>
         <div class="category-title-container">
           <h3 class="category-title">{{s.name}}</h3>
         </div>
