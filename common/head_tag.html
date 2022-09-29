@@ -16,11 +16,6 @@
     if (url === "/categories?preview_theme_id=45" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest?preview_theme_id=44" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')) {
       $('.custom-search-bar .search-widget .search-menu .search-input input[type="text"]').attr("placeholder", "Search topics, posts, users, or categories");
     }
-    helper.attach("a.become-member-button", {
-      label: "sign_up",
-      className: "btn-primary btn-small sign-up-button",
-      action: "showCreateAccount"
-    })
   });
   api.modifyClass("route:application", {
     actions: {
@@ -30,6 +25,19 @@
       }
     }
   });
+</script>
+
+<script type="text/discourse-plugin" version="0.8.25">
+  const user = api.getCurrentUser();
+  if (!user) {
+  api.decorateWidget('post:after', helper => {
+    helper.attach("button.become-member-button", {
+      label: "sign_up",
+      className: "btn-primary btn-small sign-up-button",
+      action: "showCreateAccount"
+    })
+  });
+}
 </script>
 
 <!-- custom nav links -->
@@ -783,10 +791,10 @@
         <!-- <div class="become-memeber-icon"></div> -->
         <div>
           <div class="become-member-subtitle">{{theme-setting 'become_member_subtitle'}}</div>
-          <a class="become-member-button">
+          <button class="become-member-button">
             <img class="become-member-button-arrow" />
             <div class="become-member-button-text">join the conversation</div>
-          </a>
+          </button>
         </div>
       </div>
     </div>
