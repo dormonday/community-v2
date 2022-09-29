@@ -1400,7 +1400,7 @@ body.tags-page {
           font-size: 14px;
           font-weight: 400;
           color: #6C6CFF;
-          margin-right: 0.75rem;
+          margin-left: 0.75rem;
         }
 
         .community-channels-button-arrow-icon {
@@ -1456,6 +1456,9 @@ body.tags-page {
         &:hover {
           cursor: pointer;
 
+        }
+        &:hover .community-channels-button-arrow-icon {
+          right: 18px;
         }
       }
     }
