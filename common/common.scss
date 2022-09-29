@@ -267,6 +267,7 @@ body.tags-page {
       &:hover {
         background: white;
         color: #6C6CFF !important;
+        border: 1px solid #6C6CFF;
       }
 
       // &::before {
@@ -2859,16 +2860,23 @@ body.archetype-regular {
     }
 
     #topic-title {
-      a.fancy-title {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 16px;
-        font-family: 'Sofia Pro';
-      }
-
-      .category-name {
-        color: #323338;
-        margin-left: 0.5rem;
+      .title-wrapper {
+        h1 {
+          margin-bottom: 1rem;
+          font-family: 'Sofia Pro';
+          line-height: 40px;
+        }
+        a.fancy-title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 16px;
+          font-family: 'Sofia Pro';
+        }
+  
+        .category-name {
+          color: #323338;
+          margin-left: 0.5rem;
+        }
       }
     }
 
