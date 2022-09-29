@@ -1386,13 +1386,14 @@ body.tags-page {
       }
 
       .community-channels-button {
+        position: relative;
         display: flex;
         padding: 14px 20px;
         margin: 0 11px;
         border: 1px solid #6C6CFF;
         border-radius: 24px;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         width: 170px;
 
         .community-channels-button-text {
@@ -1402,6 +1403,8 @@ body.tags-page {
         }
 
         .community-channels-button-arrow-icon {
+          position: absolute;
+          transform: translate(-230%, 0%);
           background-image: url($more_topics_purple_arrow);
           background-position: center;
           background-size: cover;
