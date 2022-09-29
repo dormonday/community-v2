@@ -3564,9 +3564,13 @@ body.archetype-regular {
   body.archetype-regular {
     #main-outlet {
       #topic-title {
-        a.fancy-title {
-          font-size: 35px;
-
+        .title-wrapper {
+          h1 {
+            line-height: 22px;
+          }
+          a.fancy-title {
+            font-size: 35px;
+          }
         }
       }
       .post-stream {
