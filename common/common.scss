@@ -189,6 +189,15 @@ body.tags-page {
       }
     }
 
+    .topic-list-data {
+      border-top: 1px solid #6C6CFF;
+      .right {
+        .topic-item-stats {
+          flex-wrap: wrap;
+        }
+      }
+    }
+
     .topic-list-item-separator {
       .topic-list-data {
         border-top: 1px solid #6C6CFF;
