@@ -431,7 +431,7 @@
       {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 72) (eq c.id 8))}}
       <a class="category-box-container" href='/c/{{c.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
-        <div class="category-image" style="background-image: url({{c.uploaded_background.url}})"></div>
+        <div class="category-image" style="background-image: url({{c.uploaded_logo.url}})"></div>
         <div class="category-title-container">
           <h3 class="category-title">{{c.name}}</h3>
         </div>
@@ -804,8 +804,9 @@
 
 <script type="text/x-handlebars" data-template-name="navigation/category">
   {{add-category-tag-classes category=category tagName=""}}
+  {{log category}}
   <section class="category-heading">
-    <div class="category-header-container">
+    <div class="category-header-container" style="background-image: url({{category.uploaded_background.url}})">
       <div class="category-info-container">
         <div class="category-title">
           <span>
