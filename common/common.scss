@@ -1048,8 +1048,10 @@ body.tags-page {
 
     &:hover a.category-box-link span {
       padding-right: 14px;
+    }
+
+    &:hover a.category-box-link {
       color: #6b6cff;
-      border-color: #6b6cff
     }
 
     &:hover a.category-box-link div.category-arrow-icon {
