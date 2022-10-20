@@ -50,7 +50,6 @@ button#create-new.btn.fa.fa-plus {
     display: inline-block;
   }
  button#create-new {
-    // display: inline-block;
     background-color: #6C6CFF;
     height: 39px;
     width: fit-content;
@@ -3238,6 +3237,7 @@ body.archetype-regular {
       .search-widget {
         width: 100% !important;
         height: 33px;
+        padding: 0;
 
         .search-icon {
           padding-top: 4px;
@@ -4928,7 +4928,7 @@ body.archetype-regular {
       }
 
       .category-breadcrumb {
-        width: 40%;
+        // width: 40%; 
 
         .select-kit {
           height: auto;
@@ -4936,7 +4936,7 @@ body.archetype-regular {
 
         .combo-box.category-drop,
         .combo-box.tag-drop {
-          width: 50%;
+          // width: 50%;
           margin-bottom: 20px;
           position: relative;
 
@@ -5027,11 +5027,11 @@ body.archetype-regular {
       }
 
       #navigation-bar {
-        width: 60%;
+        width: 0;
         flex-direction: unset;
 
         .custom-sort-by-select {
-          width: 33.33%;
+          // width: 33.33%;
 
           .select-kit.combo-box.sort-by-drop {
             display: block;
@@ -5125,7 +5125,7 @@ body.archetype-regular {
           width: 66.67%;
 
           .search-widget {
-            width: 100%;
+            width: 412px;
             padding: 0;
             margin: unset;
 
@@ -5133,9 +5133,11 @@ body.archetype-regular {
               width: 100%;
 
               .search-input {
+                
                 input[type="text"] {
                   color: #323338;
                   border: 1px solid #C5C7D0;
+                  width: 412px;
                 }
 
                 .searching {
@@ -5557,7 +5559,7 @@ body.archetype-regular {
       width: 60%;
 
       .custom-sort-by-select {
-        width: 33.33%;
+        // width: 33.33%;
 
         // .select-kit.combo-box.sort-by-drop {
         //   margin-bottom: 0;
