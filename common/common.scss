@@ -145,12 +145,9 @@ button#create-new.btn.fa.fa-plus {
                 margin-top: 0.5rem;
 
                 .discourse-tags {
-                  .box {
-                    background-color: #fff;
-                  }
                   .discourse-tag {
                     border: 1px solid #6C6CFF;
-                    background-color: #fff;
+                    background-color: #fff !important;
                     border-radius: 4px;
                     padding: 2px 4px;
                   }
@@ -278,7 +275,7 @@ body.tags-page {
   // flex-wrap: wrap !important;
 
   a.discourse-tag {
-    background: #FFFFFF;
+    background: #FFFFFF !important;
     border-radius: 5px;
     color: #111111 !important;
     font-size: 12px;
