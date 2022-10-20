@@ -1202,7 +1202,7 @@ body.tags-page {
               padding: 13.5px 0;
               flex-direction: column;
               justify-content: space-around;
-              height: 76px;
+              height: 110px;
 
               .announcement-title {
                 font-size: 16px;
@@ -3827,6 +3827,7 @@ body.archetype-regular {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
+        gap: 8vw;
       }
     }
   }
@@ -4279,12 +4280,13 @@ body.archetype-regular {
               display: table-cell;
               font-weight: 400;
               color: #000000 !important;
+              height: 110px;
             }
 
             td.topic-list-data.posters {
               display: flex;
               align-items: center;
-              margin-right: 1rem;
+              margin-right: 2rem;
             }
 
             .main-link {
@@ -4321,6 +4323,7 @@ body.archetype-regular {
               }
 
               .link-bottom-line {
+                gap: 2px;
                 a {
                   font-family: 'Sofia Pro';
                   font-size: 12px;
