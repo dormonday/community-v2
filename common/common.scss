@@ -1802,26 +1802,6 @@ body.tags-page {
       gap: unset;
       margin: unset;
 
-      .tag-drop {
-        .select-kit-collection{
-          flex-direction: row !important;
-          flex-wrap: wrap !important;
-        }
-        .select-kit.select-kit-row.is-highlighted {
-          background-color: #fff;
-        }
-  
-        .select-kit.select-kit-collection:hover.select-kit-row.is-highlighted:hover{
-          background-color: #fff;
-        }
-        .select-kit.select-kit-row.is-selected {
-          background-color: #fff;
-        }
-        .select-kit.select-kit-collection:hover .select-kit-row.is-highlighted:hover{
-          background-color: #fff;
-        }
-      }
-
       .combo-box.category-drop,
       .combo-box.tag-drop {
 
@@ -1897,9 +1877,6 @@ body.tags-page {
             }
 
             li.tag-row {
-              &:hover{
-                background-color: #fff !important
-              }
               a.discourse-tag {
                 font-size: 12px;
                 letter-spacing: -0.02em;
@@ -2264,26 +2241,6 @@ body {
 
   .category-breadcrumb {
 
-    .tag-drop {
-      .select-kit-collection{
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-      }
-      .select-kit.select-kit-row.is-highlighted {
-        background-color: #000;
-      }
-
-      .select-kit.select-kit-collection:hover.select-kit-row.is-highlighted:hover{
-        background-color: #fff;
-      }
-      .select-kit.select-kit-row.is-selected {
-        background-color: #fff;
-      }
-      .select-kit.select-kit-collection:hover .select-kit-row.is-highlighted:hover{
-        background-color: #fff;
-      }
-    }
-
     .combo-box.category-drop,
     .combo-box.tag-drop {
       width: 100%;
@@ -2360,9 +2317,6 @@ body {
           }
 
           li.tag-row {
-            &:hover{
-              background-color: #fff;
-            }
             a.discourse-tag {
               font-size: 12px;
               letter-spacing: -0.02em;
