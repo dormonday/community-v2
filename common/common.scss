@@ -1890,6 +1890,9 @@ body.tags-page {
 
     #navigation-bar {
       flex-direction: column-reverse;
+    }
+
+    .navigation-controls {
 
       .custom-sort-by-select {
         .select-kit.combo-box.sort-by-drop {
@@ -1914,7 +1917,7 @@ body.tags-page {
               margin-right: 5px;
             }
           }
-
+          border: 1px solid red;
           .select-list {
             position: absolute;
             display: none;
@@ -1929,6 +1932,7 @@ body.tags-page {
             transform: translate3d(0px, 3px, 0px);
 
             .select-kit-collection {
+              flex-direction: row;
               li {
                 display: flex;
                 align-items: baseline;
@@ -2110,6 +2114,26 @@ body.tags-page {
 
         &:hover {
           box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+        }
+      }
+      .select-kit.combo-box.sort-by-drop{
+        align-self: flex-end;
+        .select-list .select-kit-collection {
+          flex-direction: row;
+          gap: 15px;
+          li, a {
+            color: #DCDFEC;
+          }
+          li[title="Styleguide"] {
+            display: none;
+          }
+          li::marker {
+            content: '';
+          }
+          li .active{
+            color: #2B2C5D;
+          }
+          
         }
       }
     }
@@ -5209,7 +5233,10 @@ body.archetype-regular {
 
       .navigation-controls {
         margin-top: 15px;
-        margin-left: auto;
+        // margin-left: auto;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
 
         button#create-topic {
           position: relative;
