@@ -260,12 +260,13 @@
   {{navigation-bar navItems=navItems filterMode=filterMode category=category}}
 {{/unless}}
 <div class="navigation-controls">
+  <div class="custom-sort-by-select">
    <li class="select-kit combo-box sort-by-drop">
-      <!-- <div class="select-kit-header single-select-header combo-box-header sort-by-drop-header"> -->
-        <!-- <span>sort by</span>
+      <div class="select-kit-header single-select-header combo-box-header sort-by-drop-header">
+        <span>sort by</span>
         <svg class="fa d-icon d-icon-caret-right svg-icon caret-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#caret-right"></use></svg>
-        <svg class="fa d-icon d-icon-caret-down svg-icon caret-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#caret-down"></use></svg> -->
-      <!-- </div> -->
+        <svg class="fa d-icon d-icon-caret-down svg-icon caret-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#caret-down"></use></svg>
+      </div>
       <div class="select-list">
         <ul class="select-kit-collection">
           {{#each navItems as |navItem|}}
@@ -274,6 +275,18 @@
         </ul>
       </div>
     </li>
+  </div>
+  <div class="custom-sort-by-navigation">
+    <li class="select-kit combo-box sort-by-drop">
+       <div class="select-list">
+         <ul class="select-kit-collection">
+           {{#each navItems as |navItem|}}
+             {{navigation-item content=navItem filterMode=filterMode category=category}}
+           {{/each}}
+         </ul>
+       </div>
+     </li>
+   </div>
   {{#if showCategoryAdmin}}
     {{categories-admin-dropdown
       onChange=(action "selectCategoryAdminDropdownAction")
