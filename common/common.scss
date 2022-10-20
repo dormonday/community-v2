@@ -145,6 +145,9 @@ button#create-new.btn.fa.fa-plus {
                 margin-top: 0.5rem;
 
                 .discourse-tags {
+                  .box {
+                    background-color: #fff;
+                  }
                   .discourse-tag {
                     border: 1px solid #6C6CFF;
                     background-color: #fff;
@@ -1803,7 +1806,6 @@ body.tags-page {
       margin: unset;
 
       .tag-drop {
-        border: 1px solid red;
         .select-kit-collection{
           flex-direction: row !important;
           flex-wrap: wrap !important;
@@ -2266,7 +2268,6 @@ body {
   .category-breadcrumb {
 
     .tag-drop {
-      border: 1px solid red;
       .select-kit-collection{
         flex-direction: row !important;
         flex-wrap: wrap !important;
