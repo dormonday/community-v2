@@ -3788,6 +3788,8 @@ body.archetype-regular {
         top: 66px;
         // padding: 2.5em 1em 1em 1em;
         padding-top: 8px;
+        height: 500px;
+        overflow: scroll;
 
         .badge-category-parent-bg {
           display: block !important;
