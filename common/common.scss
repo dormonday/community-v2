@@ -40,6 +40,31 @@ h3,
   font-family: SofiaBold;
 }
 
+//start a discussion btn on top menu
+button#create-new.btn.fa.fa-plus {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  button#create-new.btn.fa.fa-plus {
+    display: inline-block;
+  }
+ button#create-new {
+    // display: inline-block;
+    background-color: #6C6CFF;
+    height: 39px;
+    width: fit-content;
+    padding: 8px 16px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    border: 3px solid white;
+
+    &:hover{
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
 .wrap {
   padding: unset;
 
