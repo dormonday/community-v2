@@ -1,0 +1,82 @@
+.login-modal,
+.create-account {
+  &:not(.hidden) {
+
+    .login-modal-body,
+    .create-account-body {
+      background-color: #F0F3FF !important;
+
+      &.has-alt-auth {
+        .login-right-side {
+          display: none !important;
+        }
+      }
+
+      .login-left-side, .login-welcome-header {
+        background-color: #F0F3FF !important;
+      }
+
+      .create-account-login-buttons {
+        display: none !important;
+      }
+
+      .waving-hand {
+        display: none;
+      }
+
+      .login-title {
+        color: #0F1048;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 33px;
+      }
+
+      .login-subheader {
+        color: #6C6CFF;
+        font-weight: 600;
+        font-size: 26px;
+      }
+
+      .create-account-form {
+        display: initial !important;
+        background-color: #F0F3FF !important;
+      }
+
+      #login-form, .login-form {
+        input {
+          background: #FFFFFF;
+          border-radius: 4px;
+          border: none;
+        }
+
+        .input-group {
+          width: 100%;
+        }
+
+        #forgot-password-link {
+          color: #1F76C2;
+          font-weight: 500;
+          font-size: 12px;
+        }
+      }
+
+      .modal-footer {
+        display: flex;
+        flex-direction: column;
+
+        #login-button,
+        .btn-primary {
+          background: #6C6CFF;
+          box-shadow: 0px 4px 40px rgb(29 76 242 / 16%);
+          border-radius: 39px;
+          width: 100%;
+          padding: 15px 0;
+
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
