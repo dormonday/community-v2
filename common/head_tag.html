@@ -455,7 +455,7 @@
       <!-- {{log 'test' }} -->
       {{#each categories as |c|}} 
       {{log c}}
-      {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 72) (eq c.id 8))}}
+      {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 7) (eq c.id 8))}}
       <a class="category-box-container" href='/c/{{c.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
         <div class="category-image" style="background-image: url({{c.uploaded_logo.url}})"></div>
