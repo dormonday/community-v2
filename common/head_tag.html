@@ -30,6 +30,7 @@
 <script type="text/discourse-plugin" version="0.8.25">
   const user = api.getCurrentUser();
   if (!user) {
+    console.log("daniel test")
   api.decorateWidget('post:after', helper => {
     helper.attach("button.become-member-button", {
       label: "sign_up",
