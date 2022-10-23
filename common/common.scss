@@ -1730,7 +1730,7 @@ body.tags-page {
   position: relative;
 
   .category-header-container.mobile {
-    display: contents;
+    display: block;
   }
 
   .category-header-container.desktop {
@@ -4882,7 +4882,7 @@ body.archetype-regular {
     display: none;
   }
   .category-header-container.desktop {
-    display: contents;
+    display: block;
   }
 
 
