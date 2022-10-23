@@ -995,8 +995,8 @@ body.tags-page {
     }
 
     .category-image.subcategory {
-      // width: 155px;
-      height: 35px;
+      width: 80%;
+      height: 55px;
     }
 
     .category-image.product-help {
@@ -1079,7 +1079,7 @@ body.tags-page {
       color: #6b6cff;
     }
 
-    &:hover a.category-box-link div.category-arrow-icon {
+    :not(.subcategory) &:hover a.category-box-link div.category-arrow-icon{
       background-image: url($back_arrow_purple);
     }
   }
