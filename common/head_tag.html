@@ -455,7 +455,7 @@
       <!-- {{log 'test' }} -->
       {{#each categories as |c|}} 
       {{log c}}
-      {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 8))}}
+      {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 7))}}
       <a class="category-box-container" href='/c/{{c.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
         <div class="category-image" style="background-image: url({{c.uploaded_logo.url}})"></div>
@@ -472,7 +472,7 @@
     {{/each}}
     {{#each categories as |c|}} 
       {{log c}}
-      {{#if (eq c.id 7)}}
+      {{#if (eq c.id 8)}}
       <a class="category-box-container" href='/c/{{c.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
         <div class="category-image" style="background-image: url({{c.uploaded_logo.url}})"></div>
@@ -485,8 +485,7 @@
           <div class="category-arrow-icon"></div>
         </a>
       </a>
-      {{/if}}
-      
+      {{/if}}  
     {{/each}}
   </div>
   <div class="categories-border-bottom"></div>
@@ -838,7 +837,7 @@
           <div class="become-member-subtitle">{{theme-setting 'become_member_subtitle'}}</div>
           <button class="become-member-button">
             <img class="become-member-button-arrow" />
-            <div class="become-member-button-text">join the conversation</div>
+            <div class="become-member-button-text">Join the conversation</div>
           </button>
         </div>
       </div>
