@@ -771,6 +771,7 @@
     <div class="custom-categories-boxes-container subcategory">
       {{#each subCategories as |s|}} 
       {{log s}}
+      {{#if (or (eq s.id 81) (eq s.id 82) (eq s.id 83) (eq s.id 98) (eq s.id 99))}}
       <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/workflows/{{s.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
         <div class="category-title-container">
@@ -783,6 +784,7 @@
           <div class="category-arrow-icon"></div>
         </a>
       </a>
+      {{/if}}
       {{/each}}
     </div>
     <div class="categories-border-bottom"></div>
