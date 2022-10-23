@@ -1729,6 +1729,10 @@ body.tags-page {
 .category-heading {
   position: relative;
 
+  .category-header-container.mobile {
+    display: contents;
+  }
+
   .category-header-container.desktop {
     display: none;
   }
@@ -4877,6 +4881,10 @@ body.archetype-regular {
   .category-header-container.mobile {
     display: none;
   }
+  .category-header-container.desktop {
+    display: contents;
+  }
+
 
     .category-header-container {
       display: flex;
