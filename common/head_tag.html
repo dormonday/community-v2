@@ -455,7 +455,7 @@
       <!-- {{log 'test' }} -->
       {{#each categories as |c|}} 
       {{log c}}
-      {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 7) (eq c.id 8))}}
+      {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 8))}}
       <a class="category-box-container" href='/c/{{c.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
         <div class="category-image" style="background-image: url({{c.uploaded_logo.url}})"></div>
@@ -469,6 +469,24 @@
         </a>
       </a>
       {{/if}}
+    {{/each}}
+    {{#each categories as |c|}} 
+      {{log c}}
+      {{#if (eq c.id 7)}}
+      <a class="category-box-container" href='/c/{{c.slug}}'>
+        <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
+        <div class="category-image" style="background-image: url({{c.uploaded_logo.url}})"></div>
+        <div class="category-title-container">
+          <h3 class="category-title">{{c.name}}</h3>
+        </div>
+        <div class="category-topic-count">{{c.topic_count}} posts</div>
+        <a class="category-box-link" href='/c/{{c.slug}}'>
+          <span>Join the conversation</span>
+          <div class="category-arrow-icon"></div>
+        </a>
+      </a>
+      {{/if}}
+      
     {{/each}}
   </div>
   <div class="categories-border-bottom"></div>
@@ -756,9 +774,9 @@
       {{log s}}
       <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/workflows/{{s.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
-        <div class="category-image subcategory" style="background-image: url({{s.uploaded_logo.url}})"></div>
         <div class="category-title-container">
-          <h3 class="category-title">{{s.name}}</h3>
+          <!-- <h3 class="category-title">{{s.name}}</h3> -->
+          <div class="category-image subcategory" style="background-image: url({{s.uploaded_logo.url}})"></div>
         </div>
         <div class="category-topic-count">{{s.topic_count}} posts</div>
         <a class="category-box-link" href='/c/workflows/{{s.slug}}'>
