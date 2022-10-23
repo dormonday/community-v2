@@ -238,7 +238,7 @@
 </script>
 
 <script type="text/x-handlebars" data-template-name="components/navigation-homepage">
-  <div class="container">
+  <!-- <div class="container">
     <div class="navigation">
       {{navigation-bar navItems=navItems filterMode=filterMode category=category}}
       {{create-topic-button
@@ -250,7 +250,7 @@
         canCreateTopicOnTag=canCreateTopicOnTag
       }}
     </div>
-  </div>
+  </div> -->
 </script>
 
 <script type="text/x-handlebars" data-template-name="components/d-navigation-orig">
@@ -448,9 +448,9 @@
       <div class="categories-boxes-title">{{theme-setting 'conversation_title'}}</div>
       <div class="categories-boxes-subtitle">{{theme-setting 'conversation_subtitle'}}</div>
     </div>
-    {{#if isAdmin}}
+    <!-- {{#if isAdmin}}
       <a href="/categories">Categories</a>
-    {{/if}}
+    {{/if}} -->
     <div class="custom-categories-boxes-container">
       <!-- {{log 'test' }} -->
       {{#each categories as |c|}} 
@@ -928,8 +928,8 @@
    <div class="custom-search-bar wrap">
     {{mount-widget widget="search-widget"}}
   </div>
-   <div class="custom-sort-by-select">
-    <li class="select-kit combo-box sort-by-drop">
+   <!-- <div class="custom-sort-by-select"> -->
+    <!-- <li class="select-kit combo-box sort-by-drop">
       <div class="select-kit-header single-select-header combo-box-header sort-by-drop-header">
         <span>sort by</span>
         <svg class="fa d-icon d-icon-caret-right svg-icon caret-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#caret-right"></use></svg>
@@ -942,8 +942,8 @@
           {{/each}}
         </ul>
       </div>
-    </li>
-  </div>
+    </li> -->
+  <!-- </div> -->
 </script>
 
 <script type="text/x-handlebars" data-template-name="components/navigation-item">
