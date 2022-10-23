@@ -28,7 +28,7 @@
 </script>
 
 <script type="text/discourse-plugin" version="0.8.25">
-  document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('load', function() {
     const user = api.getCurrentUser();
       if (!user) {
         console.log("daniel test")
@@ -40,7 +40,7 @@
           })
         });
       }
-  }, false);
+  })
 </script>
 
 <!-- custom nav links -->
