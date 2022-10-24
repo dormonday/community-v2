@@ -96,6 +96,25 @@ button#create-new.btn.fa.fa-plus {
   }
 }
 
+.menu-links.columned li{
+  width: unset;
+}
+
+header .menu-links, header .category-links {
+  padding: 0;
+}
+
+.menu-links{
+  padding: 0;
+  .widget-link[title*="visit monday.com"]{
+    background-color: #6C6CFF;
+    border: 1px solid #6C6CFF;
+    border-radius: 10px;
+    color: #fff !important;
+    width: fit-content !important;
+  };
+}
+
 .latest-topic-list-item .main-link a.title,
 .topic-list .main-link a.title {
   color: #000 !important;

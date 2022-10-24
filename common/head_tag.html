@@ -57,6 +57,13 @@
   });
   </script>
 
+
+<!-- add visit monday.com link to the hamburger menu -->
+<script type="text/discourse-plugin" version="0.8">
+api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
+  return {href: "https://monday.com", rawLabel: "visit monday.com", attributes: {"target": '_blank'}}
+});</script>
+
 <!-- search widget -->
 <script type="text/discourse-plugin" version="0.8">
   const searchMenuWidget = api.container.factoryFor('widget:search-menu');
