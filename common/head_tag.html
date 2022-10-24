@@ -774,8 +774,24 @@
     </div>
     <div class="custom-categories-boxes-container subcategory">
       {{#each subCategories as |s|}} 
+      {{#if (eq s.id 99)}}
+      <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/workflows/{{s.slug}}'>
+        <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
+        <div class="category-title-container">
+          <!-- <h3 class="category-title">{{s.name}}</h3> -->
+          <div class="category-image subcategory" style="background-image: url({{s.uploaded_logo.url}})"></div>
+        </div>
+        <div class="category-topic-count">{{s.topic_count}} posts</div>
+        <a class="category-box-link" href='/c/workflows/{{s.slug}}'>
+          <span>Join the conversation</span>
+          <div class="category-arrow-icon"></div>
+        </a>
+      </a>
+      {{/if}}
+      {{/each}}
+      {{#each subCategories as |s|}} 
       {{log s}}
-      {{#if (or (eq s.id 81) (eq s.id 82) (eq s.id 83) (eq s.id 98) (eq s.id 99))}}
+      {{#if (or (eq s.id 81) (eq s.id 82) (eq s.id 83) (eq s.id 98))}}
       <a class="category-box-container subcategory" style="--hovercolor: #{{s.color}}; --textcolor: #{{s.color}}0" href='/c/workflows/{{s.slug}}'>
         <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
         <div class="category-title-container">
