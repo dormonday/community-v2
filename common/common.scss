@@ -1828,7 +1828,6 @@ body.tags-page {
 
       .combo-box.category-drop,
       .combo-box.tag-drop {
-
         .combo-box-header.category-drop-header,
         .combo-box-header.tag-drop-header {
           background: #FFFFFF !important;
@@ -4963,7 +4962,7 @@ body.archetype-regular {
 
       .category-breadcrumb {
         // width: 40%; 
-
+        flex: 1.3;
         .select-kit {
           height: auto;
         }
@@ -4973,6 +4972,7 @@ body.archetype-regular {
           // width: 50%;
           margin-bottom: 20px;
           position: relative;
+          flex: 1;
 
           .combo-box-header.category-drop-header,
           .combo-box-header.tag-drop-header {
