@@ -100,6 +100,17 @@ button#create-new.btn.fa.fa-plus {
   width: unset;
 }
 
+.menu-container-footer-links .menu-links.columned li:nth-last-child(2)
+{
+  border-bottom: 1px solid #ebebeb;
+}
+
+.menu-container-footer-links .menu-links.columned li:nth-last-child(1)
+{
+  padding: 10px 0;
+}
+
+
 header .menu-links, header .category-links {
   padding: 0;
 }
@@ -113,6 +124,8 @@ header .menu-links, header .category-links {
     border-radius: 24px;
     color: #fff !important;
     width: fit-content !important;
+    align-self: center;
+    margin-left: 27%;
   };
 }
 
