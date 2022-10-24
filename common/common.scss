@@ -3428,6 +3428,9 @@ body.archetype-regular {
 
   /* navlinks */
   .d-header {
+    #site-logo {
+      height: 29px;
+    }
     ul[role="navigation"] {
       display: flex;
 
