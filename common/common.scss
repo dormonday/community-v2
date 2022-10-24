@@ -107,9 +107,10 @@ header .menu-links, header .category-links {
 .menu-links{
   padding: 0;
   .widget-link[title*="visit monday.com"]{
+    padding: 10px 18px !important;
     background-color: #6C6CFF;
     border: 1px solid #6C6CFF;
-    border-radius: 10px;
+    border-radius: 24px;
     color: #fff !important;
     width: fit-content !important;
   };
