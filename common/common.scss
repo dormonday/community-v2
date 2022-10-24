@@ -5061,7 +5061,9 @@ body.archetype-regular {
       }
 
       #navigation-bar {
-        width: 0;
+        // width: 0;
+        margin: 0;
+        flex: 1;
         flex-direction: unset;
 
         .custom-sort-by-select {
@@ -5156,12 +5158,12 @@ body.archetype-regular {
         }
 
         .custom-search-bar {
-          width: 66.67%;
+          width: 100%;
 
           .search-widget {
-            width: 412px;
+            width: 100%;
             padding: 0;
-            margin: unset;
+            margin: 0;
 
             .search-menu {
               width: 100%;
