@@ -927,13 +927,13 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
-    if (url.startsWith("/c/")){
+    if (url.startsWith("/c/") || url.startsWith("/unread/")){
       let top = $('.category-title span').position().top - 3;
       let left = $('.category-title span').position().left + $('.category-title span').width();
       $('.category-notifications-button').css('top',top + 'px');
       $('.category-notifications-button').css('left',left + 'px');
     };
-    if (url.includes("/c/")){
+    if (url.startsWith("/c/") || url.startsWith("/unread/")){
       $('.custom-sort-by-select .select-kit.sort-by-drop').on('click',function(){
         $(this).toggleClass('is-expanded');
       });
