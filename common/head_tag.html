@@ -27,18 +27,18 @@
   });
 </script>
 
+
+
 <script type="text/discourse-plugin" version="0.8.25">
-  const user = api.getCurrentUser();
-  if (!user) {
-    console.log("daniel test")
-    api.decorateWidget('above-footer', helper => {
-      helper.attach("button.become-member-button", {
+  api.createWidget("become-member-button", {
+    tagName: "buton.become-member-button", function(helper){
+      return  helper.attach("buton.become-member-button", {
         label: "sign_up",
         className: "btn-primary btn-small sign-up-button",
-        action: "showCreateAccount"
-      })
-    });
-  }
+        action: "showCreateAccount",
+      });
+    },
+  });
 </script>
 
 <!-- custom nav links -->
@@ -601,7 +601,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass('before-topic-list', 'hp-before-topic-list-announcements', {
     setupComponent(args, component) {
       api.onPageChange(async(url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" ){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
           component.set('displayAnnouncements', true);
           component.set("loadingAnnouncements", true);
           let thisUser = Discourse.User.current(); 
@@ -686,7 +686,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass("above-footer", "hp-above-footer-community-channels" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" ){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
           component.set("displayCommunityChannelBanner", true); 
         } else {  
           component.set("displayCommunityChannelBanner", false); 
@@ -708,8 +708,8 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass("above-footer", "hp-above-footer-become-member-banner" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/t') ){ 
-          console.log("yuval test")
+        const user = api.getCurrentUser();
+        if (!user){ 
           component.set("displayBecomeMemberBanner", true); 
         } else {  
           component.set("displayBecomeMemberBanner", false); 
@@ -925,13 +925,12 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
-    if (url.startsWith("/c/") || url.startsWith("/unread/")){
+    if (url.startsWith("/c/")){
       let top = $('.category-title span').position().top - 3;
       let left = $('.category-title span').position().left + $('.category-title span').width();
       $('.category-notifications-button').css('top',top + 'px');
       $('.category-notifications-button').css('left',left + 'px');
     };
-    if (url.startsWith("/c/") || url.startsWith("/unread/")){
       $('.custom-sort-by-select .select-kit.sort-by-drop').on('click',function(){
         $(this).toggleClass('is-expanded');
       });
@@ -944,7 +943,6 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
       });
 
       $('.custom-search-bar .search-widget .search-menu .search-input input[type="text"]').attr("placeholder", "Search topics, posts, users");
-    };
   });
 </script>
 
@@ -1035,7 +1033,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   <div class="custom-cta-banner" >
     <div class="custom-cta-banner-title">{{theme-setting 'cta_title'}}</div>
     <div class="custom-cta-banner-bottom">
-      <a class="custom-cta-banner-button" target="_blank" href="{{theme-setting 'cta_button_link'}}">
+      <a class="custom-cta-banner-button" target="_blank" href="https://monday.com/contact-us#form">
         <img class="custom-cta-banner-button-arrow" />
         <div class="custom-cta-banner-button-text">
           {{theme-setting 'cta_button_text'}}

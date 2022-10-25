@@ -107,7 +107,8 @@ button#create-new.btn.fa.fa-plus {
 
 .menu-container-footer-links .menu-links.columned li:nth-last-child(1)
 {
-  padding: 10px 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.3rem;
 }
 
 
@@ -125,7 +126,6 @@ header .menu-links, header .category-links {
     color: #fff !important;
     width: fit-content !important;
     align-self: center;
-    margin-left: 27%;
   };
 }
 
@@ -3769,7 +3769,7 @@ body.archetype-regular {
   /* navlinks */
   .d-header {
     #site-logo {
-      height: 29px;
+      height: 27.94px;
     }
     ul[role="navigation"] {
       display: flex;
