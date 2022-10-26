@@ -3706,6 +3706,46 @@ body.archetype-regular {
   display: none;
 }
 
+.recent-disussion-container{
+  position: relative;
+  margin: 50px 120px 0;
+  background-image: url($recent_discussions_banner_mobile);
+  height: 263px;
+  display: flex;
+  align-items: center;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .recent-disussion-text-container {
+    .recent-disussion-title {
+      padding: 2rem 2rem 1rem;
+
+      span {
+        color: #0F1048;
+        font-family: 'Sofia Pro';
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 35px;
+        letter-spacing: 0.2px;
+      }
+    }
+
+    .recent-disussion-subtitle {
+      p {
+        padding: 0rem 2rem 0rem;
+        font-family: 'Sofia Pro';
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        letter-spacing: 0.2px;
+        color: #0F1048;
+      }
+    }
+  }
+}
+
+
 @media (min-width: 769px) {
   .wrap {
     max-width: 100vw;
@@ -6857,6 +6897,45 @@ body.archetype-regular {
       font-size: 14px;
       font-weight: 300;
       color: #535768;
+    }
+  }
+  .recent-disussion-container{
+    position: relative;
+    background-image: url($recent_discussions_banner);
+    height: 264px;
+    display: flex;
+    align-items: center;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // width: fit;
+
+    .recent-disussion-text-container {
+      .recent-disussion-title {
+        margin-bottom: 14px;
+        padding: 3rem 4.5rem 1.5rem;
+
+        span {
+          color: #0F1048;
+          font-family: 'Sofia Pro';
+          font-size: 50px;
+          line-height: 50px;
+          font-weight: 700;
+          letter-spacing: 0.2px;
+        }
+      }
+
+      .recent-disussion-subtitle {
+        p {
+          padding: 0rem 4.5rem 1rem;
+          font-family: 'Sofia Pro';
+          font-size: 18px;
+          line-height: 26px;
+          font-weight: 400;
+          letter-spacing: 0.2px;
+          color: #0F1048;
+        }
+      }
     }
   }
 }

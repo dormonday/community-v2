@@ -171,7 +171,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass("below-site-header", "search-banner", {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/latest?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45"  ||  url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
           component.set("displaySearchBanner", true); 
         } else {  
           component.set("displaySearchBanner", false); 
@@ -204,7 +204,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   const navigationComponent = require('discourse/components/d-navigation').default;
   navigationComponent.reopen({
     isHomepage: function() {
-      return (window.location.pathname === "/" || window.location.pathname === "/?preview_theme_id=4988" || window.location.pathname === "/?preview_theme_id=45" || window.location.pathname === "/?preview_theme_id=44" ||  window.location.pathname === "/categories" || window.location.pathname === "/categories?preview_theme_id=4988" || window.location.pathname === "/categories?preview_theme_id=45" || window.location.pathname === "/categories?preview_theme_id=44" || window.location.pathname === "/latest" || window.location.pathname === "/latest?preview_theme_id=4988" || window.location.pathname === "/latest?preview_theme_id=45" || window.location.pathname === "/latest?preview_theme_id=44" || window.location.pathname === "/new" || window.location.pathname === "/new?preview_theme_id=4988" || window.location.pathname === "/new?preview_theme_id=45" || window.location.pathname === "/new?preview_theme_id=44")
+      return (window.location.pathname === "/" || window.location.pathname === "/?preview_theme_id=4988" || window.location.pathname === "/?preview_theme_id=45" || window.location.pathname === "/?preview_theme_id=44" ||  window.location.pathname === "/categories" || window.location.pathname === "/categories?preview_theme_id=4988" || window.location.pathname === "/categories?preview_theme_id=45" || window.location.pathname === "/categories?preview_theme_id=44" || window.location.pathname === "/latest?preview_theme_id=4988" || window.location.pathname === "/latest?preview_theme_id=45" || window.location.pathname === "/new?preview_theme_id=4988" || window.location.pathname === "/new?preview_theme_id=45")
     }.property()
   });
   api.onPageChange((url, title) => {
@@ -367,7 +367,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass('below-site-header', 'hp-above-footer-categories-boxes', {
     setupComponent(args, component) {
       api.onPageChange((url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
           component.set('displayCategoriesBoxes', true);
           component.set("loadingCategories", true);
           let thisUser = Discourse.User.current(); 
@@ -541,10 +541,10 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
         bulkSelectEnabled=bulkSelectEnabled
         addTopicsToBulkSelect=(action "addTopicsToBulkSelect")
         as |discoveryTopicList|}}
-        {{#if top}}
-          <div class="top-lists">
+        {{#if (or new top unread)}}
+          <!-- <div class="top-lists">
             {{period-chooser period=period action=(action "changePeriod") fullDay=false}}
-          </div>
+          </div> -->
         {{else}}
           {{#if topicTrackingState.hasIncoming}}
             <div class="show-more {{if hasTopics "has-topics"}}">
@@ -686,7 +686,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass("above-footer", "hp-above-footer-community-channels" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" ){ 
           component.set("displayCommunityChannelBanner", true); 
         } else {  
           component.set("displayCommunityChannelBanner", false); 
@@ -717,6 +717,18 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
       });
     }
   });
+  api.registerConnectorClass("above-main-container", "hp-above-main-container-recent-discussion" , {
+    setupComponent(args, component) {
+      api.onPageChange((url) => {
+        console.log(url);
+        if (url.startsWith("/latest") || url.startsWith("/new") || url.startsWith("/unread") || url.startsWith("/top") ){ 
+          component.set("displayRecentDiscussionBanner", true); 
+        } else {  
+          component.set("displayRecentDiscussionBanner", false); 
+        }
+      });
+    }
+  });
 </script>
 
 <!-- hp above footer more discussions btn -->
@@ -735,7 +747,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass('above-footer', 'hp-above-footer-products', {
     setupComponent(args, component) {
       api.onPageChange(async(url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
           component.set('displaySubCategoriesBoxes', true);
           component.set("loadingSubCategories", true);
           let thisUser = Discourse.User.current(); 
@@ -867,6 +879,25 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
             <div class="become-member-button-text">Join the conversation</div>
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/above-main-container/hp-above-main-container-recent-discussion">
+  {{#if displayRecentDiscussionBanner}}
+  <div class="recent-disussion-container">
+    <div class="recent-disussion-text-container">
+      <div class="recent-disussion-title">
+        <span>
+          Recent Discussion
+        </span>
+      </div>
+      <div class="recent-disussion-subtitle">
+        <p>
+          recent-disussion-subtitle  Stay up-to-date on recent posts and show off your skills by answering a question
+        </p>
       </div>
     </div>
   </div>
