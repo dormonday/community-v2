@@ -1276,6 +1276,8 @@ body.tags-page {
 
               .announcement-bottom {
                 display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
 
                 .announcement-category {
                   display: flex;
@@ -1301,7 +1303,6 @@ body.tags-page {
 
                 .announcement-tags {
                   display: flex;
-                  flex-wrap: wrap;
 
                   .announcement-tag {
                     margin: 0 10px;
