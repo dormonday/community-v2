@@ -504,18 +504,17 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
     if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" ){
-      if (window.innerWidth > 768) {
-        $('.topics-container').css('padding', '0 110px')
-      }
       $('.topics-container-header-section').css('display', 'block')
       $('.announcements-container').css('display', 'block')
       $('.see-more-button').css('display', 'flex')
       $('#main-outlet').css({'margin-left': 'unset', 'margin-right': 'unset'})
-
+      $('.navigation-container').css('display', 'none')
       if (window.innerWidth < 768) {
         $('.latest-topics-container').css('width', '100%')
       } else {
+        $('.topics-container').css('padding', '60px 110px 0 110px')
         $('.latest-topics-container').css('width', '55%')
+        
       }
     } else {
       $('.topics-container-header-section').css('display', 'none')
@@ -587,7 +586,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
               onScroll=discoveryTopicList.saveScrollPosition}}
           {{/if}}
           {{plugin-outlet name="after-topic-list" args=(hash category=category)}}
-          <a target="_blank" href="https://community.monday.com/latest" class="see-more-button">
+          <a href="https://community.monday.com/latest" class="see-more-button">
             <div class="see-more-button-text">See more discussions</div>
             <div class="see-more-button-arrow-icon"></div>
           </a>
