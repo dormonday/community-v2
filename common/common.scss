@@ -2392,6 +2392,9 @@ body.tags-page {
             li[title="Styleguide"] {
               display: none;
             }
+            li[title*="category"] {
+              display: none;
+            }
           }
         }
 
@@ -2564,9 +2567,10 @@ body {
 
       tbody {
         .topic-list-item {
+          height: 110px;
           .main-link {
             width: 87%;
-            height: 36px;
+            height: 110px;
 
             .link-top-line {
               .topic-statuses {
@@ -2833,6 +2837,9 @@ body {
             }
 
             li[title="Styleguide"] {
+              display: none;
+            }
+            li[title*="category"] {
               display: none;
             }
           }
@@ -5601,6 +5608,9 @@ body.archetype-regular {
                 li[title="Styleguide"] {
                   display: none;
                 }
+                li[title*="category"] {
+                  display: none;
+                }
               }
             }
 
@@ -5952,6 +5962,9 @@ body.archetype-regular {
               li[title="Styleguide"] {
                 display: none;
               }
+              li[title*="category"] {
+                display: none;
+              }
             }
           }
 
@@ -6167,6 +6180,9 @@ body.archetype-regular {
             color: #DCDFEC;
           }
           li[title="Styleguide"] {
+            display: none;
+          }
+          li[title*="category"] {
             display: none;
           }
           li::marker {

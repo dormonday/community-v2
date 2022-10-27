@@ -28,7 +28,6 @@
 </script>
 
 
-
 <script type="text/discourse-plugin" version="0.8.25">
   api.createWidget("become-member-button", {
     tagName: "buton.become-member-button", function(helper){
@@ -526,6 +525,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
         $('#main-outlet').css({'margin-left': 'unset', 'margin-right': 'unset'})
       } else {
         $('#main-outlet').css({'margin-left': '118px', 'margin-right': '165px'})
+        $('button#create-topic').css('display', 'none')
       }
     }
   });
