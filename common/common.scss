@@ -1301,6 +1301,7 @@ body.tags-page {
 
                 .announcement-tags {
                   display: flex;
+                  flex-wrap: wrap;
 
                   .announcement-tag {
                     margin: 0 10px;
