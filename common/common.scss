@@ -1228,7 +1228,7 @@ body.tags-page {
   .topics-section {
     .announcements-container {
       // border-top: 1px solid #D5D8DF;
-      // padding-top: 44px;
+      padding-bottom: 44px;
       // margin-top: 44px;
 
       table.announcements-list {
@@ -1331,7 +1331,7 @@ body.tags-page {
 
   .latest-topics-container {
     border-top: 1px solid #D5D8DF;
-    // padding-top: 44px;
+    padding-top: 44px;
     // margin-top: 44px;
   }
 
@@ -4708,6 +4708,7 @@ body.archetype-regular {
         border-top: unset;
         padding-top: 0;
         margin-top: 0;
+        padding-bottom: 0;
         table.announcements-list {
           thead.announcements-list-header {
             display: block;
