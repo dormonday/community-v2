@@ -1194,7 +1194,7 @@ body.tags-page {
   color: white !important;
   transition: all 0.2s ease-in-out;
   align-items: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
 
   &:hover {
     background: rgb(60, 73, 217);
@@ -1228,13 +1228,14 @@ body.tags-page {
   .topics-section {
     .announcements-container {
       // border-top: 1px solid #D5D8DF;
-      padding-top: 44px;
+      // padding-top: 44px;
       // margin-top: 44px;
 
       table.announcements-list {
         width: 100%;
 
         thead.announcements-list-header {
+          display: none;
           border: 1px solid #ebebeb;
           border-radius: 4px;
           height: 54px;
@@ -1330,8 +1331,8 @@ body.tags-page {
 
   .latest-topics-container {
     border-top: 1px solid #D5D8DF;
-    padding-top: 44px;
-    margin-top: 44px;
+    // padding-top: 44px;
+    // margin-top: 44px;
   }
 
   .topics-container-header-section {
@@ -1345,19 +1346,21 @@ body.tags-page {
       font-weight: 600;
       padding-bottom: 1.5rem;
       padding-right: 1rem;
+      // padding-top: 44px;
+      // margin-top: 44px;
     }
 
     .topics-subtitle {
       font-weight: 300;
       font-size: 17px;
       line-height: 25px;
-      white-space: nowrap;
-      margin-bottom: 64px;
+      // white-space: nowrap;
+      // margin-bottom: 64px;
     }
   }
 
   .list-controls {
-    padding: 0 28px;
+    // padding: 0 28px;
 
     .navigation-container .container {
       .custom-sort-by-select {
@@ -1388,7 +1391,7 @@ body.tags-page {
           }
         }
         .right {
-          width: 100%;
+          // width: 100%;
           .topic-item-stats {
             // flex-wrap: wrap;
           }
@@ -1923,7 +1926,8 @@ body.tags-page {
           border-radius: 4px;
           padding: 1rem 0.5rem;
           // margin: 0 19px !important;
-          width: 334px !important;
+          width: 100% !important;
+          transform: translate3d(0px, 43px, 0px) !important;
 
           .select-kit-filter {
             display: none;
@@ -2199,7 +2203,17 @@ body.tags-page {
 .navigation-container{
   display: block;
   margin: 28px;
-  width: auto;
+  // width: auto;
+
+  .select-kit.combo-box {
+    width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
 
   span {
     font-weight: 'Sofia Pro';
@@ -2263,7 +2277,8 @@ body.tags-page {
         border-radius: 4px;
         padding: 1rem 0.5rem;
         // margin: 0 19px !important;
-        width: 334px !important;
+        width: 100% !important;
+         transform: translate3d(0px, 43px, 0px) !important;
 
         .select-kit-filter {
           display: none;
@@ -2597,6 +2612,7 @@ body {
           .posts-map.posts {
             button.badge-posts {
               span.number {
+                display: none;
                 color: #535768;
                 font-size: 16px;
               }
@@ -2703,7 +2719,9 @@ body {
         border-radius: 4px;
         padding: 1rem 0.5rem;
         // margin: 0 19px !important;
-        width: 334px !important;
+        // width: 334px !important;
+        width: 100% !important;
+        transform: translate3d(0px, 43px, 0px) !important;
 
         .select-kit-filter {
           display: none;
@@ -3693,6 +3711,21 @@ body.archetype-regular {
     width: 125px;
   }
 
+  .list-controls {
+    .custom-search-bar {
+      width: 100% !important;
+      margin: 0;
+      padding: 0;
+      padding-top: 5px;
+
+      .search-widget{
+        width: 100% !important;
+        height: 33px;
+        padding: 0;
+      }
+    }
+  }
+
 }
 
 .list-container {
@@ -3708,7 +3741,6 @@ body.archetype-regular {
 
 .recent-disussion-container{
   position: relative;
-  margin: 50px 120px 0;
   background-image: url($recent_discussions_banner_mobile);
   height: 263px;
   display: flex;
@@ -3904,6 +3936,11 @@ body.archetype-regular {
     }
   }
   
+  .list-container {
+    .topics-section {
+      padding: 0;
+    }
+  }
   .discourse-tags {
     flex-wrap: nowrap !important;
   }
@@ -4656,7 +4693,7 @@ body.archetype-regular {
   .navigation-topics {
     .topics-section {
       display: flex;
-      padding: 0 70px;
+      // padding: 0 70px;
 
       .latest-topics-container {
         // margin-right: 87px;
@@ -4671,11 +4708,16 @@ body.archetype-regular {
         border-top: unset;
         padding-top: 0;
         margin-top: 0;
+        table.announcements-list {
+          thead.announcements-list-header {
+            display: block;
+          }
+        }
       }
     }
 
     .list-controls {
-      padding: 50px 120px 0;
+      // padding: 50px 120px 0;
       // width: 40%;
 
       .navigation-container .container {
@@ -4716,7 +4758,7 @@ body.archetype-regular {
 
     .topics-container {
       overflow: hidden;
-      padding: 0 50px;
+      // padding: 0 50px;
       width: 100%;
 
       .topic-list {
@@ -4765,7 +4807,7 @@ body.archetype-regular {
                   color: #383B45;
                   padding-bottom: 5px;
                   display: block;
-                  width: 293px;
+                  // width: 293px;
                   white-space: nowrap;
                   overflow: hidden;
                   text-overflow: ellipsis;
@@ -4804,6 +4846,7 @@ body.archetype-regular {
             .posts-map.posts {
               button.badge-posts {
                 span.number {
+                  display: block;
                   color: #000000;
                   font-weight: 400;
                 }
@@ -5721,6 +5764,10 @@ body.archetype-regular {
   .navigation-container{
     display: flex;
     margin: 28px 0;
+
+    .select-kit.combo-box {
+      flex: 1 1 0;
+    }
 
     .category-notifications-button {
       display: none;
@@ -6901,6 +6948,7 @@ body.archetype-regular {
   }
   .recent-disussion-container{
     position: relative;
+    // margin: 50px 120px 0;
     background-image: url($recent_discussions_banner);
     height: 264px;
     display: flex;
