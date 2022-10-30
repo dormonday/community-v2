@@ -116,6 +116,7 @@ header .menu-links, header .category-links {
   padding: 0;
 }
 
+
 .menu-links{
   padding: 0;
   .widget-link[title*="visit monday.com"]{
@@ -127,8 +128,17 @@ header .menu-links, header .category-links {
     width: fit-content !important;
     align-self: center;
   };
-  li a.widget-link[href*="/cakeday"] {
-    display: none;
+ 
+}
+
+.notAdminView {
+  .menu-links{
+    li a.widget-link[href*="/cakeday"] {
+      display: none;
+    }
+    li a.widget-link[href="/g"] {
+      display: none;
+    }
   }
 }
 

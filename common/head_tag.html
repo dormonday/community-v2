@@ -11,6 +11,7 @@
       }
       if (!isAdmin){
         $('#navigation-bar .select-list a[href="/latest"]').click();
+        $('.panel').toggleClass("notAdminView");
       }
     }
     if (url === "/categories?preview_theme_id=45" || url === "/latest" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45" || url === "/new" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest?preview_theme_id=44" || url === "/new?preview_theme_id=44" || url === "/top" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45" || url === "/top?preview_theme_id=44" || url.startsWith('/latest')) {
