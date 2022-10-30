@@ -43,6 +43,7 @@
 
 <!-- create topic btn under recent discussion in homepage on mobile-->
 <script type="text/discourse-plugin" version="0.8">
+  if (Discourse.User.current()) {
   const h = require("virtual-dom").h;
   const createTopic = function() {
     const Composer = require('discourse/models/composer').default;
@@ -59,6 +60,7 @@
     }, '+' );
     }
   });
+}
 </script>
 
 
@@ -212,7 +214,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
       api.onPageChange((url) => {
         if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45"  ||  url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
           component.set("displaySearchBanner", true); 
-        } else {  
+        } else { 
           component.set("displaySearchBanner", false); 
         }
       });
