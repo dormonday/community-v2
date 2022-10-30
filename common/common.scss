@@ -1348,6 +1348,26 @@ body.tags-page {
     border-top: 1px solid #D5D8DF;
     padding-top: 44px;
     // margin-top: 44px;
+    .add-topic{
+      margin-top: 10px;
+      float: right;
+      button#create-topic {  
+        color: #fff;
+        font-size: 23px;
+        position: relative;
+        background: #6C6CFF;
+        border: 1px solid #6C6CFF;
+        box-shadow: 0px 4px 40px rgba(29, 76, 242, 0.16);
+        padding: 0;
+        margin: 0;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        &:active {
+          box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
   }
 
   .topics-container-header-section {
