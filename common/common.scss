@@ -2310,6 +2310,10 @@ body.tags-page {
             .topic-count {
               display: none;
             }
+
+            .category-desc {
+              display: none;
+            }
           }
 
           li.tag-row {
@@ -2755,6 +2759,10 @@ body {
             }
 
             .topic-count {
+              display: none;
+            }
+
+            .category-desc {
               display: none;
             }
           }
@@ -5500,7 +5508,7 @@ body.archetype-regular {
             background: #FFFFFF !important;
             border: 1px solid #C5C7D0 !important;
             border-radius: 4px;
-            width: calc(100% - 20px) !important;
+            width: fit-content !important;
             min-width: unset !important;
             margin: 0 !important;
 
@@ -6391,7 +6399,7 @@ body.archetype-regular {
           background: #FFFFFF !important;
           border: 1px solid #C5C7D0 !important;
           border-radius: 4px;
-          width: calc(100% - 20px) !important;
+          width: fit-content !important;
           min-width: unset !important;
 
           .select-kit-filter {
