@@ -5,7 +5,7 @@ search_banner_title:
 
 search_banner_description:
   type: string
-  default: Learn from fellow monday.com users and product experts
+  default: Learn from fellow monday.com community member's and product experts
   description: Search banner description
 
 search_banner_link:

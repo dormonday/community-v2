@@ -1,7 +1,7 @@
 body {
   background: none !important;
 }
-
+$PrimaryPurple = #6161FF;
 @import "common/foundation/mixins";
 @import "profile";
 @import "header";
@@ -50,7 +50,7 @@ button#create-new.btn.fa.fa-plus {
     display: inline-block;
   }
  button#create-new {
-    background-color: #6C6CFF;
+    background-color: $PrimaryPurple;
     height: 39px;
     width: fit-content;
     padding: 8px 16px;
@@ -87,7 +87,7 @@ button#create-new.btn.fa.fa-plus {
       border-radius: 40px;
       border: none;
       transition: 0.3s ease all;
-      background-color: #6C6CFF;
+      background-color: $PrimaryPurple;
 
       span.d-button-label {
         display: block;
@@ -121,8 +121,8 @@ header .menu-links, header .category-links {
   padding: 0;
   .widget-link[title*="visit monday.com"]{
     padding: 10px 18px !important;
-    background-color: #6C6CFF;
-    border: 1px solid #6C6CFF;
+    background-color: $PrimaryPurple;
+    border: 1px solid $PrimaryPurple;
     border-radius: 24px;
     color: #fff !important;
     width: fit-content !important;
@@ -170,7 +170,7 @@ header .menu-links, header .category-links {
 
     .active {
       .d-icon {
-        color: #6C6CFF !important;
+        color: $PrimaryPurple !important;
       }
     }
   }
@@ -199,7 +199,7 @@ header .menu-links, header .category-links {
             .topic {
               .first-line {
                 .topic-title {
-                  color: #6C6CFF;
+                  color: $PrimaryPurple;
                 }
               }
 
@@ -208,7 +208,7 @@ header .menu-links, header .category-links {
 
                 .discourse-tags {
                   .discourse-tag {
-                    border: 1px solid #6C6CFF;
+                    border: 1px solid $PrimaryPurple;
                     background-color: #fff;
                     border-radius: 4px;
                     padding: 2px 4px;
@@ -273,10 +273,10 @@ body.tags-page {
     }
 
     .topic-post-visited-line {
-      border-bottom: 1px solid #6C6CFF;
+      border-bottom: 1px solid $PrimaryPurple;
 
       span {
-        color: #6C6CFF;
+        color: $PrimaryPurple;
       }
     }
 
@@ -290,10 +290,10 @@ body.tags-page {
 
     .topic-list-item-separator {
       .topic-list-data {
-        border-top: 1px solid #6C6CFF;
+        border-top: 1px solid $PrimaryPurple;
 
         span {
-          color: #6C6CFF;
+          color: $PrimaryPurple;
         }
       }
     }
@@ -303,9 +303,9 @@ body.tags-page {
     }
   }
   .topic-post-visited-line {
-    border-bottom: 1px solid #6C6CFF !important;
+    border-bottom: 1px solid $PrimaryPurple !important;
     span {
-      color: #6C6CFF !important;
+      color: $PrimaryPurple !important;
     }
   }
 }
@@ -344,7 +344,7 @@ body.tags-page {
     line-height: 12px;
     text-align: center;
     padding: 5px 10px !important;
-    border: 1px solid #6C6CFF;
+    border: 1px solid $PrimaryPurple;
     margin-right: 10px !important;
 
     // margin-bottom: 10px !important;
@@ -356,14 +356,14 @@ body.tags-page {
     }
 
     &.list-vote-count {
-      background: #6C6CFF !important;
+      background: $PrimaryPurple !important;
       color: white !important;
       position: relative;
       padding-left: 7px;
       &:hover {
         background: white !important;
-        color: #6C6CFF !important;
-        border: 1px solid #6C6CFF;
+        color: $PrimaryPurple !important;
+        border: 1px solid $PrimaryPurple;
       }
 
       // &::before {
@@ -444,7 +444,7 @@ $max-width: 100%;
     }
 
     button.search-cta {
-      background: #6C6CFF;
+      background: $PrimaryPurple;
       box-shadow: 0px 4px 40px rgba(29, 76, 242, 0.16);
       border-radius: 39px;
       padding: 16px 100px;
@@ -502,7 +502,7 @@ $max-width: 100%;
       }
 
       &:checked {
-        background-color: #6C6CFF !important;
+        background-color: $PrimaryPurple !important;
       }
 
       &:checked::before {
@@ -510,7 +510,7 @@ $max-width: 100%;
       }
 
       &:hover {
-        background-color: #6C6CFF !important;
+        background-color: $PrimaryPurple !important;
       }
     }
 
@@ -522,7 +522,7 @@ $max-width: 100%;
 
     div.second-search-button {
       button.search-cta {
-        background: #6C6CFF;
+        background: $PrimaryPurple;
         box-shadow: 0px 4px 40px rgba(29, 76, 242, 0.16);
         border-radius: 39px;
         padding: 16px 100px;
@@ -631,7 +631,7 @@ $max-width: 100%;
       }
 
       a {
-        color: #6C6CFF;
+        color: $PrimaryPurple;
         font-family: SofiaRegular;
         font-size: 16px;
         line-height: 40px;
@@ -671,7 +671,7 @@ $max-width: 100%;
         margin: 0;
         width: 100%;
         background: #ffffff;
-        border: 2px solid #6C6CFF;
+        border: 2px solid $PrimaryPurple;
         box-sizing: border-box;
         border-radius: 35px;
         font-family: "SofiaRegular";
@@ -885,7 +885,7 @@ body.tags-page {
             color: #676879;
 
             &.active {
-              color: #6C6CFF;
+              color: $PrimaryPurple;
               background-color: transparent;
             }
 
@@ -896,7 +896,7 @@ body.tags-page {
 
           &.active {
             background: #cce5ff;
-            border: 1px solid #6C6CFF;
+            border: 1px solid $PrimaryPurple;
 
             &:hover {
               background-color: #cce5ff;
@@ -911,7 +911,7 @@ body.tags-page {
 
       button#create-topic {
         position: relative;
-        background: #6C6CFF;
+        background: $PrimaryPurple;
         padding: 0;
         margin: 0;
         border-radius: 50%;
@@ -1171,7 +1171,7 @@ body.tags-page {
     font-size: 16px;
     line-height: 19px;
     letter-spacing: -0.02em;
-    color: #6C6CFF;
+    color: $PrimaryPurple;
 
     &.show-less-categories-button {
       i.show-categories-button-icon {
@@ -1199,7 +1199,7 @@ body.tags-page {
   width: fit-content;
   box-shadow: 0px 4px 40px rgba(29, 76, 242, 0.16);
   border-radius: 39px;
-  background: #6C6CFF;
+  background: $PrimaryPurple;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -1355,8 +1355,8 @@ body.tags-page {
         color: #fff;
         font-size: 23px;
         position: relative;
-        background: #6C6CFF;
-        border: 1px solid #6C6CFF;
+        background: $PrimaryPurple;
+        border: 1px solid $PrimaryPurple;
         box-shadow: 0px 4px 40px rgba(29, 76, 242, 0.16);
         padding: 0;
         margin: 0;
@@ -1547,7 +1547,7 @@ body.tags-page {
         display: flex;
         padding: 14px 20px;
         margin: 0 11px;
-        border: 1px solid #6C6CFF;
+        border: 1px solid $PrimaryPurple;
         border-radius: 24px;
         align-items: center;
         justify-content: flex-start;
@@ -1556,7 +1556,7 @@ body.tags-page {
         .community-channels-button-text {
           font-size: 14px;
           font-weight: 400;
-          color: #6C6CFF;
+          color: $PrimaryPurple;
           margin-left: 0.75rem;
         }
 
@@ -1673,7 +1673,7 @@ body.tags-page {
         width: fit-content;
         box-shadow: 0px 4px 40px rgba(29, 76, 242, 0.16);
         border-radius: 39px;
-        background: #6C6CFF;
+        background: $PrimaryPurple;
         font-size: 16px;
         line-height: 16px;
         padding: 1.1rem 2.5rem 1.1rem 1.8rem;
@@ -1722,7 +1722,7 @@ body.tags-page {
       font-size: 14px;
       line-height: 22px;
       letter-spacing: -0.02em;
-      color: #6C6CFF;
+      color: $PrimaryPurple;
     }
 
     .custom-category-topics-wrapper {
@@ -2201,7 +2201,7 @@ body.tags-page {
 
       button#create-topic {
         position: relative;
-        background: #6C6CFF;
+        background: $PrimaryPurple;
         box-shadow: 0px 4px 40px rgba(29, 76, 242, 0.16);
         padding: 0;
         margin: 0;
@@ -2559,7 +2559,7 @@ body.tags-page {
 
     button#create-topic {
       position: relative;
-      background: #6C6CFF;
+      background: $PrimaryPurple;
       box-shadow: 0px 4px 40px rgba(29, 76, 242, 0.16);
       padding: 0;
       margin: 0;
@@ -3013,7 +3013,7 @@ body {
       justify-content: center;
       align-items: center;
       position: relative;
-      background: #6C6CFF;
+      background: $PrimaryPurple;
       padding: 0;
       margin: 0;
       border-radius: 50%;
@@ -3096,7 +3096,7 @@ body {
       font-size: 16px;
       line-height: 16px;
       padding: 0.7rem 2.5rem 0.7rem 1.8rem;
-      color: #6C6CFF;
+      color: $PrimaryPurple;
       transition: all 0.2s ease-in-out;
       display: flex;
       align-items: center;
@@ -3189,7 +3189,7 @@ body {
 // reply
 #reply-control {
   .grippie {
-    background: #6C6CFF;
+    background: $PrimaryPurple;
   }
 
   .reply-area {
@@ -3203,7 +3203,7 @@ body {
     }
 
     .submit-panel .save-or-cancel button.create {
-      background: #6C6CFF;
+      background: $PrimaryPurple;
       box-shadow: 0px 3.5px 7px rgba(0, 0, 0, 0.1);
       border-radius: 55px;
       padding: 12px 16px;
@@ -3219,7 +3219,7 @@ body {
           background: #F0F3FF;
 
           svg.d-icon {
-            color: #6C6CFF !important;
+            color: $PrimaryPurple !important;
           }
         }
       }
@@ -3232,7 +3232,7 @@ body {
 }
 
 #reply-control.draft {
-  background: #6C6CFF;
+  background: $PrimaryPurple;
 }
 
 
@@ -3374,15 +3374,15 @@ body.archetype-regular {
         button.vote-button {
           height: 43px;
           background: white;
-          border: 1px solid #6C6CFF;
+          border: 1px solid $PrimaryPurple;
           border-radius: 0 8px 8px 0;
-          color: #6C6CFF;
+          color: $PrimaryPurple;
           width: 70px;
           font-size: 16px;
           font-weight: 600;
           margin-left: unset;
           &:hover {
-            background: #6C6CFF;
+            background: $PrimaryPurple;
             color: white;
           }
         }
@@ -3391,10 +3391,10 @@ body.archetype-regular {
           height: 43px;
           width: 35px;
           min-width: 35px;
-          border: 1px solid #6C6CFF;
+          border: 1px solid $PrimaryPurple;
           border-right: none;
           border-radius: 8px 0 0 8px;
-          color: #6C6CFF;
+          color: $PrimaryPurple;
           font-size: 16px;
           font-weight: 600;
         }
@@ -3423,11 +3423,11 @@ body.archetype-regular {
 
     #topic-progress-wrapper {
       #topic-progress {
-        border: 1px solid #6C6CFF;
+        border: 1px solid $PrimaryPurple;
         border-radius: 8px;
 
         .nums {
-          color: #6C6CFF;
+          color: $PrimaryPurple;
         }
 
         .bg {
@@ -3542,19 +3542,19 @@ body.archetype-regular {
 
       button,
       summary {
-        border: 1px solid #6C6CFF;
+        border: 1px solid $PrimaryPurple;
         background: white;
         border-radius: 24px;
-        color: #6C6CFF;
+        color: $PrimaryPurple;
         padding: 8px 12px;
 
         svg {
-          color: #6C6CFF;
+          color: $PrimaryPurple;
         }
       }
 
       button.create {
-        background: #6C6CFF;
+        background: $PrimaryPurple;
         color: white;
 
         svg {
@@ -3571,7 +3571,7 @@ body.archetype-regular {
           color: rgba(103, 104, 121, 0.7);
 
           a {
-            color: #6C6CFF;
+            color: $PrimaryPurple;
           }
         }
       }
@@ -3590,7 +3590,7 @@ body.archetype-regular {
 
       .suggested-topics-message {
         a {
-          color: #6C6CFF;
+          color: $PrimaryPurple;
 
         }
       }
@@ -3936,7 +3936,7 @@ body.archetype-regular {
           input {
             margin: 0;
             background: #ffffff;
-            border: 1px solid #6C6CFF;
+            border: 1px solid $PrimaryPurple;
             border-radius: 16px;
             font-family: "SofiaRegular";
             font-size: 16px;
@@ -4092,7 +4092,7 @@ body.archetype-regular {
         }
 
         a {
-          color: #6C6CFF;
+          color: $PrimaryPurple;
           font-family: SofiaRegular;
           font-size: 16px;
           line-height: 40px;
@@ -4118,19 +4118,19 @@ body.archetype-regular {
     .timeline-controls,
     .timeline-footer-controls {
       button {
-        background: #6C6CFF;
+        background: $PrimaryPurple;
         border-radius: 20px;
         color: white !important;
-        border: 1px solid #6C6CFF;
+        border: 1px solid $PrimaryPurple;
         svg {
           color: white !important;
         }
 
         &:hover {
           background: white;
-          color: #6C6CFF !important;
+          color: $PrimaryPurple !important;
           svg {
-            color: #6C6CFF !important;
+            color: $PrimaryPurple !important;
           }
         }
       }
@@ -4138,15 +4138,15 @@ body.archetype-regular {
       summary {
         background: white;
         border-radius: 20px;
-        color: #6C6CFF !important;
-        border: 1px solid #6C6CFF;
+        color: $PrimaryPurple !important;
+        border: 1px solid $PrimaryPurple;
 
         svg {
-          color: #6C6CFF;
+          color: $PrimaryPurple;
         }
 
         &:hover {
-          background: #6C6CFF;
+          background: $PrimaryPurple;
 
           svg {
             color: white !important;
@@ -4227,7 +4227,7 @@ body.archetype-regular {
           margin: 0;
           width: 100%;
           background: #ffffff;
-          border: 1px solid #6C6CFF;
+          border: 1px solid $PrimaryPurple;
           box-sizing: border-box;
           border-radius: 50px;
           font-family: "SofiaRegular";
@@ -4446,7 +4446,7 @@ body.archetype-regular {
               color: #676879;
 
               &.active {
-                color: #6C6CFF;
+                color: $PrimaryPurple;
                 background-color: transparent;
               }
 
@@ -4457,7 +4457,7 @@ body.archetype-regular {
 
             &.active {
               background: #cce5ff;
-              border: 1px solid #6C6CFF;
+              border: 1px solid $PrimaryPurple;
 
               &:hover {
                 background-color: #cce5ff;
@@ -4472,7 +4472,7 @@ body.archetype-regular {
 
         button#create-topic {
           position: relative;
-          background: #6C6CFF;
+          background: $PrimaryPurple;
           padding: 0;
           margin: 0;
           border-radius: 24px;
@@ -4716,7 +4716,7 @@ body.archetype-regular {
       font-size: 16px;
       line-height: 19px;
       letter-spacing: -0.02em;
-      color: #6C6CFF;
+      color: $PrimaryPurple;
 
       &.show-less-categories-button {
         i.show-categories-button-icon {
@@ -5010,7 +5010,7 @@ body.archetype-regular {
         font-size: 14px;
         line-height: 22px;
         letter-spacing: -0.02em;
-        color: #6C6CFF;
+        color: $PrimaryPurple;
       }
 
       .custom-category-topics-wrapper {
@@ -5336,7 +5336,7 @@ body.archetype-regular {
 
         .save-or-cancel {
           button.create {
-            background: #6C6CFF;
+            background: $PrimaryPurple;
             box-shadow: 0px 3.5px 7px rgba(0, 0, 0, 0.1);
             border-radius: 55px;
             padding: 12px 16px;
@@ -5783,7 +5783,7 @@ body.archetype-regular {
 
         button#create-topic {
           position: relative;
-          background: #6C6CFF;
+          background: $PrimaryPurple;
           padding: 0;
           margin: 0;
           border-radius: 24px;
@@ -6137,7 +6137,7 @@ body.archetype-regular {
 
       button#create-topic {
         position: relative;
-        background: #6C6CFF;
+        background: $PrimaryPurple;
         padding: 0;
         margin: 0;
         border-radius: 24px;
@@ -6174,7 +6174,7 @@ body.archetype-regular {
   .navigation-controls {
     button#create-topic {
       position: relative;
-      background: #6C6CFF;
+      background: $PrimaryPurple;
       padding: 0;
       margin: 0;
       border-radius: 24px;
@@ -6221,7 +6221,7 @@ body.archetype-regular {
           flex-direction: row;
           gap: 15px;
           li, a {
-            color: #DCDFEC;
+            color: #9699A5;
           }
           li[title="Styleguide"] {
             display: none;
@@ -6664,7 +6664,7 @@ body.archetype-regular {
 
       button#create-topic {
         position: relative;
-        background: #6C6CFF;
+        background: $PrimaryPurple;
         padding: 0;
         margin: 0;
         border-radius: 24px;
