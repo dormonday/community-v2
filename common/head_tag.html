@@ -798,7 +798,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
     }
   });
 
-  api.registerConnectorClass("above-main-container", "hp-above-main-container-categories-page" , {
+  api.registerConnectorClass("below-site-header", "hp-below-site-header-categories-page" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
         console.log(url);
@@ -988,7 +988,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 </script>
 
 
-<script type="text/x-handlebars" data-template-name="/connectors/above-main-container/hp-above-main-container-categories-page">
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hp-below-site-header-categories-page">
   {{#if displayCategoriesPageBanner}}
   <div class="categories-page-container">
     <div class="categories-page-text-container">
