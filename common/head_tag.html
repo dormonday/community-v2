@@ -507,11 +507,11 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.onPageChange((url, title) => {
     if (url === "/categories" || url === "/categories?preview_theme_id=44"){
       $("#main-outlet-wrapper").css('display','none');
-      component.set('displayBorder', false);
+      component.set("displayBorder", true); 
     }
     else{
-      component.set('displayBorder', true);
       $("#main-outlet-wrapper").css('display','block');
+      component.set("displayBorder", true);
     }
   });
 </script>
