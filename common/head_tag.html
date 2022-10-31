@@ -505,13 +505,13 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 <!-- Delete the categories from categories page (remove if want to show the categories) -->
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
+    component.set("displayBorder", true); 
     if (url === "/categories" || url === "/categories?preview_theme_id=44"){
       $("#main-outlet-wrapper").css('display','none');
-      component.set("displayBorder", true); 
+      component.set("displayBorder", false); 
     }
     else{
       $("#main-outlet-wrapper").css('display','block');
-      component.set("displayBorder", true);
     }
   });
 </script>
