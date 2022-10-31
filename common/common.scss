@@ -685,6 +685,10 @@ $max-width: 100%;
         &:focus {
           outline: none;
         }
+
+        &::placeholder {
+          font-size: 15px;
+        }
       }
 
       input[type="text"]::placeholder {
