@@ -45,7 +45,8 @@
     "dev_icon": "assets/dev_icon.svg",
     "reddit_icon": "assets/reddit_icon.svg",
     "recent_discussions_banner": "assets/recent_discussions_banner.svg",
-    "recent_discussions_banner_mobile": "assets/recent_discussions_banner_mobile.svg"
+    "recent_discussions_banner_mobile": "assets/recent_discussions_banner_mobile.svg",
+    "categories_page_banner": "assets/categories_page_banner.svg"
   },
   "color_schemes": {
     "New Color Scheme": {

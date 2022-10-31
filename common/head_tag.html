@@ -507,7 +507,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.onPageChange((url, title) => {
     if (url === "/categories" || url === "/categories?preview_theme_id=44"){
       $("#main-outlet-wrapper").css('display','none');
-      $(".wrap .categories-border-bottom").css('display','none'); 
+      $(".wrap div.categories-border-bottom").css('display','none'); 
     }
   });
 </script>
@@ -797,6 +797,20 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
       });
     }
   });
+
+  api.registerConnectorClass("above-main-container", "hp-above-main-container-categories-page" , {
+    setupComponent(args, component) {
+      api.onPageChange((url) => {
+        console.log(url);
+        if (url.startsWith("/categories")){ 
+          component.set("displayCategoriesPageBanner", true); 
+        } else {  
+          component.set("displayCategoriesPageBanner", false); 
+        }
+      });
+    }
+  });
+
 </script>
 
 <!-- hp above footer more discussions btn -->
@@ -972,6 +986,27 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   </div>
   {{/if}}
 </script>
+
+
+<script type="text/x-handlebars" data-template-name="/connectors/above-main-container/hp-above-main-container-categories-page">
+  {{#if displayCategoriesPageBanner}}
+  <div class="categories-page-container">
+    <div class="categories-page-text-container">
+      <div class="categories-page-title">
+        <span>
+          Categories
+        </span>
+      </div>
+      <div class="categories-page-subtitle">
+        <p>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</script>
+
 
 <script type="text/x-handlebars" data-template-name="navigation/category">
   {{add-category-tag-classes category=category tagName=""}}
