@@ -507,11 +507,11 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.onPageChange((url, title) => {
     if (url === "/categories" || url === "/categories?preview_theme_id=44"){
       $("#main-outlet-wrapper").css('display','none');
-      $(".categories-border-top").css('border','0 !important'); 
+      component.set('displayBorder', false);
     }
     else{
+      component.set('displayBorder', true);
       $("#main-outlet-wrapper").css('display','block');
-      $(".categories-border-top").css('border','1px solid #D5D8DF !important'); 
     }
   });
 </script>
@@ -857,7 +857,9 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 <script type="text/x-handlebars" data-template-name="/connectors/above-footer/hp-above-footer-products">
   {{#if displaySubCategoriesBoxes}}
   <div class="wrap">
+    {{#if displayBorder}}
     <div class="categories-border-top"></div>
+    {{/if}}
     <div class="custom-categories-boxes-container-header">
       <div class="categories-boxes-title">{{theme-setting 'product_help_title'}}</div>
       <div class="categories-boxes-subtitle">{{theme-setting 'product_help_subtitle'}}</div>
