@@ -507,7 +507,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.onPageChange((url, title) => {
     if (url === "/categories" || url === "/categories?preview_theme_id=44"){
       $("#main-outlet-wrapper").css('display','none');
-      $(".wrap div.categories-border-bottom").css('display','none'); 
+      $(".wrap .categories-border-bottom").css('display','none'); 
     }
   });
 </script>
@@ -802,7 +802,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
     setupComponent(args, component) {
       api.onPageChange((url) => {
         console.log(url);
-        if (url.startsWith("/categories")){ 
+        if (url === "/categories" || url === "/categories?preview_theme_id=44"){
           component.set("displayCategoriesPageBanner", true); 
         } else {  
           component.set("displayCategoriesPageBanner", false); 
