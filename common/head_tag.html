@@ -506,9 +506,11 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
     if (url === "/categories" || url === "/categories?preview_theme_id=44"){
-      $("#main-outlet-wrapper").css('display','none');
+      $(".categories-border-top").css('display','none');
+      $("#main-outlet-wrapper").css('display','none');  
     }
     else{
+      $(".categories-border-top").css('display','block');
       $("#main-outlet-wrapper").css('display','block');
     }
   });
