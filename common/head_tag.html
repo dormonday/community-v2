@@ -505,10 +505,8 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 <!-- Delete the categories from categories page (remove if want to show the categories) -->
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
-    component.set("displayBorder", true); 
     if (url === "/categories" || url === "/categories?preview_theme_id=44"){
       $("#main-outlet-wrapper").css('display','none');
-      component.set("displayBorder", false); 
     }
     else{
       $("#main-outlet-wrapper").css('display','block');
@@ -857,9 +855,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 <script type="text/x-handlebars" data-template-name="/connectors/above-footer/hp-above-footer-products">
   {{#if displaySubCategoriesBoxes}}
   <div class="wrap">
-    {{#if displayBorder}}
     <div class="categories-border-top"></div>
-    {{/if}}
     <div class="custom-categories-boxes-container-header">
       <div class="categories-boxes-title">{{theme-setting 'product_help_title'}}</div>
       <div class="categories-boxes-subtitle">{{theme-setting 'product_help_subtitle'}}</div>
