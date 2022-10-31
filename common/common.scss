@@ -1,7 +1,7 @@
 body {
   background: none !important;
 }
-$PrimaryPurple = #6161FF;
+$PrimaryPurple: #6161FF;
 @import "common/foundation/mixins";
 @import "profile";
 @import "header";
