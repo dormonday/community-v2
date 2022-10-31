@@ -212,7 +212,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass("below-site-header", "search-banner", {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45"  ||  url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45"  || url === "/latest?preview_theme_id=4988" || url === "/latest?preview_theme_id=45"  ||  url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
           component.set("displaySearchBanner", true); 
         } else { 
           component.set("displaySearchBanner", false); 
@@ -501,6 +501,16 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   });
 </script>
 
+
+<!-- Delete the categories from categories page (remove if want to show the categories) -->
+<script type="text/discourse-plugin" version="0.8">
+  api.onPageChange((url, title) => {
+    if (url === "/categories" || url === "/categories?preview_theme_id=44"){
+      $("#main-outlet-wrapper").css('display','none');
+      $(".categories-border-bottom").css('display','none'); 
+    }
+  });
+</script>
 <!-- hp above footer categories boxes template -->
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hp-above-footer-categories-boxes">
   {{#if displayCategoriesBoxes}}
@@ -744,7 +754,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   api.registerConnectorClass("above-footer", "hp-above-footer-community-channels" , {
     setupComponent(args, component) {
       api.onPageChange((url) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" ){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" ){ 
           component.set("displayCommunityChannelBanner", true); 
         } else {  
           component.set("displayCommunityChannelBanner", false); 
