@@ -932,10 +932,11 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
         <!-- <div class="become-memeber-icon"></div> -->
         <div>
           <div class="become-member-subtitle">{{theme-setting 'become_member_subtitle'}}</div>
-          <button class="become-member-button">
+          {{mount-widget widget="become-member-button"}}
+          <!-- <button class="become-member-button">
             <img class="become-member-button-arrow" />
             <div class="become-member-button-text">Join the conversation</div>
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
