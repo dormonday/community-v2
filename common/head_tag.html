@@ -416,8 +416,8 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   const Category = require('discourse/models/category').default;
   let currUrl = "";
   api.onPageChange((url, title) => {
-    currUrl=url
-    }
+    currUrl=url;
+    };
   });
 
   function onPageChangeActions(){
@@ -492,36 +492,36 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
         }
       }, 1000);
     });
-  }
+  };
   if(currUrl  === "/" || currUrl == "/?preview_theme_id=44"){
-  api.registerConnectorClass('discovery-list-controls-above', 'hp-discovery-list-controls-above-categories-boxes', {
-    setupComponent(args, component) {
-      api.onPageChange((url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
-          component.set('displayCategoriesBoxes', true);
-          onPageChangeActions();
-         
-        } else {
-          component.set('displayCategoriesBoxes', false);
-        }
-      });
-    }
-  });
-}else{
-  api.registerConnectorClass('below-site-header', 'hp-below-site-header-categories-boxes', {
-    setupComponent(args, component) {
-      api.onPageChange((url, title) => {
-        if (url === "/categories" || url === "/categories?preview_theme_id=44" ){ 
-          component.set('displayCategoriesBoxesCategoriesPage', true);
-          onPageChangeActions();
-         
-        } else {
-          component.set('displayCategoriesBoxesCategoriesPage', false);
-        }
-      });
-    }
-  });
-}
+    api.registerConnectorClass('discovery-list-controls-above', 'hp-discovery-list-controls-above-categories-boxes', {
+      setupComponent(args, component) {
+        api.onPageChange((url, title) => {
+          if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
+            component.set('displayCategoriesBoxes', true);
+            onPageChangeActions();
+          
+          } else {
+            component.set('displayCategoriesBoxes', false);
+          }
+        });
+      }
+    });
+  }else {
+    api.registerConnectorClass('below-site-header', 'hp-below-site-header-categories-boxes', {
+      setupComponent(args, component) {
+        api.onPageChange((url, title) => {
+          if (url === "/categories" || url === "/categories?preview_theme_id=44"){ 
+            component.set('displayCategoriesBoxesCategoriesPage', true);
+            onPageChangeActions();
+          
+          }else {
+            component.set('displayCategoriesBoxesCategoriesPage', false);
+          }
+        });
+      }
+    });
+  }
 </script>
 
 
@@ -538,6 +538,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
     }
   });
 </script>
+
 <!-- hp above footer categories boxes template -->
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hp-below-site-header-categories-boxes">
   {{#if displayCategoriesBoxesCategoriesPage}}
