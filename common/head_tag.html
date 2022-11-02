@@ -4,6 +4,9 @@
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
     if (url === "/" || url === "/?preview_theme_id=44"){
+      $('#banner').css('margin', '0');
+    }
+    else{
       $('#banner').css('margin', '0 110px');
     }
     if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/categories?preview_theme_id=44"){
