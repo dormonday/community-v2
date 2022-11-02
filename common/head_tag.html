@@ -414,88 +414,114 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 <script type="text/discourse-plugin" version="0.8">
   const ajax = require('discourse/lib/ajax').ajax;
   const Category = require('discourse/models/category').default;
-  api.registerConnectorClass('below-site-header', 'hp-below-site-header-categories-boxes', {
+  let currUrl = "";
+  api.onPageChange((url, title) => {
+    currUrl=url
+    }
+  });
+
+  function onPageChangeActions(){
+    component.set("loadingCategories", true);
+    let thisUser = Discourse.User.current(); 
+    let isAdmin = false;
+    if (thisUser && thisUser.admin){
+      isAdmin = true;
+    }
+    component.set("isAdmin", isAdmin);
+    ajax("/categories.json").then (function(result){
+      let categories = [];
+      let filteredCategories = result.category_list.categories.filter(category => category.notification_level != 0)
+      filteredCategories.forEach(function(category){
+        categories.push(category);
+      });
+      component.set("loadingTopics", false);
+      component.set('categories', categories);
+    });
+    $(document).ready(function() {
+      setTimeout(function(){
+        if (window.innerWidth > 768){
+          if ($(".category-box-container").length > 6){
+            let height = ($(".category-box-container").outerHeight() * 2) + (parseInt($('.category-box-container').css('margin-bottom')) * 2) - 10;
+            let $categoriesContainer = $(".custom-categories-boxes-container");
+            $categoriesContainer.css("height","100%");
+            $categoriesContainer.css("max-height","100%");
+            $('.categories-show-button-wrapper button').on('click', function(e){
+              e.preventDefault();
+              if ($(this).hasClass('show-more-categories-button')){
+                let categoryHeight = height/2;
+                let categoriesRowsNum = Math.ceil($(".category-box-container").length/3);
+                let categoriesHeight = categoriesRowsNum * categoryHeight;
+                $('.custom-categories-boxes-container').css("height","100%");
+                $('.custom-categories-boxes-container').css("max-height","100%");
+              } else {
+                $('.custom-categories-boxes-container').css("height","100%");
+                $('.custom-categories-boxes-container').css("max-height","100%");
+              }
+              $('.categories-show-button-wrapper button').each(function(index,obj){
+                $(obj).toggleClass('hide');
+              });
+            });
+          } else{
+            $(".categories-show-button-wrapper").css('display','none');
+          }
+        } else{
+          if ($(".category-box-container").length > 6){
+            let height = ($(".category-box-container").outerHeight() * 6) + (parseInt($('.category-box-container').css('margin-bottom')) * 6) - 10;
+            let $categoriesContainer = $(".custom-categories-boxes-container");
+            $categoriesContainer.css("height","100%");
+            $categoriesContainer.css("max-height","100%");
+            $('.categories-show-button-wrapper button').on('click', function(e){
+              e.preventDefault();
+              if ($(this).hasClass('show-more-categories-button')){
+                let categoryHeight = height/6;
+                let categoriesRowsNum = Math.ceil($(".category-box-container").length);
+                let categoriesHeight = categoriesRowsNum * categoryHeight;
+                $('.custom-categories-boxes-container').css("height","100%");
+                $('.custom-categories-boxes-container').css("max-height","100%");
+              } else {
+                $('.custom-categories-boxes-container').css("height","100%");
+                $('.custom-categories-boxes-container').css("max-height","100%");
+              }
+              $('.categories-show-button-wrapper button').each(function(index,obj){
+                $(obj).toggleClass('hide');
+              });
+            });
+          } else{
+            $(".categories-show-button-wrapper").css('display','none');
+          }
+        }
+      }, 1000);
+    });
+  }
+  if(currUrl  === "/" || currUrl == "/?preview_theme_id=44"){
+  api.registerConnectorClass('discovery-list-controls-above', 'hp-discovery-list-controls-above-categories-boxes', {
     setupComponent(args, component) {
       api.onPageChange((url, title) => {
-        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
+        if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44"  || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
           component.set('displayCategoriesBoxes', true);
-          component.set("loadingCategories", true);
-          let thisUser = Discourse.User.current(); 
-          let isAdmin = false;
-          if (thisUser && thisUser.admin){
-            isAdmin = true;
-          }
-          component.set("isAdmin", isAdmin);
-          ajax("/categories.json").then (function(result){
-            let categories = [];
-            let filteredCategories = result.category_list.categories.filter(category => category.notification_level != 0)
-            filteredCategories.forEach(function(category){
-              categories.push(category);
-            });
-            component.set("loadingTopics", false);
-            component.set('categories', categories);
-          });
-          $(document).ready(function() {
-            setTimeout(function(){
-              if (window.innerWidth > 768){
-                if ($(".category-box-container").length > 6){
-                  let height = ($(".category-box-container").outerHeight() * 2) + (parseInt($('.category-box-container').css('margin-bottom')) * 2) - 10;
-                  let $categoriesContainer = $(".custom-categories-boxes-container");
-                  $categoriesContainer.css("height","100%");
-                  $categoriesContainer.css("max-height","100%");
-                  $('.categories-show-button-wrapper button').on('click', function(e){
-                    e.preventDefault();
-                    if ($(this).hasClass('show-more-categories-button')){
-                      let categoryHeight = height/2;
-                      let categoriesRowsNum = Math.ceil($(".category-box-container").length/3);
-                      let categoriesHeight = categoriesRowsNum * categoryHeight;
-                      $('.custom-categories-boxes-container').css("height","100%");
-                      $('.custom-categories-boxes-container').css("max-height","100%");
-                    } else {
-                      $('.custom-categories-boxes-container').css("height","100%");
-                      $('.custom-categories-boxes-container').css("max-height","100%");
-                    }
-                    $('.categories-show-button-wrapper button').each(function(index,obj){
-                      $(obj).toggleClass('hide');
-                    });
-                  });
-                } else{
-                  $(".categories-show-button-wrapper").css('display','none');
-                }
-              } else{
-                if ($(".category-box-container").length > 6){
-                  let height = ($(".category-box-container").outerHeight() * 6) + (parseInt($('.category-box-container').css('margin-bottom')) * 6) - 10;
-                  let $categoriesContainer = $(".custom-categories-boxes-container");
-                  $categoriesContainer.css("height","100%");
-                  $categoriesContainer.css("max-height","100%");
-                  $('.categories-show-button-wrapper button').on('click', function(e){
-                    e.preventDefault();
-                    if ($(this).hasClass('show-more-categories-button')){
-                      let categoryHeight = height/6;
-                      let categoriesRowsNum = Math.ceil($(".category-box-container").length);
-                      let categoriesHeight = categoriesRowsNum * categoryHeight;
-                      $('.custom-categories-boxes-container').css("height","100%");
-                      $('.custom-categories-boxes-container').css("max-height","100%");
-                    } else {
-                      $('.custom-categories-boxes-container').css("height","100%");
-                      $('.custom-categories-boxes-container').css("max-height","100%");
-                    }
-                    $('.categories-show-button-wrapper button').each(function(index,obj){
-                      $(obj).toggleClass('hide');
-                    });
-                  });
-                } else{
-                  $(".categories-show-button-wrapper").css('display','none');
-                }
-              }
-            }, 1000);
-          });
+          onPageChangeActions();
+         
         } else {
           component.set('displayCategoriesBoxes', false);
         }
       });
     }
   });
+}else{
+  api.registerConnectorClass('below-site-header', 'hp-below-site-header-categories-boxes', {
+    setupComponent(args, component) {
+      api.onPageChange((url, title) => {
+        if (url === "/categories" || url === "/categories?preview_theme_id=44" ){ 
+          component.set('displayCategoriesBoxesCategoriesPage', true);
+          onPageChangeActions();
+         
+        } else {
+          component.set('displayCategoriesBoxesCategoriesPage', false);
+        }
+      });
+    }
+  });
+}
 </script>
 
 
@@ -514,6 +540,60 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 </script>
 <!-- hp above footer categories boxes template -->
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/hp-below-site-header-categories-boxes">
+  {{#if displayCategoriesBoxesCategoriesPage}}
+  <div class="wrap">
+    <div class="custom-categories-boxes-container-header">
+      <div class="categories-boxes-title">{{theme-setting 'conversation_title'}}</div>
+      <div class="categories-boxes-subtitle">{{theme-setting 'conversation_subtitle'}}</div>
+    </div>
+    <!-- {{#if isAdmin}}
+      <a href="/categories">Categories</a>
+    {{/if}} -->
+    <div class="custom-categories-boxes-container">
+      <!-- {{log 'test' }} -->
+      {{#each categories as |c|}} 
+      {{log c}}
+      {{#if (or (eq c.id 6) (eq c.id 5) (eq c.id 7))}}
+      <a class="category-box-container" href='/c/{{c.slug}}'>
+        <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
+        <div class="category-image" style="background-image: url({{c.uploaded_logo.url}})"></div>
+        <div class="category-title-container">
+          <h3 class="category-title">{{c.name}}</h3>
+        </div>
+        <div class="category-topic-count">{{c.topic_count}} posts</div>
+        <a class="category-box-link" href='/c/{{c.slug}}'>
+          <span>Join the conversation</span>
+          <div class="category-arrow-icon"></div>
+        </a>
+      </a>
+      {{/if}}
+    {{/each}}
+    {{#each categories as |c|}} 
+      {{log c}}
+      {{#if (eq c.id 8)}}
+      <a class="category-box-container" href='/c/{{c.slug}}'>
+        <!-- {{cdn-img src=c.uploaded_background.url class="category-box-image"}} -->
+        <div class="category-image" style="background-image: url({{c.uploaded_logo.url}})"></div>
+        <div class="category-title-container">
+          <h3 class="category-title">{{c.name}}</h3>
+        </div>
+        <div class="category-topic-count">{{c.topic_count}} posts</div>
+        <a class="category-box-link" href='/c/{{c.slug}}'>
+          <span>Join the conversation</span>
+          <div class="category-arrow-icon"></div>
+        </a>
+      </a>
+      {{/if}}  
+    {{/each}}
+  </div>
+  <div class="categories-border-bottom"></div>
+  </div>
+  {{/if}}
+</script>
+
+
+<!-- hp above footer categories boxes template Homepage -->
+<script type="text/x-handlebars" data-template-name="/connectors/discovery-list-controls-above/hp-discovery-list-controls-above-categories-boxes">
   {{#if displayCategoriesBoxes}}
   <div class="wrap">
     <div class="custom-categories-boxes-container-header">
