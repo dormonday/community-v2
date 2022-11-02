@@ -3929,6 +3929,10 @@ body.archetype-regular {
         border-bottom-color: 0;
       }
     }
+    #login-link{
+      width: fit-content;
+      border: unset;
+    }
   }
 }
 
