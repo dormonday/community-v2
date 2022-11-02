@@ -28,17 +28,6 @@
 </script>
 
 
-<script type="text/discourse-plugin" version="0.8.25">
-  api.createWidget("become-member-button", {
-    tagName: "button.become-member-button", function(helper){
-      return  helper.attach("button.become-member-button", {
-        label: "sign_up",
-        className: "btn-primary btn-small sign-up-button",
-        action: "showCreateAccount",
-      });
-    },
-  });
-</script>
 
 
 <!-- create topic btn under recent discussion in homepage on mobile-->
@@ -784,7 +773,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
         if (!user){ 
           component.set("displayBecomeMemberBanner", true); 
         } else {  
-          component.set("displayBecomeMemberBanner", true); 
+          component.set("displayBecomeMemberBanner", false); 
         }
       });
     }
@@ -944,18 +933,12 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
     <div class="become-member-section">
       <div class="become-member-title">{{theme-setting 'become_member_title'}}</div>
       <div class="become-member-content">
-        <!-- <div class="become-memeber-icon"></div> -->
         <div>
           <div class="become-member-subtitle">{{theme-setting 'become_member_subtitle'}}</div>
           <DButton @action={{route-action "showCreateAccount"}} @class="btn-primary become-member-button" @value="Join the conversation">
             <img class="become-member-button-arrow" />
             <div class="become-member-button-text">Join the conversation</div>
           </DButton>
-          <!-- {{mount-widget widget="become-member-button"}} -->
-          <!-- <button class="become-member-button">
-            <img class="become-member-button-arrow" />
-            <div class="become-member-button-text">Join the conversation</div>
-          </button> -->
         </div>
       </div>
     </div>
