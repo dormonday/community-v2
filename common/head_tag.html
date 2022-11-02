@@ -416,8 +416,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   const Category = require('discourse/models/category').default;
   let currUrl = "";
   api.onPageChange((url, title) => {
-    currUrl=url;
-    };
+    currUrl = url;
   });
 
   function onPageChangeActions(){
