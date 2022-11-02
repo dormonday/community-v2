@@ -3836,6 +3836,82 @@ body.archetype-regular {
     }
   }}
 
+// Login / signup modal
+.login-modal:not(.hidden){
+  //width: 55px;
+  #login-form {
+    .input-group {
+      width: 100%;
+      input{
+        width: auto;
+      }
+      input:focus{
+        border-color: $PrimaryPurple;
+      }
+      input:focus+label.alt-placeholder{
+        background-color: #f0f3ff;
+      }
+    }
+  }
+ .login-left-side {
+    background-color: #f0f3ff;
+    .login-welcome-header {
+      .waving-hand{
+        display: none;
+      }
+      p.login-subheader {
+        color: $PrimaryPurple;
+      }
+
+    }
+    button#login-button {
+      width: 100%;
+      height: 52px;
+      &:active, &:focus, &:hover{
+        background-color: $PrimaryPurple;
+        background-image: unset;
+        border-bottom-color: unset;
+      }
+    }
+    .modal-footer{
+      flex-direction: column;
+    }
+  }
+  
+}
+
+.d-modal.create-account{
+  .login-welcome-header{
+    background-color: #f0f3ff;
+
+    p.login-subheader{
+      color: $PrimaryPurple;
+    }
+  }
+  .login-form{
+    background: #f0f3ff;
+    padding: 3em 3em 2.5em;
+    .input-group{
+      input:focus{
+        border-color: $PrimaryPurple;
+      }
+    } 
+  }
+  .modal-footer{
+    position: unset;
+    flex-direction: column;
+    justify-content: center;
+    .btn{
+      width: 100%;
+      height: 52px;
+      &:active, &:focus, &:hover{
+        background-color: $PrimaryPurple;
+        background-image: unset;
+        border-bottom-color: unset;
+      }
+    }
+  }
+}
 
 
 
