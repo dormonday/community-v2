@@ -765,7 +765,7 @@ $max-width: 100%;
       z-index: 9;
       margin-left: auto;
       margin-right: auto;
-      left: 15px;
+      // left: 15px;
       top: 58px;
       padding: unset;
 
@@ -5928,6 +5928,7 @@ body.archetype-regular {
   .navigation-container{
     display: flex;
     margin: 28px 0;
+    gap: 20px;
 
     .select-kit.combo-box {
       flex: 1 1 0;
@@ -5954,7 +5955,7 @@ body.archetype-regular {
         .combo-box-header.category-drop-header,
         .combo-box-header.tag-drop-header {
           background: #FFFFFF !important;
-          margin-right: 20px;
+          margin-right: 0px;
           border: 1px solid #C5C7D0 !important;
           border-radius: 4px;
           padding: 5px 0 5px 15px;
@@ -5999,7 +6000,7 @@ body.archetype-regular {
           border: 1px solid #C5C7D0 !important;
           border-radius: 4px;
           width: fit-content !important;
-          min-width: unset !important;
+          min-width: 100% !important;
           margin: 0 !important;
 
           .select-kit-filter {
@@ -6235,7 +6236,7 @@ body.archetype-regular {
     }
 
     .navigation-controls {
-      margin-top: 15px;
+      margin-top: 0px;
       // margin-left: auto;
       display: flex;
       width: 100%;

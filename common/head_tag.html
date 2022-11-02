@@ -4,12 +4,16 @@
 <script type="text/discourse-plugin" version="0.8">
   api.onPageChange((url, title) => {
     if (url === "/" || url === "/?preview_theme_id=44"){
-      $('#banner').css('margin-right', '110px');
-      $('#banner').css('margin-left', '110px');
+      if (window.innerWidth >= 768) {
+        $('#banner').css('margin-right', '110px');
+        $('#banner').css('margin-left', '110px');
+      }
     }
     else{
-      $('#banner').css('margin-right', '0');
-      $('#banner').css('margin-left', '0');
+      if (window.innerWidth >= 768) {
+        $('#banner').css('margin-right', '0');
+        $('#banner').css('margin-left', '0');
+      }
     }
     if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/?preview_theme_id=44" || url === "/categories?preview_theme_id=44"){
       let thisUser = Discourse.User.current(); 
