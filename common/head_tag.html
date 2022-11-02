@@ -947,9 +947,9 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
         <!-- <div class="become-memeber-icon"></div> -->
         <div>
           <div class="become-member-subtitle">{{theme-setting 'become_member_subtitle'}}</div>
-          <DButton @action={{route-action "showCreateAccount"}} @label="signup_cta.sign_up" @icon="user" @class="btn-primary become-member-button" @value="Join the conversation">
+          <DButton @action={{route-action "showCreateAccount"}} @class="btn-primary become-member-button" @value="Join the conversation">
             <img class="become-member-button-arrow" />
-            <!-- <div class="become-member-button-text">Join the conversation</div> -->
+            <div class="become-member-button-text">Join the conversation</div>
           </DButton>
           <!-- {{mount-widget widget="become-member-button"}} -->
           <!-- <button class="become-member-button">
