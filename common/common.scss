@@ -3844,6 +3844,8 @@ body.archetype-regular {
       width: 100%;
       input{
         width: auto;
+        border: 1px solid #fff;
+        border-radius: 4px;
       }
       input:focus{
         border-color: $PrimaryPurple;
@@ -3856,6 +3858,7 @@ body.archetype-regular {
  .login-left-side {
     background-color: #f0f3ff;
     .login-welcome-header {
+      background-color: #f0f3ff;
       .waving-hand{
         display: none;
       }
@@ -3865,8 +3868,11 @@ body.archetype-regular {
 
     }
     button#login-button {
+      background-color: $PrimaryPurple;
       width: 100%;
       height: 52px;
+      border: 1px solid $PrimaryPurple;
+      border-radius: 39px;
       &:active, &:focus, &:hover{
         background-color: $PrimaryPurple;
         background-image: unset;
@@ -3887,27 +3893,40 @@ body.archetype-regular {
     p.login-subheader{
       color: $PrimaryPurple;
     }
+    .waving-hand{
+      display: none;
+    }
   }
   .login-form{
     background: #f0f3ff;
     padding: 3em 3em 2.5em;
     .input-group{
-      input:focus{
-        border-color: $PrimaryPurple;
+      input{
+        border: 1px solid #fff;
+        border-radius: 4px;
+        &:focus{
+          border-color: $PrimaryPurple;
+        }
       }
+      
     } 
   }
   .modal-footer{
+    background: #f0f3ff;
     position: unset;
     flex-direction: column;
     justify-content: center;
+    border:0;
     .btn{
+      background-color: $PrimaryPurple;
       width: 100%;
       height: 52px;
+      border: 1px solid $PrimaryPurple;
+      border-radius: 39px;
       &:active, &:focus, &:hover{
         background-color: $PrimaryPurple;
         background-image: unset;
-        border-bottom-color: unset;
+        border-bottom-color: 0;
       }
     }
   }
