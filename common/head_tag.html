@@ -406,7 +406,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
 <script type="text/discourse-plugin" version="0.8">
   const ajax = require('discourse/lib/ajax').ajax;
   const Category = require('discourse/models/category').default;
-  api.registerConnectorClass('discovery-list-controls-above', 'hp-discovery-list-controls-above-categories-boxes', {
+  api.registerConnectorClass('above-footer', 'hp-above-footer-categories-boxes', {
     setupComponent(args, component) {
       api.onPageChange((url, title) => {
         if (url === "/" || url === "/?preview_theme_id=4988" || url === "/?preview_theme_id=45" || url === "/?preview_theme_id=44" || url === "/categories" || url === "/categories?preview_theme_id=4988" || url === "/categories?preview_theme_id=45" || url === "/categories?preview_theme_id=44" || url === "/new?preview_theme_id=4988" || url === "/new?preview_theme_id=45" || url === "/top?preview_theme_id=4988" || url === "/top?preview_theme_id=45"){ 
@@ -505,7 +505,7 @@ api.decorateWidget("hamburger-menu:footerLinks", function(helper) {
   });
 </script>
 <!-- hp above footer categories boxes template -->
-<script type="text/x-handlebars" data-template-name="/connectors/discovery-list-controls-above/hp-discovery-list-controls-above-categories-boxes">
+<script type="text/x-handlebars" data-template-name="/connectors/above-footer/hp-above-footer-categories-boxes">
   {{#if displayCategoriesBoxes}}
   <div class="wrap">
     <div class="custom-categories-boxes-container-header">
