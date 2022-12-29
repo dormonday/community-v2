@@ -17,16 +17,21 @@ $PrimaryPurple: #6161FF;
 }
 
 @font-face {
+  font-family: SofiaSemiBold;
+  src: url($sofia_semi_bold) format("otf");
+}
+
+@font-face {
   font-family: RobotoLight;
   src: url($roboto_light) format("woff");
 }
 
 html {
-  font-family: 'sofia pro';
+  font-family: SofiaRegular;
 }
 
 body {
-  font-family: 'sofia pro';
+  font-family: SofiaRegular;
 }
 
 h1 {
@@ -624,7 +629,7 @@ $max-width: 100%;
       }
 
       p {
-        font-family: 'sofia pro';
+        font-family: SofiaRegular;
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
@@ -1088,14 +1093,13 @@ body.tags-page {
         line-height: 25px;
         font-weight: 600;
         color: #181B34;
-        font-family: 'sofia Pro';
         font-weight: 500;
       }
     }
 
     .category-description-container {
       p.category-description {
-        font-family: 'Sofia Pro';
+        font-family: SofiaRegular;
         font-size: 16px;
         line-height: 26px;
         letter-spacing: -0.2px;
@@ -1272,7 +1276,7 @@ body.tags-page {
 
           .announcement-section {
             // height: 100px;
-            font-family: 'Sofia Pro';
+            font-family: SofiaRegular;
 
             .announcement-content {
               display: flex;
@@ -1880,7 +1884,7 @@ body.tags-page {
 
         span {
           color: #0F1048;
-          font-family: 'Sofia Pro';
+          font-family: SofiaBold;
           font-size: 35px;
           font-weight: 600;
           line-height: 35px;
@@ -1891,7 +1895,7 @@ body.tags-page {
       .category-description {
         p {
           padding: 0rem 2rem 0rem;
-          font-family: 'Sofia Pro';
+          font-family: SofiaRegular;
           font-size: 18px;
           font-weight: 300;
           line-height: 26px;
@@ -1908,7 +1912,7 @@ body.tags-page {
     width: auto;
 
     span {
-      font-weight: 'Sofia Pro';
+      font-weight: SofiaRegular;
       font-weight: 300;
     }
 
@@ -2262,7 +2266,7 @@ body.tags-page {
   }
 
   span {
-    font-weight: 'Sofia Pro';
+    font-weight: SofiaRegular;
     font-weight: 300;
   }
 
@@ -2632,8 +2636,8 @@ body {
 
               a {
                 font-size: 16px;
-                font-family: 'Sofia Pro';
-                font-weight: 600;
+                font-family:SofiaSemiBold;
+                // font-weight: bolder;
                 letter-spacing: -0.3px;
                 color: #383B45;
                 padding-bottom: 5px;
@@ -2646,7 +2650,7 @@ body {
 
             .link-bottom-line {
               a {
-                font-family: 'Sofia Pro';
+                font-family: SofiaRegular;
                 font-size: 12px;
                 letter-spacing: -0.2px;
               }
@@ -3372,7 +3376,7 @@ body {
 body.archetype-regular {
   #main-outlet {
     padding: 3rem 2rem 2rem;
-    font-family: 'Sofia Pro';
+    font-family: SofiaRegular;
 
     .voting {
       .voting-wrapper {
@@ -3412,13 +3416,13 @@ body.archetype-regular {
       .title-wrapper {
         h1 {
           margin-bottom: 1rem;
-          font-family: 'Sofia Pro';
+          font-family: SofiaRegular;
         }
         a.fancy-title {
           font-weight: 600;
           font-size: 16px;
           line-height: 22px;
-          font-family: 'Sofia Pro';
+          font-family: SofiaRegular;
         }
   
         .category-name {
@@ -3486,7 +3490,7 @@ body.archetype-regular {
                 color: #0F1048;
                 font-size: 14px;
                 font-weight: 400;
-                font-family: 'Sofia Pro';
+                font-family: SofiaRegular;
               }
             }
 
@@ -3815,7 +3819,7 @@ body.archetype-regular {
 
       span {
         color: #0F1048;
-        font-family: 'Sofia Pro';
+        font-family: SofiaRegular;
         font-size: 35px;
         font-weight: 600;
         line-height: 35px;
@@ -3826,7 +3830,7 @@ body.archetype-regular {
     .recent-disussion-subtitle {
       p {
         padding: 0rem 2rem 0rem;
-        font-family: 'Sofia Pro';
+        font-family: SofiaRegular;
         font-size: 18px;
         font-weight: 300;
         line-height: 26px;
@@ -3978,7 +3982,7 @@ body.archetype-regular {
   }
 
   html {
-    font-family: 'Sofia Pro';
+    font-family: SofiaRegular;
   }
 
   h1 {
@@ -4779,7 +4783,7 @@ body.archetype-regular {
 
         .category-description-container {
           p.category-description {
-            font-family: 'Sofia Pro';
+            font-family: SofiaRegular;
             font-size: 16px;
             line-height: 26px;
             letter-spacing: -0.2px;
@@ -4962,8 +4966,8 @@ body.archetype-regular {
 
                 a {
                   font-size: 16px;
-                  font-weight: 600;
-                  font-family: 'Sofia Pro';
+                  // font-weight: 600;
+                  font-family: SofiaSemiBold;
                   letter-spacing: -0.3px;
                   color: #383B45;
                   padding-bottom: 5px;
@@ -4982,7 +4986,7 @@ body.archetype-regular {
               .link-bottom-line {
                 gap: 2px;
                 a {
-                  font-family: 'Sofia Pro';
+                  font-family: SofiaRegular;
                   font-size: 12px;
                   letter-spacing: -0.2px;
 
@@ -5039,6 +5043,7 @@ body.archetype-regular {
       }
     }
   }
+
 
   .hp-above-footer-community-channels {
     .community-channels-section {
@@ -5553,7 +5558,7 @@ body.archetype-regular {
 
           span {
             color: #0F1048;
-            font-family: 'Sofia Pro';
+            font-family: SofiaRegular;
             font-size: 50px;
             line-height: 50px;
             font-weight: 700;
@@ -5564,7 +5569,7 @@ body.archetype-regular {
         .category-description {
           p {
             padding: 0rem 4.5rem 1rem;
-            font-family: 'Sofia Pro';
+            font-family: SofiaRegular;
             font-size: 18px;
             line-height: 26px;
             font-weight: 400;
@@ -6379,8 +6384,8 @@ body.archetype-regular {
 
                 a {
                   font-size: 16px;
-                  font-family: 'Sofia Pro';
-                  font-weight: 600;
+                  font-family: SofiaSemiBold;
+                  // font-weight: 600;
                   letter-spacing: -0.3px;
                   color: #383B45;
                   padding-bottom: 5px;
@@ -6393,7 +6398,7 @@ body.archetype-regular {
 
               .link-bottom-line {
                 a {
-                  font-family: 'Sofia Pro';
+                  font-family: SofiaRegular;
                   font-size: 12px;
                   letter-spacing: -0.2px;
                 }
@@ -7135,7 +7140,7 @@ body.archetype-regular {
 
         span {
           color: #0F1048;
-          font-family: 'Sofia Pro';
+          font-family: SofiaBold;
           font-size: 50px;
           line-height: 50px;
           font-weight: 700;
@@ -7146,7 +7151,7 @@ body.archetype-regular {
       .recent-disussion-subtitle {
         p {
           padding: 0rem 4.5rem 1rem;
-          font-family: 'Sofia Pro';
+          font-family: SofiaRegular;
           font-size: 18px;
           line-height: 26px;
           font-weight: 400;
