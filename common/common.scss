@@ -17,11 +17,6 @@ $PrimaryPurple: #6161FF;
 }
 
 @font-face {
-  font-family: SofiaSemiBold;
-  src: url($sofia_semi_bold) format("otf");
-}
-
-@font-face {
   font-family: RobotoLight;
   src: url($roboto_light) format("woff");
 }
@@ -2636,8 +2631,8 @@ body {
 
               a {
                 font-size: 16px;
-                font-family:SofiaSemiBold;
-                // font-weight: bolder;
+                font-family: SofiaRegular;
+                font-weight: bolder;
                 letter-spacing: -0.3px;
                 color: #383B45;
                 padding-bottom: 5px;
@@ -4966,8 +4961,8 @@ body.archetype-regular {
 
                 a {
                   font-size: 16px;
-                  // font-weight: 600;
-                  font-family: SofiaSemiBold;
+                  font-weight: bolder;
+                  font-family: SofiaRegular;
                   letter-spacing: -0.3px;
                   color: #383B45;
                   padding-bottom: 5px;
@@ -6384,8 +6379,8 @@ body.archetype-regular {
 
                 a {
                   font-size: 16px;
-                  font-family: SofiaSemiBold;
-                  // font-weight: 600;
+                  font-family: SofiaRegular;
+                  font-weight: bold;
                   letter-spacing: -0.3px;
                   color: #383B45;
                   padding-bottom: 5px;
